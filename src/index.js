@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/global.sass';
 import {
-  BrowserRouter as Router,
+  BrowserRouter,
   Switch,
   Route,
 } from "react-router-dom";
@@ -10,6 +10,8 @@ import {
 import IndexPage from './pages/indexPage.js'
 import MsgBoard from './pages/messageBoard'
 import Sample from './pages/sample'
+
+
 const pagesArray = [
   { page: <Sample />, route: "/sample" },
   { page: <MsgBoard />, route: "/message_board" },
@@ -24,13 +26,11 @@ const routes = pagesArray.map(p => (
     {p.page}
   </Route>
 ))
-/**
-  <Router>
+
+ReactDOM.render(
+  <BrowserRouter>
     <Switch>
       {routes}
     </Switch>
-  </Router>
- */
-ReactDOM.render(
-  <h1>HA</h1>
-  , document.getElementById('root'));
+  </BrowserRouter>
+  , document.getElementById('app'));
