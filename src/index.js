@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/global.sass';
 import {
-  BrowserRouter,
+  BrowserRouter,// as Router加了會有異常
   Switch,
   Route,
 } from "react-router-dom";
