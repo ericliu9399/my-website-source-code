@@ -1,0 +1,39 @@
+@import ../lib/sass/_variable
+//GLOBAL SETTING
+*
+  font-family: $font_family
+  box-sizing: border-box
+  position: relative //center
+  // transition: 2s
+  border: solid 1px white
+  // vertical-align: top
+html,body,#___gatsby
+  margin: 0px
+  padding: 0px
+  width: 100%
+body
+  background: $bg_color
+  color: white
+  overflow-x: hidden//假如設在html會造成fixed元素擋住scrollbar
+//字型設定
+html
+  font-size: $font_size// 基本字型大小
+  background-color: #333
+  //https://stackoverflow.com/questions/25020582/scrolling-to-an-anchor-using-transition-css3
+  scroll-behavior: smooth// 可以滑順move
+h1
+  font-size: 2.5rem
+//scroll bar
+::-webkit-scrollbar
+  width: 10px
+  background-color: black
+  cursor: pointer
+::-webkit-scrollbar-thumb
+  background-color: rgb(109, 131, 242)
+::-webkit-scrollbar-track
+  background-color: black
+//hide scrollbar
+// body
+//   right: -17px
+// #___gatsby
+//   left: -17px

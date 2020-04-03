@@ -1,0 +1,19 @@
+@mixin indep
+  position: absolute
+@mixin center
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translateX(-50%) translateY(-50%)
+@mixin trans($s)
+  transition: $s
+@mixin size($w,$h)
+  width: $w
+  height: $h
+@mixin fill
+  width: 100%
+  height: 100%
+@mixin text($size,$spacing,$color)
+  font-size: $size
+  letter-spacing: $spacing
+  color: $color !important

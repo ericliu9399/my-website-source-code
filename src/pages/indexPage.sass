@@ -1,0 +1,159 @@
+@import ../lib/sass/_variable
+@import ../lib/sass/mixin
+//main
+$header_height: 60px
+$main_margin: 100px
+//section
+$title_padding: 60px
+//color
+$icon_color: rgba(73, 97, 220, 1)
+$icon_img: linear-gradient(135deg, rgba(106, 152, 240, 1) 0%,  rgba(0, 0, 0, 0) 99%)
+main
+  margin: 0px $main_margin
+  top: 0px
+  @media all and (max-width: $break-medium)
+    margin: 0px 60px
+  section
+    min-height: 100vh
+    h2.section_title
+      text-align: center      
+      padding-top: $title_padding
+    h2.sub_title
+      text-align: center
+    .text
+      max-width: 500px
+      height: 500px
+      border-radius: 10px
+      padding: 10px
+  #home
+    img
+      position: absolute
+      top: 0px
+      right: -$main_margin
+    .name_card
+      width: fit-content
+      padding-top: $header_height
+      height: 90vh
+      display: flex
+      flex-direction: column
+      justify-content: center
+    .favorite
+      display: flex
+      flex-direction: column
+      align-items: center
+      h2
+        text-align: center
+      .container
+        width: 100%
+        display: flex
+        justify-content: space-evenly
+        @media all and (max-width:$break_medium) 
+          flex-direction: column
+          align-items: center
+        .sub_div
+          display: flex
+          flex-direction: column
+          align-items: center
+          padding: 4px
+          width: 300px
+          .icon
+            width: 100px
+            height: 100px
+            border-radius: 50%
+            background-color: $icon_color
+            background-image: $icon_img
+            transition-duration: 1s
+            &:hover
+              border-radius: 10%
+              background-color: gold
+              svg
+                animation: none
+                opacity: 1
+            svg
+              width: 50%
+              height: 50%
+              transition-duration: 2s
+              +center
+              opacity: 0.7
+              // animation: breathLight 2s infinite
+              // @keyframes breathLight
+              //   50%
+              //     opacity: 1
+              //     filter: drop-shadow(0px 0px 30px gold)
+          .text
+            width: 250px
+            height: 150px
+            background: red
+  #about_me
+    width: 100%
+    // height: 100vh//100vｈ加下去會讓底下ｓｅｃｔｉｏｎ整個扁掉，無法變大
+    .bg_div
+      position: absolute
+      z-index: -1
+      left: -$main_margin
+      right: -$main_margin
+      height: 400px
+      transform: skewY(-3deg)
+      background-color: rgb(35, 35, 35)
+    .container
+      width: 100%
+      display: flex
+      height: fit-content
+      align-items: center
+      justify-content: space-around
+      @media all and (max-width:$break_medium) 
+        flex-direction: column
+        align-items: center
+      img
+        width: 250px
+        height: 250px
+        border-radius: 50%
+      p
+        width: fit-content
+        height: fit-content
+    .skill_container
+      width: 100%
+      display: flex
+      justify-content: space-around
+      a
+        text-decoration: none
+        color: white
+        padding: 5px
+        border-radius: 5px
+        display: flex
+        justify-content: center
+        border: solid 1px #666
+        svg
+          width: 30px
+          height: 30px
+          margin: auto
+          margin-right: 5px
+          filter: drop-shadow(0px 0px 30px white)
+        p
+          margin: auto
+          padding: 0px
+          height: fit-content
+
+        #react path
+          fill: #61DAFB
+        #javascript path
+          fill: #F1DA1F
+        #express path
+          // fill: #8CC84B          
+          filter: drop-shadow(0px 0px 30px white)
+// background-color: red
+        #gatsby
+          background-color: red
+  #projects
+    // background: red
+    .project
+      height: fit-content
+      background: #999
+      margin-bottom: 20px
+      border-radius: 10px
+      padding: 10px
+  #contact
+    // display: flex
+    // flex-direction: column
+    height: fit-content
+
