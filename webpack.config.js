@@ -41,8 +41,12 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [
           // Creates `style` nodes from JS strings
-          'style-loader',
-          // Translates CSS into CommonJS
+          {
+            loader: 'style-loader',
+            options: {
+              esModule: true
+            }
+          },
           'css-loader',
           // Compiles Sass to CSS
           'sass-loader',

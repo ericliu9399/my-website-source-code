@@ -24,10 +24,13 @@ const routes = pagesArray.map(p => (
     {p.page}
   </Route>
 ))
-ReactDOM.render(
+/**
   <Router>
     <Switch>
       {routes}
     </Switch>
   </Router>
+ */
+ReactDOM.render(
+  <h1>HA</h1>
   , document.getElementById('root'));
