@@ -24,7 +24,6 @@ const routes = pagesArray.map(p => (
     {p.page}
   </Route>
 ))
-
 ReactDOM.render(
   <BrowserRouter>
     <Switch>

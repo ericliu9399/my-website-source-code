@@ -43,9 +43,9 @@ module.exports = {
           // Creates `style` nodes from JS strings
           {
             loader: 'style-loader',
-            options: {
-              esModule: true
-            }
+            // options: {
+            //   esModule: true
+            // }
           },
           'css-loader',
           // Compiles Sass to CSS
