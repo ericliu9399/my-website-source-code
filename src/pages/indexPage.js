@@ -6,7 +6,6 @@ import Formspree from "../components/formspree"
 import BgImg from "../images/home_bg.svg"
 import { Link } from "react-router-dom"
 import myphoto from "../images/myphoto.png"
-// import ReactLogo from '../images/skill/React.svg'
 import ReactLogo from '../images/skill/React.svg'
 import JavascriptLogo from '../images/skill/Javascript.svg'
 import NodejsLogo from '../images/skill/nodejs-icon.svg'
