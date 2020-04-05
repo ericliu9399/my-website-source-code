@@ -9,6 +9,8 @@ import myphoto from "../images/myphoto.png"
 import ReactLogo from '../images/skill/React2.svg'
 import JavascriptLogo from '../images/skill/Javascript.svg'
 import NodejsLogo from '../images/skill/nodejs-icon.svg'
+import NextBtn from '../components/nextBtn'
+import LogoContainer from '../components/logoContainer'
 
 function IndexPage() {
   useEffect(() => {
@@ -25,6 +27,7 @@ function IndexPage() {
       <Link to="/message_board">message board</Link>
     </>
   )
+
   return (
     <>
       <Header>
@@ -32,12 +35,13 @@ function IndexPage() {
       </Header>
       <main>
         <section id="home">
-          <BgImg />
+          <BgImg id="BgImg" />
           <div className="name_card">
             <p>Hello, i’m</p>
             <h1>Eric Liu {/* Michael Liu | James Liu | William Liu*/}</h1>
             <p>CREATIVE FRONT-END WEB DEVELOPER</p>
           </div>
+          <NextBtn />
         </section>
         <section id="about_me">
           <h2 className="section_title">About me</h2>
@@ -48,10 +52,9 @@ function IndexPage() {
           </div>
           <h2 className="sub_title">My Skillsets</h2>
           <div className="skill_container">
-            <a href="#home" id="react" ><ReactLogo /><p>React.js</p></a>
-            <a href="#home" id="javascript" ><JavascriptLogo /><p>Javascript</p></a>
-            <a href="#home" id="express" ><NodejsLogo /><p>Express.js</p></a>
-
+            <a href="#home" id="react" ><LogoContainer Logo={<ReactLogo />} /><p>React.js</p></a>
+            <a href="#home" id="javascript" ><LogoContainer Logo={<JavascriptLogo />} /><p>Javascript</p></a>
+            <a href="#home" id="express" ><LogoContainer Logo={<NodejsLogo />} /><p>Express.js</p></a>
           </div>
         </section>
         <section id="projects">
