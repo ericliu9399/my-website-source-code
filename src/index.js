@@ -9,9 +9,7 @@ import {
 //pages
 import IndexPage from './pages/indexPage.js'
 import MsgBoard from './pages/messageBoard'
-import Sample from './pages/sample'
 const pagesArray = [
-  { page: <Sample />, route: "/sample" },
   { page: <MsgBoard />, route: "/message_board" },
   { page: <IndexPage />, route: "/" },
 ]
