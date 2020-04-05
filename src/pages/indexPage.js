@@ -41,7 +41,7 @@ function IndexPage() {
             <h1>Eric Liu {/* Michael Liu | James Liu | William Liu*/}</h1>
             <p>CREATIVE FRONT-END WEB DEVELOPER</p>
           </div>
-          <NextBtn />
+          <NextBtn href="#about_me" />
         </section>
         <section id="about_me">
           <h2 className="section_title">About me</h2>
@@ -56,6 +56,7 @@ function IndexPage() {
             <a href="#home" id="javascript" ><LogoContainer Logo={<JavascriptLogo />} /><p>Javascript</p></a>
             <a href="#home" id="express" ><LogoContainer Logo={<NodejsLogo />} /><p>Express.js</p></a>
           </div>
+          <NextBtn href="#projects" />
         </section>
         <section id="projects">
           <h2 className="section_title">Side projects</h2>
