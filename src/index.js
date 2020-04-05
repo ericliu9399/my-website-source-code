@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/global.sass';
 import {
+  HashRouter, //這款router refresh會可以顯示
   BrowserRouter,// as Router加了會有異常
   Switch,
   Route,
@@ -25,9 +26,9 @@ const routes = pagesArray.map(p => (
   </Route>
 ))
 ReactDOM.render(
-  <BrowserRouter>
+  <HashRouter>
     <Switch>
       {routes}
     </Switch>
-  </BrowserRouter>
+  </HashRouter>
   , document.getElementById('app'));
