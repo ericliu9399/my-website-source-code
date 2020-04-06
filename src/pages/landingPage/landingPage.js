@@ -3,7 +3,7 @@ import Header from '../../components/header'
 import { Link } from 'react-router-dom'
 import './landingPage.sass'
 import MagicCube from './images/magic_cube.svg'
-import HandLeft from './images/exp.svg'
+import HandLeft from './images/hand_left.svg'
 
 
 function landingPage() {
@@ -12,7 +12,7 @@ function landingPage() {
       <Header>
         <Link to="/">home</Link>
       </Header>
-      <MagicCube className="magicCube" />
+      {/* <MagicCube className="magicCube" /> */}
       <HandLeft />
     </div>
   )
