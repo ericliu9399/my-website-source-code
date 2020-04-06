@@ -1,16 +1,19 @@
 import React from 'react';
 import Header from '../../components/header'
 import { Link } from 'react-router-dom'
+import './landingPage.sass'
 import MagicCube from './images/magic_cube.svg'
-import styles from './landingPage.module.sass'
+import HandLeft from './images/exp.svg'
+
 
 function landingPage() {
   return (
-    <div className={styles.landingPage}>
+    <div id="landingPage">
       <Header>
         <Link to="/">home</Link>
       </Header>
-      <MagicCube className={styles.magicCube}/>
+      <MagicCube className="magicCube" />
+      <HandLeft />
     </div>
   )
 }

@@ -81,7 +81,7 @@ export default () => {
       />
     )
   return (
-    <div className="messageBoard">
+    <div id="messageBoard">
       <Header>
         <Link to="/">home</Link>
       </Header>

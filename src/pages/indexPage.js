@@ -34,7 +34,7 @@ function IndexPage() {
       <Header>
         {links}
       </Header>
-      <main>
+      <main id="indexPage">
         <section id="home">
           <BgImg id="BgImg" />
           <div className="name_card">
