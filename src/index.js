@@ -10,7 +10,7 @@ import {
 //pages
 import IndexPage from './pages/indexPage.js'
 import MsgBoard from './pages/messageBoard'
-import LandingPage from './pages/landingPage'
+import LandingPage from './pages/landingPage/landingPage'
 const pagesArray = [
   { page: <MsgBoard />, route: "/message_board" },
   { page: <LandingPage />, route: "/landing_page" },
