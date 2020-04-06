@@ -65,10 +65,13 @@ module.exports = {
       {
         test: /\.svg$/,
         use: ['@svgr/webpack'],
+        options: {
+          svgo: false
+        }
       },
       {
         test: /\.pug$/,
-        use: [ 'babel-loader', 'pug-as-jsx-loader' ]
+        use: ['babel-loader', 'pug-as-jsx-loader']
       },
     ]
   }
