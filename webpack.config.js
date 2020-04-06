@@ -65,9 +65,9 @@ module.exports = {
       {
         test: /\.svg$/,
         use: ['@svgr/webpack'],
-        options: {
-          svgo: false
-        }
+        // options: {
+        //   svgo: false
+        // }
       },
       {
         test: /\.pug$/,
