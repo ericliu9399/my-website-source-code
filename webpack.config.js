@@ -5,10 +5,14 @@ const cssModuleRegex = /\.module\.css$/;
 const sassRegex = /\.(scss|sass)$/;
 const sassModuleRegex = /\.module\.(scss|sass)$/;
 module.exports = {
-  entry: path.resolve(__dirname, "src", "index.js"),
+  entry: {
+    bundle: path.resolve(__dirname, "src", "index.js"),
+    pugPage: path.resolve(__dirname, "src/pages/landingPage", "entryPug.js")
+  },
   output: {
-    path: path.resolve(__dirname, "public"),
-    filename: "bundle.js"
+    // path: path.resolve(__dirname, "public"),
+    filename: "[name].js",
+    path: __dirname + '/dist'
   },
   devServer: {
     contentBase: path.resolve(__dirname, "public"),
@@ -69,10 +73,24 @@ module.exports = {
         //   svgo: false
         // }
       },
+      // {
+      //   test: /\.pug$/,
+      //   use: ['babel-loader', 'pug-as-jsx-loader']
+      // },
       {
         test: /\.pug$/,
-        use: ['babel-loader', 'pug-as-jsx-loader']
-      },
+        oneOf: [
+          // this applies to pug imports inside JavaScript
+          {
+            exclude: /\.vue$/,
+            use: ['raw-loader', 'pug-plain-loader']
+          },
+          // this applies to <template lang="pug"> in Vue components
+          {
+            use: ['pug-plain-loader']
+          }
+        ]
+      }
     ]
   }
 };

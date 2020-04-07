@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import './landingPage.sass'
 import MagicCube from './images/magic_cube.svg'
 import HandLeft from './images/hand_left.svg'
-
+import Eye from './images/handy.svg'
 
 function landingPage() {
   return (
@@ -13,7 +13,7 @@ function landingPage() {
         <Link to="/">home</Link>
       </Header>
       {/* <MagicCube className="magicCube" /> */}
-      <HandLeft />
+      <Eye />
     </div>
   )
 }
