@@ -1,0 +1,6 @@
+#landingPage {
+  background-color: #666;
+  min-height: 100vh;
+  min-width: 100vw; }
+  #landingPage .magicCube {
+    width: 400px; }
