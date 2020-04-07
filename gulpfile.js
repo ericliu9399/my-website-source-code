@@ -6,11 +6,11 @@ var pug = require('gulp-pug');
 gulp.task('all', gulp.series(pug2html, sass2css, js_move, movePic));
 gulp.task('run', gulp.series('all', watch));
 const srcPath = 'src/pages/landingPage'
-const distPath = 'public/landing_page'
+const distPath = 'public/landingPage'
 const path = {
   pug: {
     input: srcPath + '/*.pug',
-    output: distPath
+    output: "public"
   },
   sass: {
     input: srcPath + '/sass/*.sass',

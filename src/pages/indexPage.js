@@ -25,7 +25,7 @@ function IndexPage() {
       <a href="#projects">projects</a>
       <a href="#contact">contact</a>
       <Link to="/message_board">message board</Link>
-      <Link to="/landing_page">landing page</Link>
+      <a href="./landing_page.html">landing page</a>
     </>
   )
 
