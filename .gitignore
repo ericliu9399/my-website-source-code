@@ -59,3 +59,9 @@ typings/
 
 # dotenv environment variables file
 .env
+
+create-react-app
+
+src/pages/landingPage
+
+gulpfile.js
