@@ -39,7 +39,7 @@ function IndexPage() {
           <BgImg id="BgImg" />
           <div className="name_card">
             <p>Hello, i’m</p>
-            <h1>Eric Liu {/* Michael Liu | James Liu | William Liu*/}</h1>
+            <h1>Eric Liu x {/* Michael Liu | James Liu | William Liu*/}</h1>
             <p>CREATIVE FRONT-END WEB DEVELOPER</p>
           </div>
           <NextBtn href="#about_me" />
