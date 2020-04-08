@@ -65,3 +65,5 @@ create-react-app
 ./src/pages/landingPage
 
 gulpfile.js
+
+mynote.md

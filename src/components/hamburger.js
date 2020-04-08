@@ -3,13 +3,13 @@ import './hamburger.sass'
 
 function Hamburger({ children }) {
   const [clsH, setClsH] = useState("hamburger")//hamburger class
-  const [clsN, setClsN] = useState("")//navbar class
+  const [idNav, setID_Nav] = useState("")//navbar class
   let timer
   function hamburgerOn() {
     console.log("on")
     clearTimeout(timer)
     setClsH("hamburger hamburger_click")
-    setClsN("nav_hide")
+    setID_Nav("nav_hide")
     timer = setTimeout(() => {
       setClsH("hamburger hamburger_click hamburger_cross")
     }, 210)
@@ -18,7 +18,7 @@ function Hamburger({ children }) {
     console.log("off")
     clearTimeout(timer)
     setClsH("hamburger hamburger_click")
-    setClsN("")
+    setID_Nav("")
     timer = setTimeout(() => {
       setClsH("hamburger")
     }, 210)
@@ -28,13 +28,13 @@ function Hamburger({ children }) {
   }
   return (
     <div className="mobile_nav">
-      <nav className={clsN}>
+      <nav id={idNav}>
         {children}
       </nav>
       <div className={clsH} onClick={hamburgerOnclick}>
-        <div className="bar bar1" />
-        <div className="bar bar2" />
-        <div className="bar bar3" />
+        <div className="bar" id="bar1"/>
+        <div className="bar" id="bar2"/>
+        <div className="bar" id="bar3"/>
       </div>
     </div>
   )
