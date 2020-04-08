@@ -62,6 +62,6 @@ typings/
 
 create-react-app
 
-src/pages/landingPage
+./src/pages/landingPage
 
 gulpfile.js
