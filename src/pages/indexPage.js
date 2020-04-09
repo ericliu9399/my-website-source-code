@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import Header from "../components/header.js"
+import Header from "../components/Header.js"
 import Hamburger from "../components/Hamburger"
 import "./indexPage.sass"
 import Formspree from "../components/Formspree"
@@ -9,8 +9,8 @@ import myphoto from "../images/myphoto.png"
 import ReactLogo from '../images/skill/React2.svg'
 import JavascriptLogo from '../images/skill/Javascript.svg'
 import NodejsLogo from '../images/skill/nodejs-icon.svg'
-import NextBtn from '../components/nextBtn'
-import LogoContainer from '../components/logoContainer'
+import NextBtn from '../components/NextBtn'
+import LogoContainer from '../components/LogoContainer'
 import apiUrl from '../lib/apiUrl'
 
 function IndexPage() {

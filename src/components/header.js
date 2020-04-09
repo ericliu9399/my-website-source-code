@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./header.module.sass"
+import styles from "./Header.module.sass"
 
 
 export default ({ children }) => {

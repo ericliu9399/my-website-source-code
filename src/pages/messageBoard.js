@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
-import Header from "../components/header"
+import Header from "../components/Header"
 import Form from "../components/CommentForm"
-import Comment from "../components/comment"
+import Comment from "../components/Comment"
 import "./messageBoard.sass"
 import { Link } from "react-router-dom";
 import Hamburger from '../components/Hamburger'

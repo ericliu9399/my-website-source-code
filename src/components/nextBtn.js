@@ -1,6 +1,6 @@
 import React from "react"
 import NextIcon from '../images/next.svg'
-import './nextBtn.sass'
+import './NextBtn.sass'
 
 export default ({ href }) => <div className="nextContainer">
   <a className="next" href={href}>
