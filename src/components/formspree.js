@@ -1,7 +1,7 @@
 import React from "react"
-import styles from "./formspree.module.sass"
+import styles from "./Formspree.module.sass"
 
-export default class MyForm extends React.Component {
+export default class Formspree extends React.Component {
   constructor(props) {
     super(props);
     this.submitForm = this.submitForm.bind(this);
@@ -20,8 +20,8 @@ export default class MyForm extends React.Component {
         method="POST"
       >
         <div className={styles.upPart}>
-          <label className={styles.subContainer}>Email<input type="email" name="email" /></label>
-          <label className={styles.subContainer}>Name<input type="text" name="name" /></label>
+          <label>Email<input type="email" name="email" /></label>
+          <label>Name<input type="text" name="name" /></label>
         </div>
         <label className={styles.message}>Message<textarea name="message" defaultValue={""} /></label>
         <div className={styles.bottomPart}>
