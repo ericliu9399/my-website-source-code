@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react"
 import Header from "../components/header"
-import Form from "../components/commentForm"
+import Form from "../components/CommentForm"
 import Comment from "../components/comment"
 import "./messageBoard.sass"
 import { Link } from "react-router-dom";
-import Hamburger from '../components/hamburger'
+import Hamburger from '../components/Hamburger'
+import apiUrl from '../lib/apiUrl'
 
 export default () => {
   const [data, setData] = useState([])
-  const apiUrl = 'http://localhost:3000/'
   useEffect(() => {
     getMethod(setData)
   }, [])
@@ -49,7 +49,7 @@ export default () => {
       headers: myHeaders,
       redirect: 'follow'
     };
-    return fetch(`http://localhost:3000/${id}/${deletePassword}`, requestOptions)
+    return fetch(apiUrl + `${id}/${deletePassword}`, requestOptions)
       .then(response => {
         if (response.ok) response.json()
           .then(json => {
@@ -88,7 +88,12 @@ export default () => {
       <div className="container">
         <Comments />
         <Form post={postMethod} />
-        <a className="reply_btn" href="#commentForm">留言</a>
+        <a
+          className="reply_btn"
+          href="/#CommentForm"
+        >
+          留言
+        </a>
       </div>
       <Hamburger>
         <Link to="/">home</Link>

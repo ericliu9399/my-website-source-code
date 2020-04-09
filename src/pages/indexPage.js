@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import Header from "../components/header.js"
-import Hamburger from "../components/hamburger"
+import Hamburger from "../components/Hamburger"
 import "./indexPage.sass"
 import Formspree from "../components/Formspree"
 import BgImg from "../images/home_bg.svg"
@@ -11,12 +11,13 @@ import JavascriptLogo from '../images/skill/Javascript.svg'
 import NodejsLogo from '../images/skill/nodejs-icon.svg'
 import NextBtn from '../components/nextBtn'
 import LogoContainer from '../components/logoContainer'
+import apiUrl from '../lib/apiUrl'
 
 function IndexPage() {
   useEffect(() => {
-    fetch("http://localhost:3000/start")
-    // .then(res => res.text())
-    // .then(text => console.log(text))
+    fetch(apiUrl + "start")
+    .then(res => res.text())
+    .then(text => console.log(text))
   }, [])
   const links = (
     <>

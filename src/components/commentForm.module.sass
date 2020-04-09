@@ -47,9 +47,12 @@
   display: flex
   align-self: center
   flex: 1
+  @media all and ( max-width:  $break_medium)
+    flex-direction: column
   p
     padding: 0px
     padding-right: 10px
     flex: initial
   input
+    width: fit-content
     flex: 1

@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
-import './hamburger.sass'
+import './Hamburger.sass'
 
 function Hamburger({ children }) {
   const [clsH, setClsH] = useState("hamburger")//hamburger class
   const [idNav, setID_Nav] = useState("")//navbar class
   let timer
   function hamburgerOn() {
-    console.log("on")
     clearTimeout(timer)
     setClsH("hamburger hamburger_click")
     setID_Nav("nav_hide")
@@ -15,7 +14,6 @@ function Hamburger({ children }) {
     }, 210)
   }
   function hamburgerOff() {
-    console.log("off")
     clearTimeout(timer)
     setClsH("hamburger hamburger_click")
     setID_Nav("")

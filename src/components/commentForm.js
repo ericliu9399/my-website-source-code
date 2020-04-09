@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./commentForm.module.sass"
+import styles from "./CommentForm.module.sass"
 
 export default class CommentForm extends React.Component {
   constructor(props) {
@@ -14,7 +14,7 @@ export default class CommentForm extends React.Component {
       <form
         className={styles.commentForm}
         onSubmit={this.submit}
-        id="commentForm"//連結跳轉用
+        id="CommentForm"//連結跳轉用
       >
         <div className={styles.upPart}>
           <label className={styles.subContainer}>Name<input type="text" name="name" /></label>
@@ -22,7 +22,10 @@ export default class CommentForm extends React.Component {
         </div>
         <label className={styles.message}>Message<textarea name="content" defaultValue={""} /></label>
         <div className={styles.bottomPart}>
-          <label className={styles.deletePassword}><p>Password for delete</p><input name="deletePassword" defaultValue={""} /></label>
+          <label className={styles.deletePassword}>
+            <p>Password for delete</p>
+            <input name="deletePassword" defaultValue={""} />
+          </label>
           <button>Submit</button>
         </div>
         <p>{errorMessage}</p>
@@ -33,7 +36,9 @@ export default class CommentForm extends React.Component {
     ev.preventDefault()
     let formData = new FormData(ev.target)
     let json = this.form2json(formData)
-    this.props.post(json, message => { this.setState({ errorMessage: message }) })
+    this.props.post(json, message => {
+      this.setState({ errorMessage: message })
+    })
   }
   form2json = (formData) => {
     let jsonData = {}
