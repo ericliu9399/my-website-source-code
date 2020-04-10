@@ -6,18 +6,19 @@ import Formspree from "../components/Formspree"
 import BgImg from "../images/home_bg.svg"
 import { Link } from "react-router-dom"
 import myphoto from "../images/myphoto.png"
-import ReactLogo from '../images/skill/React2.svg'
+import ReactLogo from '../images/skill/React.svg'
 import JavascriptLogo from '../images/skill/Javascript.svg'
 import NodejsLogo from '../images/skill/nodejs-icon.svg'
 import NextBtn from '../components/NextBtn'
 import LogoContainer from '../components/LogoContainer'
 import apiUrl from '../lib/apiUrl'
+import WebpackLogo from '../images/skill/Webpack.svg'
 
 function IndexPage() {
   useEffect(() => {
     fetch(apiUrl + "start")
-    .then(res => res.text())
-    .then(text => console.log(text))
+      .then(res => res.text())
+      .then(text => console.log(text))
   }, [])
   const links = (
     <>
@@ -57,6 +58,7 @@ function IndexPage() {
             <a href="#home" id="react" ><LogoContainer Logo={<ReactLogo />} /><p>React.js</p></a>
             <a href="#home" id="javascript" ><LogoContainer Logo={<JavascriptLogo />} /><p>Javascript</p></a>
             <a href="#home" id="express" ><LogoContainer Logo={<NodejsLogo />} /><p>Express.js</p></a>
+            <a href="#home" id="webpack"><LogoContainer Logo={<WebpackLogo />} />Webpack</a>
           </div>
           <NextBtn href="#projects" />
         </section>
