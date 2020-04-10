@@ -14,7 +14,7 @@ const pagesArray = [
   { page: <MsgBoard />, route: "/message_board" },
   { page: <IndexPage />, route: "/" },
 ]
-
+console.log("v1")
 const routes = pagesArray.map(p => (
   <Route
     path={p.route}

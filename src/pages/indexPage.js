@@ -21,7 +21,6 @@ function IndexPage() {
   }, [])
   const links = (
     <>
-      <span>2020.4.10 AM10:30 EDIT</span>
       <a href="#home">home</a>
       <a href="#about_me">about me</a>
       <a href="#projects">projects</a>
