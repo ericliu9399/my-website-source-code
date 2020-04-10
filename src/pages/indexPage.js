@@ -14,6 +14,8 @@ import LogoContainer from '../components/LogoContainer'
 import apiUrl from '../lib/apiUrl'
 import WebpackLogo from '../images/skill/Webpack.svg'
 import GulpLogo from '../images/skill/Gulp.svg'
+import SassLogo from '../images/skill/Sass.svg'
+import PugLogo from '../images/skill/Pug.svg'
 
 function IndexPage() {
   useEffect(() => {
@@ -61,6 +63,8 @@ function IndexPage() {
             <a href="#home" id="express" ><LogoContainer Logo={<NodejsLogo />} /><p>Express.js</p></a>
             <a href="#home" id="webpack"><LogoContainer Logo={<WebpackLogo />} />Webpack</a>
             <a href="#home" id="gulp"><LogoContainer Logo={<GulpLogo />} />Gulp</a>
+            <a href="#home" id="sass"><LogoContainer Logo={<SassLogo />} />Sass</a>
+            <a href="#home" id="pug"><LogoContainer Logo={<PugLogo />} />Pug</a>
           </div>
           <NextBtn href="#projects" />
         </section>
