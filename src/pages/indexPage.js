@@ -13,6 +13,7 @@ import NextBtn from '../components/NextBtn'
 import LogoContainer from '../components/LogoContainer'
 import apiUrl from '../lib/apiUrl'
 import WebpackLogo from '../images/skill/Webpack.svg'
+import GulpLogo from '../images/skill/Gulp.svg'
 
 function IndexPage() {
   useEffect(() => {
@@ -59,6 +60,7 @@ function IndexPage() {
             <a href="#home" id="javascript" ><LogoContainer Logo={<JavascriptLogo />} /><p>Javascript</p></a>
             <a href="#home" id="express" ><LogoContainer Logo={<NodejsLogo />} /><p>Express.js</p></a>
             <a href="#home" id="webpack"><LogoContainer Logo={<WebpackLogo />} />Webpack</a>
+            <a href="#home" id="gulp"><LogoContainer Logo={<GulpLogo />} />Gulp</a>
           </div>
           <NextBtn href="#projects" />
         </section>
