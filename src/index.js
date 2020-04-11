@@ -8,10 +8,10 @@ import {
   Route,
 } from "react-router-dom";
 //pages
-import IndexPage from './pages/indexPage.js'
-import MsgBoard from './pages/messageBoard'
+import IndexPage from './pages/IndexPage'
+import MessageBoard from './pages/MessageBoard'
 const pagesArray = [
-  { page: <MsgBoard />, route: "/message_board" },
+  { page: <MessageBoard />, route: "/message_board" },
   { page: <IndexPage />, route: "/" },
 ]
 console.log("v1")

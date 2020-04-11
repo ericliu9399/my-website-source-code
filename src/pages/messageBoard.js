@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react"
 import Header from "../components/Header"
 import Form from "../components/CommentForm"
 import Comment from "../components/Comment"
-import "./messageBoard.sass"
+import "./MessageBoard.sass"
 import { Link } from "react-router-dom";
 import Hamburger from '../components/Hamburger'
 import apiUrl from '../lib/apiUrl'
 
-export default () => {
+ function MessageBoard() {
   const [data, setData] = useState([])
   useEffect(() => {
     getMethod(setData)
@@ -101,3 +101,4 @@ export default () => {
     </div>
   )
 }
+export default MessageBoard

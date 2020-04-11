@@ -1,7 +1,7 @@
 import React, { useEffect } from "react"
 import Header from "../components/Header.js"
 import Hamburger from "../components/Hamburger"
-import "./indexPage.sass"
+import "./IndexPage.sass"
 import Formspree from "../components/Formspree"
 import BgImg from "../images/home_bg.svg"
 import { Link } from "react-router-dom"
