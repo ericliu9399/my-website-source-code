@@ -1,4 +1,3 @@
-//assets
 module.exports = [
   {
     test: /.*\.(gif|png|jpe?g)$/i,
