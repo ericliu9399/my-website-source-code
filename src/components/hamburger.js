@@ -9,10 +9,7 @@ function Hamburger({ children }) {
   function hamburgerOn() {
     clearTimeout(timer)
     setClsH("hamburger hamburger_click")
-    setIsNavShow(true)
-    setTimeout(() => {
-      setID_Nav("nav_show")
-    }, 10)
+    navFadeIn()
     timer = setTimeout(() => {
       setClsH("hamburger hamburger_click hamburger_cross")
     }, 210)
@@ -31,6 +28,12 @@ function Hamburger({ children }) {
   function hamburgerOnclick() {
     clsH === "hamburger" ? hamburgerOn() : hamburgerOff()
   }
+  function navFadeIn() {
+    setIsNavShow(true)
+    setTimeout(() => {
+      setID_Nav("nav_show")
+    }, 10)
+  }
   return (
     <div
       className="mobile_nav"
@@ -42,9 +45,9 @@ function Hamburger({ children }) {
         {children}
       </nav>}
       <div className={clsH}>
-        <div id="bar1" />
-        <div id="bar2" />
-        <div id="bar3" />
+        <div className="bar" id="bar1" />
+        <div className="bar" id="bar2" />
+        <div className="bar" id="bar3" />
       </div>
     </div>
   )
