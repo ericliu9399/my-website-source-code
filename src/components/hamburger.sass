@@ -43,12 +43,6 @@ $hamburger_diameter: 15vw
   border-radius: 50%
   cursor: pointer
   align-self: flex-end
-  // .bar
-  //   background: red
-  //   animation: breachLight 1s infinite
-  // @keyframes breathLight
-  //   50%
-  //     background-color: black
   #bar1,#bar2,#bar3
     position: absolute
     width: 50%
@@ -58,6 +52,11 @@ $hamburger_diameter: 15vw
     background-color: white
     border-radius: 5px
     transition-duration: 0.2s
+    opacity: 1
+    animation: BarBreathLight 2s infinite
+    @keyframes BarBreathLight
+      50%
+        opacity: 0
   #bar1
     transform: translateX(-50%) translateY(-250%)
   #bar2

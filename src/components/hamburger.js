@@ -45,9 +45,9 @@ function Hamburger({ children }) {
         {children}
       </nav>}
       <div className={clsH}>
-        <div className="bar" id="bar1" />
-        <div className="bar" id="bar2" />
-        <div className="bar" id="bar3" />
+        <div id="bar1" />
+        <div id="bar2" />
+        <div id="bar3" />
       </div>
     </div>
   )

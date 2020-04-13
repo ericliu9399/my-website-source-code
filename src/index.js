@@ -10,7 +10,6 @@ import {
 //pages
 import IndexPage from './pages/IndexPage'
 import MessageBoard from './pages/MessageBoard'
-import Sj from './sj.js'
 const pagesArray = [
   { page: <MessageBoard />, route: "/message_board" },
   { page: <IndexPage />, route: "/" },
@@ -24,7 +23,6 @@ const routes = pagesArray.map(p => (
     {p.page}
   </Route>
 ))
-
 ReactDOM.render(
   <HashRouter >
     <Switch>
