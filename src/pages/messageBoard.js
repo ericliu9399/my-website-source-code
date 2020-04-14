@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import Hamburger from '../components/Hamburger'
 import apiUrl from '../lib/apiUrl'
 
- function MessageBoard() {
+function MessageBoard() {
   const [data, setData] = useState([])
   useEffect(() => {
     getMethod(setData)
@@ -36,7 +36,9 @@ import apiUrl from '../lib/apiUrl'
           response.json().then(json => addData(json))
           setMessage("Success!")
         }
-        else response.text().then(text => { setMessage(text) })
+      })
+      .catch(err => {
+        setMessage(err.toString())
       })
   }
   function deleteMethod(id, deletePassword, setMessage) {
@@ -87,7 +89,7 @@ import apiUrl from '../lib/apiUrl'
       </Header>
       <div className="container">
         <Comments />
-        <Form post={postMethod} />
+        <Form postMethod={postMethod} />
         <a
           className="reply_btn"
           href="/#CommentForm"
