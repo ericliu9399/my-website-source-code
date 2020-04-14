@@ -92,7 +92,7 @@ function MessageBoard() {
         <Form postMethod={postMethod} />
         <a
           className="reply_btn"
-          href="/#CommentForm"
+          href="/message_board#CommentForm"
         >
           留言
         </a>
