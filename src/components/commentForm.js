@@ -1,5 +1,6 @@
-import React from "react"
+import React, { useState } from "react"
 import styles from "./CommentForm.module.sass"
+
 
 export default class CommentForm extends React.Component {
   constructor(props) {
@@ -17,18 +18,24 @@ export default class CommentForm extends React.Component {
         id="CommentForm"//連結跳轉用
       >
         <div className={styles.upPart}>
-          <label className={styles.subContainer}>Name<input type="text" name="name" /></label>
-          <label className={styles.subContainer}>Email<input type="email" name="email" /></label>
+          <label>Name
+            <input type="text" name="name" />
+          </label>
+          <label>Email
+            <input type="email" name="email" />
+          </label>
         </div>
-        <label className={styles.message}>Message<textarea name="content" defaultValue={""} /></label>
+        <label className={styles.middlePart}>Message
+          <textarea name="content" defaultValue={""} />
+        </label>
         <div className={styles.bottomPart}>
-          <label className={styles.deletePassword}>
-            <p>Password for delete</p>
+          <label>
+            Password for delete
             <input name="deletePassword" defaultValue={""} />
           </label>
           <button>Submit</button>
         </div>
-        <p>{errorMessage}</p>
+        <p className={styles.errorMes}>{errorMessage}</p>
       </form>
     )
   }
