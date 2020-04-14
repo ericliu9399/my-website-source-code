@@ -24,9 +24,9 @@ const routes = pagesArray.map(p => (
   </Route>
 ))
 ReactDOM.render(
-  <HashRouter >
+  <Router >
     <Switch>
       {routes}
     </Switch>
-  </HashRouter >
+  </Router >
   , document.getElementById('app'));
