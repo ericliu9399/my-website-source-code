@@ -12,22 +12,22 @@
     "content": [
       "Hi, I'm Eric Liu, a passionate self-taught frontEnd web developer from Taiwan.",
       "I tend to make use of modern web technologies to build websites that looks great,",
-      "feels fantastic, and functions correctly. I am especially focusing on Reactjs.",
-      "I also do Graphic and UI designing. Since I love both programming and designing,",
-      "I'm also interested in creating programmatic designs and creative coding projects"
+      "feels fantastic, and functions correctly. I am especially focusing on Reactjs."
     ]
   },
   "projects": {
     "title": "Side projects",
+    "toSrc": "source code",
+    "toProject": "go to project",
     "project": [
       {
         "title": "Message Board",
-        "summary": "前後端分離的簡易留言板,前後端分別部屬在github與heroku。",
+        "summary": "Simple message board with separate front and back ends. The front and back ends are deployed on GitHub and Heroku.",
         "list": [
           {
-            "listTitle": "前端",
-            "srcLink": "https://github.com/syyui15926/syyui15926.github.io/blob/master/src/pages/messageBoard.js",
-            "projectLink": "http://localhost:3000/#/message_board",
+            "listTitle": "Front-End",
+            "srcA": "https://github.com/syyui15926/syyui15926.github.io/blob/master/src/pages/messageBoard.js",
+            "projectLink": "/message_board",
             "listItem": [
               "React.js",
               "Javascript",
@@ -36,8 +36,8 @@
             ]
           },
           {
-            "listTitle": "後端",
-            "srcLink": "https://github.com/syyui15926/syyui15926.github.io",
+            "listTitle": "Back-End",
+            "srcA": "https://github.com/syyui15926/syyui15926.github.io",
             "listItem": [
               "express.js",
               "Javascript",
@@ -48,15 +48,30 @@
       },
       {
         "title": "This personal website",
-        "summary": "這個網頁是用React.js製作的個人網站。",
+        "summary": "This page is a personal website made with React.js.",
         "list": [
           {
-            "srcLink": "https://github.com/syyui15926/syyui15926.github.io",
+            "srcA": "https://github.com/syyui15926/syyui15926.github.io",
             "listItem": [
               "React.js",
               "Javascript",
               "Sass",
               "Webpack",
+              "RWD"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Landing Page",
+        "summary": "In cooperation with the designer, I am responsible for the part of the program",
+        "list": [
+          {
+            "srcA": "https://github.com/syyui15926/syyui15926.github.io",
+            "listItem": [
+              "Pug",
+              "Sass",
+              "Gulp",
               "RWD"
             ]
           }
