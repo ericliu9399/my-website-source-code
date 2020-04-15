@@ -1,0 +1,45 @@
+@import '../lib/sass/_variable'
+.nextContainer
+  width: 100%
+  height: 10vw
+  @media all and ( max-width: $break_medium )
+    height: 15vw
+  @media all and ( max-width: $break_small )
+    height: 25vw
+.next
+  left: 50%
+  bottom: 0px
+  width: 10vw
+  height: 10vw
+  @media all and ( max-width: $break_medium )
+    width: 15vw
+    height: 15vw
+  @media all and ( max-width: $break_small )
+    width: 25vw
+    height: 25vw
+  height: 100%
+  transform: translateX(-50%)
+  position: absolute
+  &:hover
+    #n1
+      transform: translateY(-50px)
+    #n2
+      transform: translateY(-25px)
+    #n3
+      transform: translateY(0px)
+  svg
+    fill: white
+    filter: drop-shadow(0px 0px 20px rgba(255,0,0,0))
+    width: 100%
+    height: 100%
+    position: absolute
+    animation: breathLight2 2s infinite
+    @keyframes breathLight2
+      50%
+        filter: drop-shadow(0px 0px 20px rgba(255,0,0,1))
+  #n1
+    transition-duration: 1.5s
+  #n2
+    transition-duration: 1s
+  #n3
+    transition-duration: 0.5s

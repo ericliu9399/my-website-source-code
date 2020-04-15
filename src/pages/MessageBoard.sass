@@ -1,0 +1,26 @@
+@import ../lib/sass/_variable
+@import ../lib/sass/_mixin
+$messageBoard_bg_color: #666
+#messageBoard
+  width: 100vw
+  min-height: 100vh
+  background: $messageBoard_bg_color
+  padding-bottom: 100px
+  .container
+    padding-top: $navbar_height
+    width: 80vw
+    background: $messageBoard_bg_color
+    margin-left: auto
+    margin-right: auto
+.reply_btn
+  position: fixed
+  padding: 10px 10px
+  border-radius: 10px
+  background: #AAA
+  // top: $navbar_height+ 10px
+  bottom: 40px
+  left: 10px
+  z-index: 1
+  cursor: pointer
+  text-decoration: none
+  color: white
