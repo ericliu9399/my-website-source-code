@@ -55,7 +55,13 @@ function IndexPage() {
           <div className="bgDiv" />
           <div className="container">
             <img src={myphoto} alt="" />
-            <p>Hi, I'm Eric Liu, a passionate self-taught frontEnd web developer from Taiwan.<br />I tend to make use of modern web technologies to build websites that looks great,<br />feels fantastic, and functions correctly. I am especially focusing on Reactjs.<br /><br />I also do Graphic and UI designing. Since I love both programming and designing,<br />I'm also interested in creating programmatic designs and creative coding projects.</p>
+            <p>
+              Hi, I'm Eric Liu, a passionate self-taught frontEnd web developer from Taiwan.
+              <br />I tend to make use of modern web technologies to build websites that looks great,
+              <br />feels fantastic, and functions correctly. I am especially focusing on Reactjs.
+              <br /><br />I also do Graphic and UI designing. Since I love both programming and designing,
+              <br />I'm also interested in creating programmatic designs and creative coding projects.
+            </p>
           </div>
           <h2 className="subTitle">My Skillsets</h2>
           <div className="skillContainer">
