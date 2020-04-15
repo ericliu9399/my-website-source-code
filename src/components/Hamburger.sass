@@ -1,4 +1,5 @@
 @import ../lib/sass/_variable
+@import ../components/Header.module
 $icon_color: rgba(73, 97, 220, 1)
 $icon_img: linear-gradient(135deg, rgba(106, 152, 240, 1) 0%,  rgba(0, 0, 0, 0) 99%)
 $hamburger_diameter: 15vw
@@ -19,18 +20,22 @@ $hamburger_diameter: 15vw
     width: fit-content
     transition-duration: 0.5s
     opacity: 0
-    a
+    a,div
       width: min-content
       min-width: 110px
       max-height: 60px
       text-align: center
       padding: 10px
+      margin: 0px
       margin-bottom: 10px
       background-color: $icon_color
       background-image: $icon_img
       text-decoration: none
       color: white
       border-radius: 5px
+      transition-duration: 0.2s
+      &:hover
+        color: $a_hover_color
   #nav_show
     transform: translateY(-10px)
     opacity: 1
