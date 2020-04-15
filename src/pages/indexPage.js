@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
 import Header from "../components/Header.js"
 import Hamburger from "../components/Hamburger"
 import "./IndexPage.sass"
@@ -17,6 +17,8 @@ import GulpLogo from '../images/skill/Gulp.svg'
 import SassLogo from '../images/skill/Sass.svg'
 import PugLogo from '../images/skill/Pug.svg'
 import ReactRouterLogo from '../images/skill/react-router.svg'
+import ContentEnglish from './indexPageContentEnglish.json'
+import ContentChinese from './indexPageContentChinese.json'
 
 function IndexPage() {
   useEffect(() => {
@@ -24,6 +26,8 @@ function IndexPage() {
       .then(res => res.text())
       .then(text => console.log(text))
   }, [])
+  const [content, setContent] = useState(ContentChinese)
+  const { home, aboutMe, projects, contact } = content
   const links = (
     <>
       <a href="#home">home</a>
@@ -34,7 +38,29 @@ function IndexPage() {
       {/* <a href="./landing_page.html">landing page</a> */}
     </>
   )
-
+  const { project } = projects
+  const projectsTemplate = project.map(p => (
+    <div className="project">
+      <h2>{p.title}</h2>
+      <p>
+        {p.summary}
+      </p>
+      <ul>
+        {p.list.map(l => (
+          <li>{l.listTitle}
+            {l.srcA && <a href={l.srcA}>{projects.toSrc}</a>}
+            {l.projectA && <a href={l.projectA}>{projects.toProject}</a>}
+            {l.projectLink && <Link to={l.projectLink}>{projects.toProject}</Link>}
+            <ul>
+              {l.listItem.map(i => (
+                <li>{i}</li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))
   return (
     <>
       <Header>
@@ -44,26 +70,26 @@ function IndexPage() {
         <section id="home">
           <BgImg id="BgImg" />
           <div className="nameCard">
-            <p>Hello, i’m</p>
-            <h1>Eric Liu{/* Michael Liu | James Liu | William Liu*/}</h1>
-            <p>CREATIVE FRONT-END WEB DEVELOPER</p>
+            <p>{home.nameCard[0]}</p>
+            <h1>{home.nameCard[1]}{/* Michael Liu | James Liu | William Liu*/}</h1>
+            <p>{home.nameCard[2]}</p>
           </div>
           <NextBtn href="#aboutMe" />
         </section>
         <section id="aboutMe">
-          <h2 className="sectionTitle">About me</h2>
+          <h2 className="sectionTitle">{aboutMe.title}</h2>
           <div className="bgDiv" />
           <div className="container">
             <img src={myphoto} alt="" />
             <p>
-              Hi, I'm Eric Liu, a passionate self-taught frontEnd web developer from Taiwan.
-              <br />I tend to make use of modern web technologies to build websites that looks great,
-              <br />feels fantastic, and functions correctly. I am especially focusing on Reactjs.
-              <br /><br />I also do Graphic and UI designing. Since I love both programming and designing,
-              <br />I'm also interested in creating programmatic designs and creative coding projects.
+              {aboutMe.content[0]}
+              <br />{aboutMe.content[1]}
+              <br />{aboutMe.content[2]}
+              <br /><br />{aboutMe.content[3]}
+              <br />{aboutMe.content[4]}
             </p>
           </div>
-          <h2 className="subTitle">My Skillsets</h2>
+          <h2 className="subTitle">{aboutMe.subTitle}</h2>
           <div className="skillContainer">
             <a href="#react_link" id="react" ><LogoContainer Logo={<ReactLogo />} /><p>React.js</p></a>
             <a href="#javascript_link" id="javascript" ><LogoContainer Logo={<JavascriptLogo />} /><p>Javascript</p></a>
@@ -77,7 +103,7 @@ function IndexPage() {
           <NextBtn href="#projects" />
         </section>
         <section id="projects">
-          <h2 className="sectionTitle">Side projects</h2>
+          <h2 className="sectionTitle">{projects.title}</h2>
           <div className="linkTo">
             <div className="to" id="react_link"></div>
             <div className="to" id="sass_link"></div>
@@ -85,61 +111,10 @@ function IndexPage() {
             <div className="to" id="webpack_link"></div>
             <div className="to" id="javascript_link"></div>
           </div>
-          <div className="project">
-            <h2>Message Board </h2>
-            <p>
-              前後端分離的簡易留言板,前後端分別部屬在github與heroku。
-            </p>
-            <ul>
-              <li>前端
-                <a href="https://github.com/syyui15926/syyui15926.github.io/blob/master/src/pages/messageBoard.js">觀看原始碼</a>
-                <Link to="/message_board">前往作品</Link>
-                <ul>
-                  <li>React.js </li>
-                  <li>Javascript </li>
-                  <li>Sass</li>
-                  <li>Webpack</li>
-                </ul>
-              </li>
-              <li>後端<a href="https://github.com/syyui15926/express-message-board-api/blob/master/index.js">觀看原始碼</a>
-                <ul>
-                  <li>express.js</li>
-                  <li>Javascript </li>
-                  <li>fs</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-          <div className="project">
-            <h2>Personal website </h2>
-            <p>
-              這個網頁是用React.js製作的個人網站。
-            </p>
-            <a href="https://github.com/syyui15926/syyui15926.github.io">觀看原始碼</a>
-            <ul>
-              <li>React.js </li>
-              <li>Javascript </li>
-              <li>Sass</li>
-              <li>Webpack</li>
-              <li>RWD</li>
-            </ul>
-          </div>
-          {/* <div className="project">
-            <h2>Landing Page </h2>
-            <p>
-              與設計師合作的,我負責程式的部分
-            </p>
-            <a href="/">觀看原始碼</a>
-            <ul>
-              <li>React.js </li>
-              <li>Gatsby.js <span>前端框架</span></li>
-              <li>Sass <span>預處理器</span></li>
-              <li>SVG Animation</li>
-            </ul>
-          </div> */}
+          {projectsTemplate}
         </section>
         <section id="contact">
-          <h2 className="sectionTitle">Get In Touch</h2>
+          <h2 className="sectionTitle">{contact.title}</h2>
           <Formspree />
         </section>
       </main>
