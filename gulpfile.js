@@ -12,6 +12,10 @@ const path = {
     input: srcPath + '/*.pug',
     output: "public"
   },
+  pugOther: {
+    input: srcPath + '/pages/*.pug',
+    output: distPath
+  },
   sass: {
     input: srcPath + '/sass/*.sass',
     output: distPath + '/css'
@@ -27,6 +31,7 @@ const path = {
 }
 function watch() {
   gulp.watch(path.pug.input, pug2html)
+  gulp.watch(path.pugOther.input,pug2html_other)
   gulp.watch(path.sass.input, sass2css)
   gulp.watch(path.js.input, js_move)
   gulp.watch(path.img.input, movePic)
@@ -50,7 +55,11 @@ function pug2html() {
     .pipe(pug({ pretty: true, debug: false }))
     .pipe(gulp.dest(path.pug.output))
 }
-
+function pug2html_other() {
+  return gulp.src(path.pugOther.input, { allowEmpty: true })
+    .pipe(pug({ pretty: true, debug: false }))
+    .pipe(gulp.dest(path.pugOther.output))
+}
 
 
 
