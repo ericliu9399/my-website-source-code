@@ -27,7 +27,7 @@ function IndexPage() {
       .then(res => res.text())
       .then(text => console.log(text))
   }, [])
-  const [content, setContent] = useState(ContentEnglish)
+  const [content, setContent] = useState(ContentChinese)
   const { home, aboutMe, projects, contact } = content
   const links = (
     <>
@@ -88,11 +88,7 @@ function IndexPage() {
           <div className="container">
             <img src={myphoto} alt="" />
             <p>
-              {aboutMe.content[0]}
-              <br />{aboutMe.content[1]}
-              <br />{aboutMe.content[2]}
-              <br /><br />{aboutMe.content[3]}
-              <br />{aboutMe.content[4]}
+              {aboutMe.content}
             </p>
           </div>
           <h2 className="subTitle">{aboutMe.subTitle}</h2>
