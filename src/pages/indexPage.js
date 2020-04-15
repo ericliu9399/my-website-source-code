@@ -19,6 +19,7 @@ import PugLogo from '../images/skill/Pug.svg'
 import ReactRouterLogo from '../images/skill/react-router.svg'
 import ContentEnglish from './indexPageContentEnglish.json'
 import ContentChinese from './indexPageContentChinese.json'
+import LanguageSelect from '../components/LanguageSelect'
 
 function IndexPage() {
   useEffect(() => {
@@ -26,7 +27,7 @@ function IndexPage() {
       .then(res => res.text())
       .then(text => console.log(text))
   }, [])
-  const [content, setContent] = useState(ContentChinese)
+  const [content, setContent] = useState(ContentEnglish)
   const { home, aboutMe, projects, contact } = content
   const links = (
     <>
@@ -35,6 +36,7 @@ function IndexPage() {
       <a href="#projects">projects</a>
       <a href="#contact">contact</a>
       <Link to="/message_board">message board</Link>
+      <LanguageSelect />
       {/* <a href="./landing_page.html">landing page</a> */}
     </>
   )
