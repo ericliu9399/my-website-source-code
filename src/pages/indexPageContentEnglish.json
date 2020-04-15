@@ -1,0 +1,70 @@
+{
+  "home": {
+    "nameCard": [
+      "Hello, i’m",
+      "Eric Liu",
+      "CREATIVE FRONT-END WEB DEVELOPER"
+    ]
+  },
+  "aboutMe": {
+    "title": "About me",
+    "subTitle": "My Skillsets",
+    "content": [
+      "Hi, I'm Eric Liu, a passionate self-taught frontEnd web developer from Taiwan.",
+      "I tend to make use of modern web technologies to build websites that looks great,",
+      "feels fantastic, and functions correctly. I am especially focusing on Reactjs.",
+      "I also do Graphic and UI designing. Since I love both programming and designing,",
+      "I'm also interested in creating programmatic designs and creative coding projects"
+    ]
+  },
+  "projects": {
+    "title": "Side projects",
+    "project": [
+      {
+        "title": "Message Board",
+        "summary": "前後端分離的簡易留言板,前後端分別部屬在github與heroku。",
+        "list": [
+          {
+            "listTitle": "前端",
+            "srcLink": "https://github.com/syyui15926/syyui15926.github.io/blob/master/src/pages/messageBoard.js",
+            "projectLink": "http://localhost:3000/#/message_board",
+            "listItem": [
+              "React.js",
+              "Javascript",
+              "Sass",
+              "Webpack"
+            ]
+          },
+          {
+            "listTitle": "後端",
+            "srcLink": "https://github.com/syyui15926/syyui15926.github.io",
+            "listItem": [
+              "express.js",
+              "Javascript",
+              "fs"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "This personal website",
+        "summary": "這個網頁是用React.js製作的個人網站。",
+        "list": [
+          {
+            "srcLink": "https://github.com/syyui15926/syyui15926.github.io",
+            "listItem": [
+              "React.js",
+              "Javascript",
+              "Sass",
+              "Webpack",
+              "RWD"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "title": "Get In Touch"
+  }
+}
