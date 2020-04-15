@@ -5,8 +5,9 @@ body {
   background-color: #333;
   min-height: 100vh;
   min-width: 100vw; }
-  #landingPage .magicCube {
-    width: 40px; }
+
+#magicCube {
+  width: 40vw; }
 
 .hand_left {
   width: 300px; }
