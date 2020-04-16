@@ -1,0 +1,26 @@
+svg {
+  transform: translateX(-10%); }
+
+[data-name="finger1"] {
+  transform-origin: 50% 30%;
+  animation: finger1 1.5s infinite; }
+
+[data-name="finger2"] {
+  transform-origin: 43% 40%;
+  animation: finger1 3s infinite; }
+
+[data-name="finger3"] {
+  transform-origin: 40% 55%;
+  animation: finger1 1s infinite; }
+
+[data-name="finger4"] {
+  transform-origin: 30% 75%;
+  animation: finger-10 2s infinite; }
+
+@keyframes finger1 {
+  50% {
+    transform: rotate(30deg); } }
+
+@keyframes finger-10 {
+  50% {
+    transform: rotate(-10deg); } }
