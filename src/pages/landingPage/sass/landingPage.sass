@@ -1,15 +1,49 @@
-$main_color: #F43453
-$eye_care: #666
-body
+@import ../../../lib/sass/_mixin
+$main_color: #EF2B53
+$band_color: #D7348D
+$band1_color: #9C348D
+$eye_care: #333
+$basic_l: 10vmin
+$height__hand_right_top: $basic_l*3
+$height__hand_left: $basic_l*3
+$height__hand_right_down: $basic_l*4
+$height__magic_cube: $basic_l*5
+body,html
+  margin: 0px
+  padding: 0px
   background-color: $eye_care
-#landingPage
-  background-color: #333
-  min-height: 100vh
-  min-width: 100vw
-  // padding-top: $navbar_height
-#magicCube
-  width: 40vw
-  
-.hand_left
-  width: 300px
+iframe
+  // border: solid 1px red
+  display: block
+  position: absolute
+#hand_right_top
+  width: $height__hand_right_top*1.5
+  height: $height__hand_right_top
+  left: 50vmin  
+#hand_left
+  width: $height__hand_left*1.5
+  height: $height__hand_left
+  top: 30vmin
+#hand_right_down
+  width: $height__hand_right_down*1.5
+  height: $height__hand_right_down
+  bottom: 0px
+  left: 50vmin
+#magic_cube
+  width: $height__magic_cube*1.5
+  height: $height__magic_cube
+  top: $basic_l*2
+  left: $basic_l*2
+.band
+  position: absolute
+  top: $basic_l*3
+  width: 100%
+  height: $basic_l*1.5
+  background-color: $band_color
+  .band1
+    background-color: $band1_color
+    height: 100%
+    width: 60%
+
+
 
