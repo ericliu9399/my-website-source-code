@@ -36,6 +36,7 @@ function IndexPage() {
       <a href="#projects">projects</a>
       <a href="#contact">contact</a>
       <Link to="/message_board">message board</Link>
+      <a href="landing_page.html">landing page</a>
       <LanguageSelect
         switchLangMethod={setContent}
         language={[ContentEnglish, ContentChinese]}
