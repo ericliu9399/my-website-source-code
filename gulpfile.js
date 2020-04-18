@@ -3,7 +3,7 @@ var sass = require('gulp-sass');
 var pug = require('gulp-pug');
 
 //gulp task
-gulp.task('all', gulp.series(pug2html, sass2css, js_move));
+gulp.task('all', gulp.series(pug2html, pug2html_other, sass2css, js_move, movePic));
 gulp.task('run', gulp.series('all', watch));
 const srcPath = 'src/pages/landingPage'
 const distPath = 'public/landingPage'
@@ -26,18 +26,18 @@ const path = {
   },
   svg: {
     input: srcPath + '/images/*.svg'
+  },
+  img: {
+    input: srcPath + '/images/*.jpg',
+    output: distPath + '/images'
   }
-  // img: {
-  //   input: srcPath + '/images/*.png',
-  //   output: distPath + '/images'
-  // 
 }
 function watch() {
   gulp.watch(path.pug.input, pug2html)
   gulp.watch(path.pugOther.input, pug2html_other)
   gulp.watch(path.sass.input, sass2css)
   gulp.watch(path.js.input, js_move)
-  gulp.watch(path.svg.input, pug2html)
+  gulp.watch(path.img.input, movePic)
 }
 //各種項目
 function sass2css() {
@@ -59,16 +59,16 @@ function pug2html_other() {
     .pipe(pug({ pretty: true, debug: false }))
     .pipe(gulp.dest(path.pugOther.output))
 }
-
+function movePic() {
+  return gulp.src(path.img.input, { allowEmpty: true })
+    .pipe(gulp.dest(path.img.output))
+}
 
 
 /**
  * 用不到
  */
-function movePic() {
-  return gulp.src(path.img.input, { allowEmpty: true })
-    .pipe(gulp.dest(path.img.output))
-}
+
 function js_uglify() {
   return gulp.src('src/js/*.js')
     .pipe(concat('app.min.js'))
