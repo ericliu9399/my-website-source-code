@@ -20,6 +20,7 @@ import ReactRouterLogo from '../images/skill/react-router.svg'
 import ContentEnglish from './indexPageContentEnglish.json'
 import ContentChinese from './indexPageContentChinese.json'
 import LanguageSelect from '../components/LanguageSelect'
+import ProjectsTemplate from '../components/ProjectsTemplate.js'
 
 function IndexPage() {
   useEffect(() => {
@@ -45,37 +46,14 @@ function IndexPage() {
       {/* <a href="./landing_page.html">landing page</a> */}
     </>
   )
-  const { project } = projects
-  const projectsTemplate = project.map(p => (
-    <div className="project">
-      <h2>{p.title}</h2>
-      <p>
-        {p.summary}
-      </p>
-      <ul>
-        {p.list.map(l => (
-          <li>{l.listTitle}
-            {l.srcA && <a href={l.srcA}>{projects.toSrc}</a>}
-            {l.projectA && <a href={l.projectA}>{projects.toProject}</a>}
-            {l.projectLink && <Link to={l.projectLink}>{projects.toProject}</Link>}
-            <ul>
-              {l.listItem.map(i => (
-                <li>{i}</li>
-              ))}
-            </ul>
-          </li>
-        ))}
-      </ul>
-    </div>
-  ))
   return (
     <>
       <Header>
         {links}
       </Header>
+      <BgImg id="BgImg" />
       <main id="indexPage">
         <section id="home">
-          <BgImg id="BgImg" />
           <div className="nameCard">
             <p>{home.nameCard[0]}</p>
             <h1>{home.nameCard[1]}{/* Michael Liu | James Liu | William Liu*/}</h1>
@@ -83,9 +61,9 @@ function IndexPage() {
           </div>
           <NextBtn href="#aboutMe" />
         </section>
+        <div className="bgDiv" />
         <section id="aboutMe">
           <h2 className="sectionTitle">{aboutMe.title}</h2>
-          <div className="bgDiv" />
           <div className="container">
             <img src={myphoto} alt="" />
             <p>
@@ -114,7 +92,7 @@ function IndexPage() {
             <div className="to" id="webpack_link"></div>
             <div className="to" id="javascript_link"></div>
           </div>
-          {projectsTemplate}
+          <ProjectsTemplate projects={projects} />
         </section>
         <section id="contact">
           <h2 className="sectionTitle">{contact.title}</h2>
