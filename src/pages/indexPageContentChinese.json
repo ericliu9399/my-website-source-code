@@ -15,7 +15,7 @@
     "title": "個人項目",
     "toSrc": "原始碼",
     "toProject": "前往作品",
-    "project": [
+    "projectArray": [
       {
         "title": "簡易留言板",
         "summary": "前後端分離的簡易留言板,前後端分別部屬在github與heroku。",
@@ -61,9 +61,21 @@
       {
         "title": "登陸頁面",
         "summary": "與設計師(我的姊姊)合作的，我負責程式的部分",
+        "preview": {
+          "path": "landingPage/images/preview-100.jpg",
+          "previewDivStyle": {
+            "height": "200px"
+          },
+          "previewImgStyle": {
+            "top": "-400px",
+            "left": "-300px",
+            "width": "1000px"
+          }
+        },
         "list": [
           {
             "srcA": "https://github.com/syyui15926/syyui15926.github.io",
+            "projectA": "/landing_page.html",
             "listItem": [
               "Pug",
               "Sass",
