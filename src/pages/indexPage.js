@@ -5,7 +5,6 @@ import "./IndexPage.sass"
 import Formspree from "../components/Formspree"
 import BgImg from "../images/home_bg.svg"
 import { Link } from "react-router-dom"
-import myphoto from "../images/myphoto.png"
 import ReactLogo from '../images/skill/React.svg'
 import JavascriptLogo from '../images/skill/Javascript.svg'
 import NodejsLogo from '../images/skill/nodejs-icon.svg'
@@ -65,7 +64,7 @@ function IndexPage() {
         <section id="aboutMe">
           <h2 className="sectionTitle">{aboutMe.title}</h2>
           <div className="container">
-            <img src={myphoto} alt="" />
+            <img src="images/myphoto.png" alt="" />
             <p>
               {aboutMe.content}
             </p>
