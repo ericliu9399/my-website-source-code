@@ -14,7 +14,7 @@ function ProjectsTemplate({ language }) {
       className="project"
       key={project.title}
     >
-      <div className="sub_container">
+      <div className="sub_container" style={project.subContainerStyle}>
         <div className="content">
           <h2>{project.title}</h2>
           <p>
@@ -25,7 +25,7 @@ function ProjectsTemplate({ language }) {
           {project.list.map(l => (
             <li className="li_column" key={JSON.stringify(l)}>{l.listTitle}
               {l.srcA && <a href={l.srcA}>{data.toSrc}</a>}
-              {l.projectA && <a href={l.projectA}>{data.toSrc}</a>}
+              {l.projectA && <a href={l.projectA}>{data.toProject}</a>}
               {l.projectLink && <Link to={l.projectLink}>{data.toProject}</Link>}
               <ul>
                 {l.listItem.map(i => (
