@@ -46,6 +46,7 @@
           "srcA": "https://github.com/syyui15926/syyui15926.github.io",
           "listItem": [
             "React.js",
+            "React Router",
             "Javascript",
             "Sass",
             "Webpack",
@@ -56,7 +57,7 @@
     },
     {
       "title": "登陸頁面",
-      "summary": "與設計師(我的姊姊)合作的，我負責程式的部分",
+      "summary": "我姊姊設計的登陸頁面，我負責程式的部分。",
       "subContainerStyle": {
         "flexWrap": "nowrap"
       },
