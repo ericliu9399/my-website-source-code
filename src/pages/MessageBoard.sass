@@ -9,6 +9,10 @@ $messageBoard_bg_color: #666
   .container
     padding-top: $navbar_height
     width: 80vw
+    @media all and ( min-width: $break_medium )
+      width: 60vw
+    @media all and ( min-width: $break_large )
+      width: 50vw
     max-width: 1080px
     background: $messageBoard_bg_color
     margin-left: auto
