@@ -1,27 +1,46 @@
+@import ../lib/sass/_variable
 .project
   height: fit-content
   background: #999
   margin-bottom: 20px
   border-radius: 10px
   padding: 10px
+  @media all and ( min-width: $break_medium )
+    display: flex
   .sub_container
     display: flex
-    ul
+    flex-wrap: wrap
+    @media all and ( min-width: $break_medium )
+      display: flex
+      flex-direction: column
+      max-width: 50%
+    .content
+      display: flex
+      flex-direction: column
+      // max-width: 170px
+    ul#ul_row
       margin: 0px
+      padding: 0px
       width: fit-content
-      li a
-        margin-left: 10px
-    .preview
+      display: flex
+      li.li_column
+        display: flex
+        flex-direction: column
+        a
+          margin-left: 10px
+          white-space: nowrap     
+  .preview
+    position: relative
+    flex: 1
+    transform: translateX(20px) translateY(20px)
+    border-radius: 20px
+    transition-duration: 0.5s
+    overflow: hidden
+    // cursor: pointer
+    filter: drop-shadow(-5px -5px 10px white)
+    img
       position: relative
-      flex: 1
-      transform: translateX(20px) translateY(20px)
-      border-radius: 20px
-      transition-duration: 0.5s
-      overflow: hidden
-      cursor: pointer
-      filter: drop-shadow(-5px -5px 10px white)
-      img
-        position: relative
-      &:hover
-        transform: none
-        filter: drop-shadow(5px 5px 10px white)
+      // height: 100%
+    // &:hover
+    //   transform: none
+    //   filter: drop-shadow(5px 5px 10px white)
