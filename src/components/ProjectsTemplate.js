@@ -9,14 +9,16 @@ function ProjectsTemplate({ projects }) {
       className="project"
       key={project.title}
     >
-      <h2>{project.title}</h2>
-      <p>
-        {project.summary}
-      </p>
       <div className="sub_container">
-        <ul>
+        <div className="content">
+          <h2>{project.title}</h2>
+          <p>
+            {project.summary}
+          </p>
+        </div>
+        <ul id="ul_row">
           {project.list.map(l => (
-            <li key={JSON.stringify(l)}>{l.listTitle}
+            <li className="li_column" key={JSON.stringify(l)}>{l.listTitle}
               {l.srcA && <a href={l.srcA}>{projects.toSrc}</a>}
               {l.projectA && <a href={l.projectA}>{projects.toProject}</a>}
               {l.projectLink && <Link to={l.projectLink}>{projects.toProject}</Link>}
@@ -29,9 +31,9 @@ function ProjectsTemplate({ projects }) {
           )
           )}
         </ul>
-        <div className="preview" style={project.preview?.previewDivStyle}>
-          <img src={project.preview?.path} alt="" style={project.preview?.previewImgStyle} />
-        </div>
+      </div>
+      <div className="preview" style={project.preview?.previewDivStyle}>
+        <img src={project.preview?.path} alt="" style={project.preview?.previewImgStyle} />
       </div>
     </div>
   ))
