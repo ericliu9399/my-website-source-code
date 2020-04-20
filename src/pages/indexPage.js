@@ -27,8 +27,11 @@ function IndexPage() {
       .then(res => res.text())
       .then(text => console.log(text))
   }, [])
-  const [content, setContent] = useState(ContentChinese)
-  const { home, aboutMe, projects, contact } = content
+  const [language, setLanguage] = useState("chinese")
+  let content
+  if (language === "chinese") content = ContentChinese
+  if (language === "english") content = ContentEnglish
+  const { home, aboutMe, contact } = content
   const links = (
     <>
       <a href="#home">home</a>
@@ -38,9 +41,9 @@ function IndexPage() {
       <Link to="/message_board">message board</Link>
       <a href="landing_page.html">landing page</a>
       <LanguageSelect
-        switchLangMethod={setContent}
-        language={[ContentEnglish, ContentChinese]}
-        currentLanguage={content}
+        switchLangMethod={setLanguage}
+        language={["chinese", "english"]}
+        currentLanguage={language}
       />
       {/* <a href="./landing_page.html">landing page</a> */}
     </>
@@ -83,15 +86,7 @@ function IndexPage() {
           <NextBtn href="#projects" />
         </section>
         <section id="projects">
-          <h2 className="sectionTitle">{projects.title}</h2>
-          <div className="linkTo">
-            <div className="to" id="react_link"></div>
-            <div className="to" id="sass_link"></div>
-            <div className="to" id="express_link"></div>
-            <div className="to" id="webpack_link"></div>
-            <div className="to" id="javascript_link"></div>
-          </div>
-          <ProjectsTemplate projects={projects} />
+          <ProjectsTemplate language={language}/>
         </section>
         <section id="contact">
           <h2 className="sectionTitle">{contact.title}</h2>
