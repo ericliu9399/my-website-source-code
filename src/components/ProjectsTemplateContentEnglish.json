@@ -7,14 +7,7 @@
       "title": "Message Board",
       "summary": "Simple message board with separate front and back ends. The front and back ends are deployed on GitHub and Heroku.",
       "preview": {
-        "path": "images/preview_message_board.png",
-        "previewDivStyle": {
-          "height": "200px"
-        },
-        "previewImgStyle": {
-          "transform": "translateX(0%) translateY(0%)",
-          "width": "100%"
-        }
+        "path": "images/preview_message_board.png"
       },
       "list": [
         {
@@ -42,15 +35,11 @@
     {
       "title": "This personal website",
       "summary": "This page is a personal website made with React.js.",
+      "subContainerStyle": {
+        "flexWrap": "nowrap"
+      },
       "preview": {
-        "path": "images/preview_this_personal_website.png",
-        "previewDivStyle": {
-          "height": "200px"
-        },
-        "previewImgStyle": {
-          "transform": "translateX(-20%) translateY(-20%)",
-          "width": "200%"
-        }
+        "path": "images/preview_this_personal_website.png"
       },
       "list": [
         {
@@ -68,15 +57,11 @@
     {
       "title": "Landing Page",
       "summary": "In cooperation with the designer, I am responsible for the part of the program.",
+      "subContainerStyle": {
+        "flexWrap": "nowrap"
+      },
       "preview": {
-        "path": "landingPage/images/preview-100.jpg",
-        "previewDivStyle": {
-          "height": "200px"
-        },
-        "previewImgStyle": {
-          "transform": "translateX(-20%) translateY(-20%)",
-          "width": "250%"
-        }
+        "path": "landingPage/images/preview-100.jpg"
       },
       "list": [
         {

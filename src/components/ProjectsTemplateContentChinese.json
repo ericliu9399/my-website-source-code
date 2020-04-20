@@ -7,14 +7,7 @@
       "title": "簡易留言板",
       "summary": "前後端分離的簡易留言板,前後端分別部屬在github與heroku。",
       "preview": {
-        "path": "images/preview_message_board.png",
-        "previewDivStyle": {
-          "height": "100%"
-        },
-        "previewImgStyle": {
-          "transform": "translateX(0%) translateY(0%)",
-          "width": "100%"
-        }
+        "path": "images/preview_message_board.png"
       },
       "list": [
         {
@@ -42,15 +35,11 @@
     {
       "title": "這個個人網站",
       "summary": "這個網站是用React.js製作的個人網站。",
+      "subContainerStyle": {
+        "flexWrap": "nowrap"
+      },
       "preview": {
-        "path": "images/preview_this_personal_website.png",
-        "previewDivStyle": {
-          "height": "200px"
-        },
-        "previewImgStyle": {
-          "transform": "translateX(-20%) translateY(-20%)",
-          "width": "200%"
-        }
+        "path": "images/preview_this_personal_website.png"
       },
       "list": [
         {
@@ -68,19 +57,15 @@
     {
       "title": "登陸頁面",
       "summary": "與設計師(我的姊姊)合作的，我負責程式的部分",
+      "subContainerStyle": {
+        "flexWrap": "nowrap"
+      },
       "preview": {
-        "path": "landingPage/images/preview-100.jpg",
-        "previewDivStyle": {
-          "height": "200px"
-        },
-        "previewImgStyle": {
-          "transform": "translateX(-20%) translateY(-20%)",
-          "width": "250%"
-        }
+        "path": "landingPage/images/preview-100.jpg"
       },
       "list": [
         {
-          "srcA": "https://github.com/syyui15926/syyui15926.github.io",
+          "srcA": "https://github.com/syyui15926/syyui15926.github.io/tree/master/src/pages/landingPage",
           "projectA": "/landing_page.html",
           "listItem": [
             "Pug",
