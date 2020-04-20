@@ -19,6 +19,16 @@
       {
         "title": "簡易留言板",
         "summary": "前後端分離的簡易留言板,前後端分別部屬在github與heroku。",
+        "preview": {
+          "path": "images/preview_message_board.png",
+          "previewDivStyle": {
+            "height": "200px"
+          },
+          "previewImgStyle": {
+            "transform": "translateX(0%) translateY(0%)",
+            "width": "100%"
+          }
+        },
         "list": [
           {
             "listTitle": "前端",
@@ -45,6 +55,16 @@
       {
         "title": "這個個人網站",
         "summary": "這個網站是用React.js製作的個人網站。",
+        "preview": {
+          "path": "images/preview_this_personal_website.png",
+          "previewDivStyle": {
+            "height": "200px"
+          },
+          "previewImgStyle": {
+            "transform": "translateX(-20%) translateY(-20%)",
+            "width": "200%"
+          }
+        },
         "list": [
           {
             "srcA": "https://github.com/syyui15926/syyui15926.github.io",
@@ -67,9 +87,8 @@
             "height": "200px"
           },
           "previewImgStyle": {
-            "top": "-400px",
-            "left": "-300px",
-            "width": "1000px"
+            "transform": "translateX(-20%) translateY(-20%)",
+            "width": "250%"
           }
         },
         "list": [

@@ -19,6 +19,16 @@
       {
         "title": "Message Board",
         "summary": "Simple message board with separate front and back ends. The front and back ends are deployed on GitHub and Heroku.",
+        "preview": {
+          "path": "images/preview_message_board.png",
+          "previewDivStyle": {
+            "height": "200px"
+          },
+          "previewImgStyle": {
+            "transform": "translateX(0%) translateY(0%)",
+            "width": "100%"
+          }
+        },
         "list": [
           {
             "listTitle": "Front-End",
@@ -45,6 +55,16 @@
       {
         "title": "This personal website",
         "summary": "This page is a personal website made with React.js.",
+        "preview": {
+          "path": "images/preview_this_personal_website.png",
+          "previewDivStyle": {
+            "height": "200px"
+          },
+          "previewImgStyle": {
+            "transform": "translateX(-20%) translateY(-20%)",
+            "width": "200%"
+          }
+        },
         "list": [
           {
             "srcA": "https://github.com/syyui15926/syyui15926.github.io",
@@ -67,9 +87,8 @@
             "height": "200px"
           },
           "previewImgStyle": {
-            "top": "-400px",
-            "left": "-300px",
-            "width": "1000px"
+            "transform": "translateX(-20%) translateY(-20%)",
+            "width": "250%"
           }
         },
         "list": [
