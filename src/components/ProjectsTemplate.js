@@ -1,9 +1,14 @@
 import React from 'react'
 import { Link } from "react-router-dom"
 import './ProjectsTemplate.sass'
+import ProjectsTemplateContentChinese from './ProjectsTemplateContentChinese.json'
+import ProjectsTemplateContentEnglish from './ProjectsTemplateContentEnglish.json'
 
-function ProjectsTemplate({ projects }) {
-  const { projectArray } = projects
+function ProjectsTemplate({ language }) {
+  let data
+  if (language === "chinese") data = ProjectsTemplateContentChinese
+  if (language === "english") data = ProjectsTemplateContentEnglish
+  const { projectArray } = data
   return (projectArray?.map(project => (
     <div
       className="project"
@@ -19,9 +24,9 @@ function ProjectsTemplate({ projects }) {
         <ul id="ul_row">
           {project.list.map(l => (
             <li className="li_column" key={JSON.stringify(l)}>{l.listTitle}
-              {l.srcA && <a href={l.srcA}>{projects.toSrc}</a>}
-              {l.projectA && <a href={l.projectA}>{projects.toProject}</a>}
-              {l.projectLink && <Link to={l.projectLink}>{projects.toProject}</Link>}
+              {l.srcA && <a href={l.srcA}>{data.toSrc}</a>}
+              {l.projectA && <a href={l.projectA}>{data.toSrc}</a>}
+              {l.projectLink && <Link to={l.projectLink}>{data.toProject}</Link>}
               <ul>
                 {l.listItem.map(i => (
                   <li key={i}>{i}</li>
