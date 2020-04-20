@@ -14,7 +14,7 @@
   "projects": {
     "title": "個人項目",
     "toSrc": "原始碼",
-    "toProject": "前往作品",
+    "toProject": "前往網頁",
     "projectArray": [
       {
         "title": "簡易留言板",
@@ -22,7 +22,7 @@
         "preview": {
           "path": "images/preview_message_board.png",
           "previewDivStyle": {
-            "height": "200px"
+            "height": "100%"
           },
           "previewImgStyle": {
             "transform": "translateX(0%) translateY(0%)",
