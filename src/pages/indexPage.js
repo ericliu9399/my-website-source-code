@@ -31,7 +31,8 @@ function IndexPage() {
   let content
   if (language === "chinese") content = ContentChinese
   if (language === "english") content = ContentEnglish
-  const { home, aboutMe, contact } = content
+  const { home, aboutMe, project, contact } = content
+  console.log(content)
   const links = (
     <>
       <a href="#home">home</a>
@@ -85,6 +86,7 @@ function IndexPage() {
           <NextBtn href="#projects" />
         </section>
         <section id="projects">
+          <h2 className="sectionTitle">{project.title}</h2>
           <ProjectsTemplate language={language} />
         </section>
         <section id="contact">
