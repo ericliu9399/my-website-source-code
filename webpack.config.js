@@ -1,4 +1,5 @@
 const path = require("path");
+const MinifyPlugin = require("babel-minify-webpack-plugin")
 
 module.exports = {
   entry: {
@@ -20,5 +21,9 @@ module.exports = {
       ...require('./webpack/rule/style'),
       ...require('./webpack/rule/asset')
     ]
-  }
+  },
+  plugins: [
+    new MinifyPlugin()
+  ]
 };
+
