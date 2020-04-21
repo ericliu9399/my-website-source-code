@@ -4,27 +4,15 @@ svg {
 [data-name="finger4"] {
   transform-origin: 50% 30%;
   animation: finger30deg 1.5s infinite; }
-  @media all and (max-width: 768px) {
-    [data-name="finger4"] {
-      animation: none; } }
 
 [data-name="finger3"] {
   transform-origin: 43% 40%;
   animation: finger30deg 3s infinite; }
-  @media all and (max-width: 768px) {
-    [data-name="finger3"] {
-      animation: none; } }
 
 [data-name="finger2"] {
   transform-origin: 40% 55%;
   animation: finger30deg 1s infinite; }
-  @media all and (max-width: 768px) {
-    [data-name="finger2"] {
-      animation: none; } }
 
 [data-name="finger1"] {
   transform-origin: 30% 75%;
   animation: finger_m_10deg 2s infinite; }
-  @media all and (max-width: 768px) {
-    [data-name="finger1"] {
-      animation: none; } }
