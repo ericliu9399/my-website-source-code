@@ -52,20 +52,21 @@ iframe
   min-width: 320px
   height: $basic_l
   background-color: #EE2A9B
-  @media all and ( max-width: $break_medium)
+  @media all and ( min-width: $break_small) and ( max-width: $break_medium)
     top: $basic_l*8
     left: 0px
     right: auto
-    width: 55%
+    width: $basic_l*8
     height: $basic_l
   @media all and ( max-width: $break_small)
-    top: 50%
+    top: $basic_l*8
     bottom: $basic_l
     right: auto
     left: 0px
     width: 100%
+    padding: 5px
     height: $basic_l
-    background-color: unset
+    // background-color: unset
     svg
       opacity: 0
   svg
