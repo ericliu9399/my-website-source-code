@@ -11,16 +11,15 @@
   left: 50%
   bottom: 0px
   width: 10vw
-  height: 10vw
-  @media all and ( max-width: $break_medium )
+  height: 100%
+  transform: translateX(-50%)
+  position: absolute
+  @media all and (min-width:$break_small) and (max-width: $break_medium )
     width: 15vw
     height: 15vw
   @media all and ( max-width: $break_small )
     width: 25vw
     height: 25vw
-  height: 100%
-  transform: translateX(-50%)
-  position: absolute
   &:hover
     #n1
       transform: translateY(-50px)
