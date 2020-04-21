@@ -8,25 +8,27 @@ $project_min_height: 300px
   margin-bottom: 20px
   border-radius: 10px
   padding: 10px
-  @media all and ( min-width: $break_medium )
-    display: flex
+  display: flex
+  justify-content: space-between
+  @media all and ( max-width: $break_medium )
+    flex-direction: column    
   .sub_container
     display: flex
-    flex-wrap: wrap
-    @media all and ( min-width: $break_medium )
-      display: flex
-      flex-direction: column
-      max-width: 50%
+    flex-direction: column
+    max-width: 50%
+    @media all and ( max-width: $break_medium )
+      flex-direction: row
+      max-width: 100%
     .content
       display: flex
       flex-direction: column
-      // max-width: 170px
     ul#ul_row
       margin: 0px
       padding: 0px
       width: fit-content
       display: flex
-      flex: 1
+      @media all and ( max-width: $break_small )
+        flex-wrap: wrap
       li.li_column
         display: flex
         flex-direction: column
@@ -35,19 +37,20 @@ $project_min_height: 300px
           white-space: nowrap
   .preview
     align-self: flex-end
-    backgound: black
     height: $project_min_height
-    width: fit-content
-    position: relative
     flex: 1
+    display: flex
+    justify-content: flex-end
     transform: translateX(20px) translateY(20px)
-    border-radius: 20px
-    transition-duration: 0.5s
     overflow: hidden
-    filter: drop-shadow(-5px -5px 10px white)
+    border-radius: 20px
+    border: solid 1px white
     img
-      position: relative
+      border-radius: 20px
       height: 100%
-    // &:hover
-    //   transform: none
-    //   filter: drop-shadow(5px 5px 10px white)
+      margin: 0px
+      padding: 0px
+      filter: drop-shadow(-5px -5px 10px white)
+      @media all and ( max-width: $break_medium )
+        height: auto
+        width: 100%
