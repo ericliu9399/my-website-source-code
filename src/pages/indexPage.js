@@ -45,7 +45,6 @@ function IndexPage() {
         language={["chinese", "english"]}
         currentLanguage={language}
       />
-      {/* <a href="./landing_page.html">landing page</a> */}
     </>
   )
   return (
@@ -58,7 +57,7 @@ function IndexPage() {
         <section id="home">
           <div className="nameCard">
             <p>{home.nameCard[0]}</p>
-            <h1>{home.nameCard[1]}{/* Michael Liu | James Liu | William Liu*/}</h1>
+            <h1>{home.nameCard[1]}</h1>
             <p>{home.nameCard[2]}</p>
           </div>
           <NextBtn href="#aboutMe" />
@@ -74,19 +73,19 @@ function IndexPage() {
           </div>
           <h2 className="subTitle">{aboutMe.subTitle}</h2>
           <div className="skillContainer">
-            <a href="#react_link" id="react" ><LogoContainer Logo={<ReactLogo />} /><p>React.js</p></a>
-            <a href="#javascript_link" id="javascript" ><LogoContainer Logo={<JavascriptLogo />} /><p>Javascript</p></a>
-            <a href="#express_link" id="express" ><LogoContainer Logo={<NodejsLogo />} /><p>Express.js</p></a>
-            <a href="#webpack_link" id="webpack"><LogoContainer Logo={<WebpackLogo />} />Webpack</a>
-            <a href="#gulp_link" id="gulp"><LogoContainer Logo={<GulpLogo />} />Gulp</a>
-            <a href="#sass_link" id="sass"><LogoContainer Logo={<SassLogo />} />Sass</a>
-            <a href="#pug_link" id="pug"><LogoContainer Logo={<PugLogo />} />Pug</a>
-            <a href="#reactRouter_link" id="reactRouter"><LogoContainer Logo={<ReactRouterLogo />} />React Router</a>
+            <div id="react" ><LogoContainer Logo={<ReactLogo />} /><p>React.js</p></div>
+            <div id="javascript" ><LogoContainer Logo={<JavascriptLogo />} /><p>Javascript</p></div>
+            <div id="express" ><LogoContainer Logo={<NodejsLogo />} /><p>Express.js</p></div>
+            <div id="webpack"><LogoContainer Logo={<WebpackLogo />} />Webpack</div>
+            <div id="gulp"><LogoContainer Logo={<GulpLogo />} />Gulp</div>
+            <div id="sass"><LogoContainer Logo={<SassLogo />} />Sass</div>
+            <div id="pug"><LogoContainer Logo={<PugLogo />} />Pug</div>
+            <div id="reactRouter"><LogoContainer Logo={<ReactRouterLogo />} />React Router</div>
           </div>
           <NextBtn href="#projects" />
         </section>
         <section id="projects">
-          <ProjectsTemplate language={language}/>
+          <ProjectsTemplate language={language} />
         </section>
         <section id="contact">
           <h2 className="sectionTitle">{contact.title}</h2>
