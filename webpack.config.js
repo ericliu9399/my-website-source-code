@@ -1,10 +1,8 @@
 const path = require("path");
-const MinifyPlugin = require("babel-minify-webpack-plugin")
 
 module.exports = {
   entry: {
     bundle: path.resolve(__dirname, "src", "index.js"),
-    // pugPage: path.resolve(__dirname, "src/pages/landingPage", "entryPug.js")
   },
   output: {
     path: path.resolve(__dirname, "public"),
@@ -21,9 +19,6 @@ module.exports = {
       ...require('./webpack/rule/style'),
       ...require('./webpack/rule/asset')
     ]
-  },
-  plugins: [
-    new MinifyPlugin()
-  ]
+  }
 };
 
