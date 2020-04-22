@@ -33,7 +33,7 @@
       ]
     },
     {
-      "title": "This personal website",
+      "title": "My Website",
       "summary": "This page is a personal website made with React.js.",
       "subContainerStyle": {
         "flexWrap": "nowrap"
