@@ -3,8 +3,8 @@ var sass = require('gulp-sass');
 var pug = require('gulp-pug');
 
 //gulp task
-gulp.task('all', gulp.series(pug2html, pug2html_other, sass2css, js_move, movePic));
-gulp.task('run', gulp.series('all', watch));
+gulp.task('build', gulp.series(pug2html, pug2html_other, sass2css, js_move, movePic));
+gulp.task('dev', gulp.series('build', watch));
 const srcPath = 'src/pages/landingPage'
 const distPath = 'public/landingPage'
 const path = {
