@@ -67,7 +67,7 @@
       "list": [
         {
           "srcA": "https://github.com/syyui15926/syyui15926.github.io/tree/master/src/pages/landingPage",
-          "projectA": "/public/landing_page.html",
+          "projectA": "/landing_page.html",
           "listItem": [
             "Pug",
             "Sass",
