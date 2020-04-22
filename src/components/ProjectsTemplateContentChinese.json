@@ -62,12 +62,12 @@
         "flexWrap": "nowrap"
       },
       "preview": {
-        "path": "landingPage/images/preview-100.jpg"
+        "path": "images/preview_landing_page.jpg"
       },
       "list": [
         {
           "srcA": "https://github.com/syyui15926/syyui15926.github.io/tree/master/src/pages/landingPage",
-          "projectA": "/landing_page.html",
+          "projectA": "/public/landing_page.html",
           "listItem": [
             "Pug",
             "Sass",
