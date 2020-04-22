@@ -67,7 +67,7 @@ function IndexPage() {
         <section id="aboutMe">
           <h2 className="sectionTitle">{aboutMe.title}</h2>
           <div className="container">
-            <img src="images/myphoto.png" alt="" />
+            <img src="images/myphoto.png" alt="my photo"/>
             <p>
               {aboutMe.content}
             </p>
