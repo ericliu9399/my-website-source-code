@@ -28,35 +28,27 @@ function ProjectsTemplate({ language }) {
 
 
   let { projectArray, toSrc, toProject } = content
-  const refs = useMemo(() =>
-    Array.from({ length: projectArray.length }).map(() => createRef())
-    , [projectArray.length])
+  // const mergeArray = projectArray.map((item1, key1) => {
+  //   const { title, summary, contentList } = item1
+  //   const { preview, subContainerStyle, dataList } = dataArray[key1]
+  //   const mergeList = contentList.map((item2, key2) => {
+  //     const { listTitle } = item2
+  //     const { srcA, projectLink, listItem } = dataList[key2]
+  //   })
+  // })
+
+  // const refs = useMemo(() =>
+  //   Array.from({ length: projectArray.length }).map(() => createRef())
+  //   , [projectArray.length])
+
+  // const { title, summary, list: contentList } = item1
+  // const { preview, list: dataList, subContainerStyle } = dataArray[key1]
+
+
   return projectArray.map((item1, key1) => {
-    const { title, summary, list: contentList } = item1
-    const { preview, list: dataList, subContainerStyle } = dataArray[key1]
     return (
       <div className="project" key={key1}>
-        <div className="sub_container">
-          <div className="content">
-            <h2>{title}</h2>
-            <p>{summary}</p>
-          </div>
-          <div className="feature">
-            {dataList?.map((item2, key2) => {
-              const { listTitle } = contentList ? contentList[key2] : {}
-              const { srcA, projectA, projectLink, listItem } = item2
-              return (
-                <ul>
-                  {listTitle}
-                  {srcA && <p>srcA</p>}
-                  {projectA && <p>projectA</p>}
-                  {projectLink && <p>projectLink</p>}
-                  {listItem && <p>listItem</p>}
-                </ul>
-              )
-            })}
-          </div>
-        </div>
+
         <div className="preview">
         </div>
       </div>
