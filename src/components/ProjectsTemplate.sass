@@ -1,7 +1,10 @@
 @import ../lib/sass/_variable
 @import ../lib/sass/_mixin
 $project_min_height: 300px
+*
+  border: solid 1px white
 .project
+  background: red
   height: fit-content
   min-height: $project_min_height
   background: #999
@@ -22,19 +25,22 @@ $project_min_height: 300px
     .content
       display: flex
       flex-direction: column
-    ul#ul_row
+    .feature
       margin: 0px
       padding: 0px
       width: fit-content
       display: flex
       @media all and ( max-width: $break_small )
         flex-wrap: wrap
-      li.li_column
+      ul
         display: flex
         flex-direction: column
-        a
-          margin-left: 10px
-          white-space: nowrap
+      // li.li_column
+      //   display: flex
+      //   flex-direction: column
+      //   a
+      //     margin-left: 10px
+      //     white-space: nowrap
   .preview
     align-self: flex-end
     height: $project_min_height
