@@ -6,76 +6,22 @@
     {
       "title": "簡易留言板",
       "summary": "前後端分離的簡易留言板,前後端分別部屬在github與heroku。",
-      "preview": {
-        "path": "images/preview_message_board.png"
-      },
       "list": [
         {
-          "listTitle": "前端",
-          "srcA": "https://github.com/syyui15926/syyui15926.github.io/blob/master/src/pages/messageBoard.js",
-          "projectLink": "/message_board",
-          "listItem": [
-            "React.js",
-            "Javascript",
-            "Sass",
-            "Webpack"
-          ]
+          "listTitle": "前端"
         },
         {
-          "listTitle": "後端",
-          "srcA": "https://github.com/syyui15926/syyui15926.github.io",
-          "listItem": [
-            "express.js",
-            "Javascript",
-            "fs"
-          ]
+          "listTitle": "後端"
         }
       ]
     },
     {
       "title": "這個個人網站",
-      "summary": "這個網站是用React.js製作的個人網站。",
-      "subContainerStyle": {
-        "flexWrap": "nowrap"
-      },
-      "preview": {
-        "path": "images/preview_this_personal_website.png"
-      },
-      "list": [
-        {
-          "srcA": "https://github.com/syyui15926/syyui15926.github.io",
-          "listItem": [
-            "React.js",
-            "React Router",
-            "Javascript",
-            "Sass",
-            "Webpack",
-            "RWD"
-          ]
-        }
-      ]
+      "summary": "這個網站是用React.js製作的個人網站。"
     },
     {
       "title": "登陸頁面",
-      "summary": "我姊姊設計的登陸頁面，我負責程式的部分。",
-      "subContainerStyle": {
-        "flexWrap": "nowrap"
-      },
-      "preview": {
-        "path": "images/preview_landing_page.jpg"
-      },
-      "list": [
-        {
-          "srcA": "https://github.com/syyui15926/syyui15926.github.io/tree/master/src/pages/landingPage",
-          "projectA": "/landing_page.html",
-          "listItem": [
-            "Pug",
-            "Sass",
-            "Gulp",
-            "RWD"
-          ]
-        }
-      ]
+      "summary": "我姊姊設計的登陸頁面，我負責程式的部分。"
     }
   ]
 }
