@@ -20,6 +20,8 @@ import ContentEnglish from './indexPageContentEnglish.json'
 import ContentChinese from './indexPageContentChinese.json'
 import LanguageSelect from '../components/LanguageSelect'
 import ProjectsTemplate from '../components/ProjectsTemplate.js'
+import myphoto from '../images/myphoto.png'
+
 function AboutMe({ data }) {
   const { title, content, subTitle } = data
 
@@ -27,7 +29,7 @@ function AboutMe({ data }) {
     <section id="aboutMe">
       <h2 className="sectionTitle">{title}</h2>
       <div className="container">
-        <img src="images/myphoto.png" alt="Eric Liu" />
+        <img src={myphoto} alt="Eric Liu" />
         <p>
           {content}
         </p>
