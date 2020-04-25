@@ -44,9 +44,13 @@ function Content({ title, summary }) {
     </div>
   )
 }
-function Preview({ preview, divRef }) {
+function Preview({ preview }) {
   const { path } = preview
   const [imgStyle, setImgStyle] = useState({})
+  const divRef = useMemo(() => {
+    console.log("useMemo create divRef")
+    return createRef()
+  }, [])
   function moveToMiddle({ target: img }) {
     // console.log(key)
     let img_width = img.offsetWidth
@@ -77,11 +81,6 @@ function ProjectsTemplate({ language }) {
 
   let { projectArray, toSrc, toProject } = content
 
-  const refs = useMemo(() => {
-    console.log("useMemo create refs")
-    return Array.from({ length: projectArray.length }).map(() => createRef())
-  }, [projectArray.length])
-
   return projectArray.map((item, key) => {
     const { title, summary, list: contentList } = item
     const { preview, list: dataList, subContainerStyle } = dataArray[key]
@@ -96,10 +95,10 @@ function ProjectsTemplate({ language }) {
             toProject={toProject}
           />
         </div>
-        <Preview preview={preview} divRef={refs[key]} />
+        <Preview preview={preview} />
       </div>
     )
   })
-}
+}// divRef={refs[key]} 
 
 export default ProjectsTemplate
