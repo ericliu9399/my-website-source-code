@@ -1,9 +1,7 @@
 import React, { useState, useMemo, createRef } from 'react'
 import { Link } from "react-router-dom"
 import './ProjectsTemplate.sass'
-import ProjectsTemplateContentChinese from './ProjectsTemplateContentChinese.json'
-import ProjectsTemplateContentEnglish from './ProjectsTemplateContentEnglish.json'
-import dataArray from './ProjectsTemplateData.json'
+
 function FeatureItem({ contentListItem, dataListItem, toSrc, toProject }) {
   const { listTitle } = contentListItem || {}
   const { srcA, projectLink, projectA, listItem } = dataListItem || {}
@@ -68,6 +66,11 @@ function Preview({ preview, divRef }) {
   )
 }
 function ProjectsTemplate({ language }) {
+  //require data
+  const ProjectsTemplateContentChinese = require('./ProjectsTemplateContentChinese.json')
+  const ProjectsTemplateContentEnglish = require('./ProjectsTemplateContentEnglish.json')
+  const dataArray = require('./ProjectsTemplateData.json')
+
   let content
   if (language === "chinese") content = ProjectsTemplateContentChinese
   if (language === "english") content = ProjectsTemplateContentEnglish
