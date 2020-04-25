@@ -70,15 +70,10 @@ function Preview({ preview }) {
   )
 }
 function ProjectsTemplate({ language }) {
-  //require data
-  const ProjectsTemplateContentChinese = require('./ProjectsTemplateContentChinese.json')
-  const ProjectsTemplateContentEnglish = require('./ProjectsTemplateContentEnglish.json')
-  const dataArray = require('./ProjectsTemplateData.json')
-
   let content
-  if (language === "chinese") content = ProjectsTemplateContentChinese
-  if (language === "english") content = ProjectsTemplateContentEnglish
-
+  if (language === "chinese") content = require('./ProjectsTemplateContentChinese.json')
+  if (language === "english") content = require('./ProjectsTemplateContentEnglish.json')
+  const dataArray = require('./ProjectsTemplateData.json')
   let { projectArray, toSrc, toProject } = content
 
   return projectArray.map((item, key) => {
@@ -99,6 +94,6 @@ function ProjectsTemplate({ language }) {
       </div>
     )
   })
-}// divRef={refs[key]} 
+}
 
 export default ProjectsTemplate
