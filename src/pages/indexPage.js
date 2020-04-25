@@ -20,6 +20,46 @@ import ContentEnglish from './indexPageContentEnglish.json'
 import ContentChinese from './indexPageContentChinese.json'
 import LanguageSelect from '../components/LanguageSelect'
 import ProjectsTemplate from '../components/ProjectsTemplate.js'
+function AboutMe({ data }) {
+  const { title, content, subTitle } = data
+
+  return (
+    <section id="aboutMe">
+      <h2 className="sectionTitle">{title}</h2>
+      <div className="container">
+        <img src="images/myphoto.png" alt="my photo" />
+        <p>
+          {content}
+        </p>
+      </div>
+      <h2 className="subTitle">{subTitle}</h2>
+      <div className="skillContainer">
+        <div id="react" ><LogoContainer Logo={<ReactLogo />} /><p>React.js</p></div>
+        <div id="javascript" ><LogoContainer Logo={<JavascriptLogo />} /><p>Javascript</p></div>
+        <div id="express" ><LogoContainer Logo={<NodejsLogo />} /><p>Express.js</p></div>
+        <div id="webpack"><LogoContainer Logo={<WebpackLogo />} />Webpack</div>
+        <div id="gulp"><LogoContainer Logo={<GulpLogo />} />Gulp</div>
+        <div id="sass"><LogoContainer Logo={<SassLogo />} />Sass</div>
+        <div id="pug"><LogoContainer Logo={<PugLogo />} />Pug</div>
+        <div id="reactRouter"><LogoContainer Logo={<ReactRouterLogo />} />React Router</div>
+      </div>
+      <NextBtn href="#projects" />
+    </section>
+  )
+}
+
+function Home({ nameCard }) {
+  return (
+    <section id="home">
+      <div className="nameCard">
+        <p>{nameCard[0]}</p>
+        <h1>{nameCard[1]}</h1>
+        <p>{nameCard[2]}</p>
+      </div>
+      <NextBtn href="#aboutMe" />
+    </section>
+  )
+}
 
 function IndexPage() {
   useEffect(() => {
@@ -54,36 +94,9 @@ function IndexPage() {
       </Header>
       <BgImg id="BgImg" />
       <main id="indexPage">
-        <section id="home">
-          <div className="nameCard">
-            <p>{home.nameCard[0]}</p>
-            <h1>{home.nameCard[1]}</h1>
-            <p>{home.nameCard[2]}</p>
-          </div>
-          <NextBtn href="#aboutMe" />
-        </section>
+        <Home nameCard={home.nameCard} />
         <div className="bgDiv" />
-        <section id="aboutMe">
-          <h2 className="sectionTitle">{aboutMe.title}</h2>
-          <div className="container">
-            <img src="images/myphoto.png" alt="my photo"/>
-            <p>
-              {aboutMe.content}
-            </p>
-          </div>
-          <h2 className="subTitle">{aboutMe.subTitle}</h2>
-          <div className="skillContainer">
-            <div id="react" ><LogoContainer Logo={<ReactLogo />} /><p>React.js</p></div>
-            <div id="javascript" ><LogoContainer Logo={<JavascriptLogo />} /><p>Javascript</p></div>
-            <div id="express" ><LogoContainer Logo={<NodejsLogo />} /><p>Express.js</p></div>
-            <div id="webpack"><LogoContainer Logo={<WebpackLogo />} />Webpack</div>
-            <div id="gulp"><LogoContainer Logo={<GulpLogo />} />Gulp</div>
-            <div id="sass"><LogoContainer Logo={<SassLogo />} />Sass</div>
-            <div id="pug"><LogoContainer Logo={<PugLogo />} />Pug</div>
-            <div id="reactRouter"><LogoContainer Logo={<ReactRouterLogo />} />React Router</div>
-          </div>
-          <NextBtn href="#projects" />
-        </section>
+        <AboutMe data={aboutMe} />
         <section id="projects">
           <h2 className="sectionTitle">{project.title}</h2>
           <ProjectsTemplate language={language} />
