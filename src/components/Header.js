@@ -2,7 +2,7 @@ import React from "react"
 import styles from "./Header.module.sass"
 
 
-export default ({ children }) => {
+function Header({ children }) {
   return (
     <header className={styles.header}>
       <nav>
@@ -11,3 +11,5 @@ export default ({ children }) => {
     </header>
   )
 }
+
+export default Header
