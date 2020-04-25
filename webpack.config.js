@@ -15,9 +15,9 @@ module.exports = {
   },
   module: {
     rules: [
-      ...require('./webpack/rule/script'),
-      ...require('./webpack/rule/style'),
-      ...require('./webpack/rule/asset')
+      ...require('./webpack/rules/script'),
+      ...require('./webpack/rules/style'),
+      ...require('./webpack/rules/asset')
     ]
   }
 };
