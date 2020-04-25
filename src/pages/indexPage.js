@@ -27,7 +27,7 @@ function AboutMe({ data }) {
     <section id="aboutMe">
       <h2 className="sectionTitle">{title}</h2>
       <div className="container">
-        <img src="images/myphoto.png" alt="my photo" />
+        <img src="images/myphoto.png" alt="Eric Liu" />
         <p>
           {content}
         </p>

@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import styles from "./comment.module.sass"
+import styles from "./Comment.module.sass"
 
 const Comment = ({ name, email, content, id, isDelete, sendDeletRequest }) => {
   const [isClickDelet, setIsClickDelet] = useState(false)

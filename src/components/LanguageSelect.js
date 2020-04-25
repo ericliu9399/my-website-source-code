@@ -4,7 +4,7 @@ import LangLogo from '../images/translate.svg'
 
 function LanguageSelect({ switchLangMethod, language, currentLanguage }) {
   function onClick() {
-    let index = language.findIndex((lang) => lang == currentLanguage)
+    let index = language.findIndex((lang) => lang === currentLanguage)
     if (index === language.length - 1)
       index = 0
     else

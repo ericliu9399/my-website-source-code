@@ -1,5 +1,5 @@
 import React from 'react'
-import style from './logoContainer.module.sass'
+import style from './LogoContainer.module.sass'
 
 const LogoContainer = ({ Logo, dropShadowColor }) => {
   return (<div
