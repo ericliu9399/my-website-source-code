@@ -3,7 +3,6 @@ module.exports = [
     test: /\.js$/,
     exclude: /node_modules/,
     use: [
-      "source-map-loader",
       {
         loader: "babel-loader",
         options: {
@@ -13,7 +12,6 @@ module.exports = [
           ]
         }
       }
-    ],
-    enforce: "pre"
+    ]
   }
 ]
