@@ -69,7 +69,6 @@ function Preview({ preview }) {
     </div>
   )
 }
-
 function ProjectItem({ subContainerStyle, title, summary, contentList, dataList, toSrc, toProject, preview }) {
   return (
     <div className="ProjectItem" >
@@ -86,7 +85,6 @@ function ProjectItem({ subContainerStyle, title, summary, contentList, dataList,
     </div>
   )
 }
-
 function ProjectItemArray({ projectArray, toProject, toSrc, dataArray }) {
   return projectArray.map((item, key) => {
     const { title, summary, list: contentList } = item
