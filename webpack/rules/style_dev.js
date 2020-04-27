@@ -30,7 +30,7 @@ module.exports = [
         options: {
           modules: {
             mode: 'local',
-            localIdentName: '[path]__[name]__[local]--[hash:base64:5]',
+            localIdentName: '[path]_[name]__[local]--[hash:base64:5]',
           }
         }
       },
