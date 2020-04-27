@@ -10,6 +10,7 @@ import SassLogo from '../images/skill/Sass.svg'
 import PugLogo from '../images/skill/Pug.svg'
 import ReactRouterLogo from '../images/skill/react-router.svg'
 import myphoto from '../images/myphoto.png'
+import './AboutMe.sass'
 
 function AboutMe({ data }) {
   const { title, content, subTitle } = data
