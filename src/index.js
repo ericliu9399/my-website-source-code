@@ -10,6 +10,7 @@ import {
 //pages
 import IndexPage from './pages/IndexPage'
 import MessageBoard from './pages/MessageBoard'
+
 const pagesArray = [
   { page: <MessageBoard />, route: "/message_board" },
   { page: <IndexPage />, route: "/" },

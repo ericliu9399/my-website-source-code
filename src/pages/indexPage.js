@@ -23,7 +23,7 @@ function IndexPage() {
   let content
   if (language === "chinese") content = ContentChinese
   if (language === "english") content = ContentEnglish
-  const { home, aboutMe, project, contact } = content
+  const { home, aboutMe, contact } = content
   const links = (
     <>
       <a href="#home">home</a>
