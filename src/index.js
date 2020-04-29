@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './lib/css/normalize.css'
 import './styles/global.sass';
 import {
   // HashRouter, //這款router refresh會可以顯示
