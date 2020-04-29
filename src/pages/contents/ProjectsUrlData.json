@@ -1,0 +1,68 @@
+[
+  {
+    "preview": {
+      "path": "images/preview_message_board.png"
+    },
+    "list": [
+      {
+        "srcA": "https://github.com/syyui15926/my-website-source-code/blob/master/src/pages/MessageBoard.js",
+        "projectLink": "/message_board",
+        "listItem": [
+          "React.js",
+          "Javascript",
+          "Sass",
+          "Webpack"
+        ]
+      },
+      {
+        "srcA": "https://github.com/syyui15926/express-message-board-api",
+        "listItem": [
+          "express.js",
+          "Javascript",
+          "fs"
+        ]
+      }
+    ]
+  },
+  {
+    "subContainerStyle": {
+      "flexWrap": "nowrap"
+    },
+    "preview": {
+      "path": "images/preview_this_personal_website.png"
+    },
+    "list": [
+      {
+        "srcA": "https://github.com/syyui15926/my-website-source-code",
+        "listItem": [
+          "React.js",
+          "React Router",
+          "Javascript",
+          "Sass",
+          "Webpack",
+          "RWD"
+        ]
+      }
+    ]
+  },
+  {
+    "subContainerStyle": {
+      "flexWrap": "nowrap"
+    },
+    "preview": {
+      "path": "images/preview_landing_page.jpg"
+    },
+    "list": [
+      {
+        "srcA": "https://github.com/syyui15926/my-website-source-code/tree/master/src/pages/landingPage",
+        "projectA": "/landing_page.html",
+        "listItem": [
+          "Pug",
+          "Sass",
+          "Gulp",
+          "RWD"
+        ]
+      }
+    ]
+  }
+]
