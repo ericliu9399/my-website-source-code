@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from "react"
-import Header from "../components/Header.js"
-import Hamburger from "../components/Hamburger"
+import { Link } from "react-router-dom"
 import "./IndexPage.sass"
 import BgImg from "../images/home_bg.svg"
-import { Link } from "react-router-dom"
 import apiUrl from '../lib/apiUrl'
-import ContentEnglish from './indexPageContentEnglish.json'
-import ContentChinese from './indexPageContentChinese.json'
+import Header from "../components/Header.js"
+import Hamburger from "../components/Hamburger"
 import LanguageSelect from '../components/LanguageSelect'
 import Project from '../components/Project.js'
 import AboutMe from '../components/AboutMe'
 import Home from '../components/Home'
 import Contact from '../components/Contact'
+import ContentEnglish from './contents/indexPageContentEnglish.json'
+import ContentChinese from './contents/indexPageContentChinese.json'
+import ProjectCht from './contents/ProjectsContentChinese.json'
+import ProjectEng from './contents/ProjectsContentEnglish.json'
+import ProjectData from './contents/ProjectsData.json'
 
 function IndexPage() {
   useEffect(() => {
@@ -39,9 +42,9 @@ function IndexPage() {
     />
   ]
 
-  if (language === "chinese") content = require('./ProjectsTemplateContentChinese.json')
-  if (language === "english") content = require('./ProjectsTemplateContentEnglish.json')
-  const dataArray = require('./ProjectsTemplateData.json')
+  if (language === "chinese") content = ProjectCht
+  if (language === "english") content = ProjectEng
+  const dataArray = ProjectData
   return (
     <>
       <Header links={links} />
