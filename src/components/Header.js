@@ -2,11 +2,11 @@ import React from "react"
 import styles from "./Header.module.sass"
 
 
-function Header({ children }) {
+function Header({ links }) {
   return (
     <header className={styles.header}>
       <nav>
-        {children}
+        {links}
       </nav >
     </header>
   )

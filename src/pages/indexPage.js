@@ -24,29 +24,27 @@ function IndexPage() {
   if (language === "chinese") content = ContentChinese
   if (language === "english") content = ContentEnglish
   const { home, aboutMe, contact } = content
-  const links = (
-    <>
-      <a href="#home">home</a>
-      <a href="#aboutMe">about me</a>
-      <a href="#projects">projects</a>
-      <a href="#contact">contact</a>
-      <Link to="/message_board">message board</Link>
-      <a href="/landing_page.html">landing page</a>
-      <LanguageSelect
-        switchLangMethod={setLanguage}
-        language={["chinese", "english"]}
-        currentLanguage={language}
-      />
-    </>
-  )
+  const links = [
+    <a href="#home" key="home">home</a>,
+    <a href="#aboutMe" key="about me">about me</a>,
+    <a href="#projects" key="projects">projects</a>,
+    <a href="#contact" key="contact">contact</a>,
+    <Link to="/message_board" key="message board">message board</Link>,
+    <a href="/landing_page.html" key="landing page">landing page</a>,
+    <LanguageSelect
+      switchLangMethod={setLanguage}
+      language={["chinese", "english"]}
+      currentLanguage={language}
+      key="LanguageSelect"
+    />
+  ]
+
   if (language === "chinese") content = require('./ProjectsTemplateContentChinese.json')
   if (language === "english") content = require('./ProjectsTemplateContentEnglish.json')
   const dataArray = require('./ProjectsTemplateData.json')
   return (
     <>
-      <Header>
-        {links}
-      </Header>
+      <Header links={links} />
       <BgImg id="BgImg" />
       <main id="indexPage">
         <Home nameCard={home.nameCard} />
@@ -55,9 +53,7 @@ function IndexPage() {
         <Project content={content} dataArray={dataArray} />
         <Contact data={contact} />
       </main>
-      <Hamburger>
-        {links}
-      </Hamburger>
+      <Hamburger links={links} />
     </>
   )
 }

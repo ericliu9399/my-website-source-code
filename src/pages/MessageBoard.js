@@ -82,11 +82,10 @@ function MessageBoard() {
         sendDeletRequest={deleteMethod}
       />
     )
+  const link = [<Link to="/" key="home">home</Link>]
   return (
     <div id="messageBoard">
-      <Header>
-        <Link to="/">home</Link>
-      </Header>
+      <Header links={link} />
       <div className="container">
         <Comments />
         <Form postMethod={postMethod} />
@@ -97,9 +96,7 @@ function MessageBoard() {
           留言
         </a>
       </div>
-      <Hamburger>
-        <Link to="/">home</Link>
-      </Hamburger>
+      <Hamburger links={link} />
     </div>
   )
 }

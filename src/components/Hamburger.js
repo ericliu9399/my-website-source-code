@@ -9,8 +9,9 @@ import {
   hamburgerCross,
   navShow
 } from './Hamburger.module.sass'
+import Button from '../components/Button'
 
-function Hamburger({ children }) {
+function Hamburger({ links }) {
   const [clsH, setClsH] = useState(hamburger)//hamburger class
   const [idNav, setID_Nav] = useState("")//navbar class
   const [isNavShow, setIsNavShow] = useState(false)
@@ -43,6 +44,7 @@ function Hamburger({ children }) {
       setID_Nav(navShow)
     }, 10)
   }
+
   return (
     <div
       className={mobileNav}
@@ -51,7 +53,11 @@ function Hamburger({ children }) {
       }}
     >
       {isNavShow && <nav id={idNav}>
-        {children}
+        {links.map((item, key) => {
+          return (
+            <Button key={key}>{item}</Button>
+          )
+        })}
       </nav>}
       <div className={clsH}>
         <div id={bar1} />
