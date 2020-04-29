@@ -14,7 +14,7 @@ import ContentEnglish from './contents/indexPageContentEnglish.json'
 import ContentChinese from './contents/indexPageContentChinese.json'
 import ProjectCht from './contents/ProjectsContentChinese.json'
 import ProjectEng from './contents/ProjectsContentEnglish.json'
-import ProjectData from './contents/ProjectsData.json'
+import ProjectData from './contents/ProjectsUrlData.json'
 
 function IndexPage() {
   useEffect(() => {
