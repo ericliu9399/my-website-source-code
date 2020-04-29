@@ -1,16 +1,17 @@
 import React, { useState, useMemo, createRef } from 'react'
 import { Link } from "react-router-dom"
 import styles from './Project.module.sass'
+import Button from './Button';
 
 function FeatureItem({ contentListItem, dataListItem, toSrc, toProject }) {
   const { listTitle } = contentListItem || {}
   const { srcA, projectLink, projectA, listItem } = dataListItem || {}
   return (
-    <div className={styles.FeatureItem}>
+    <div className={styles.featureItem}>
       {listTitle && <p>{listTitle}</p>}
-      {srcA && <><a href={srcA}>{toSrc}</a><br /></>}
-      {projectLink && <><Link to={projectLink}>{toProject}</Link><br /></>}
-      {projectA && <><a href={projectA}>{toProject}</a><br /></>}
+      {srcA && <Button><a href={srcA}>{toSrc}</a></Button>}
+      {projectLink && <Button color="secondary"><Link to={projectLink}>{toProject}</Link></Button>}
+      {projectA && <Button color="secondary"><a href={projectA}>{toProject}</a></Button>}
       <ul>
         {listItem.map(item => <li key={item}>{item}</li>)}
       </ul>

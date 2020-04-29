@@ -1,5 +1,6 @@
 import React from "react"
 import styles from "./Contact.module.sass"
+import Button from './Button'
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -28,7 +29,7 @@ export default class Contact extends React.Component {
           <label className={styles.message}>Message<textarea name="message" defaultValue={""} /></label>
           <div className={styles.bottomPart}>
             {status === "ERROR" && <p>Ooops! There was an error.</p>}
-            {status === "SUCCESS" ? <p>Thanks!</p> : <button>Submit</button>}
+            {status === "SUCCESS" ? <p>Thanks!</p> : <Button>Submit</Button>}
           </div>
         </form>
       </section>
