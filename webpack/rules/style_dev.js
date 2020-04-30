@@ -13,6 +13,23 @@ module.exports = [
     ]
   },
   {
+    test: cssModuleRegex,
+    use: [
+      'style-loader',
+      {
+        loader: 'css-loader',
+        options: {
+          modules: {
+            mode: 'local',
+            localIdentName: '[[path]_[name]__[local]--hash:base64:5]',
+          },
+          importLoaders: 1
+        }
+      },
+      'postcss-loader'
+    ]
+  },
+  {
     test: sassRegex,
     exclude: sassModuleRegex,
     use: [
