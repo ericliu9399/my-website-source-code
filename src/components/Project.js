@@ -1,7 +1,7 @@
 import React, { useState, useMemo, createRef } from 'react'
 import { Link } from "react-router-dom"
 import styles from './Project.module.sass'
-import Button from './Button';
+import Button from './MuiBtn';
 
 function FeatureItem({ contentListItem, dataListItem, toSrc, toProject }) {
   const { listTitle } = contentListItem || {}
