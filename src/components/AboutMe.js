@@ -29,11 +29,11 @@ function AboutMe({ data }) {
         <div id="react" ><LogoContainer Logo={<ReactLogo />} /><p>React.js</p></div>
         <div id="javascript" ><LogoContainer Logo={<JavascriptLogo />} /><p>Javascript</p></div>
         <div id="express" ><LogoContainer Logo={<NodejsLogo />} /><p>Express.js</p></div>
-        <div id="webpack"><LogoContainer Logo={<WebpackLogo />} />Webpack</div>
-        <div id="gulp"><LogoContainer Logo={<GulpLogo />} />Gulp</div>
-        <div id="sass"><LogoContainer Logo={<SassLogo />} />Sass</div>
-        <div id="pug"><LogoContainer Logo={<PugLogo />} />Pug</div>
-        <div id="reactRouter"><LogoContainer Logo={<ReactRouterLogo />} />React Router</div>
+        <div id="webpack"><LogoContainer Logo={<WebpackLogo />} /><p>Webpack</p></div>
+        <div id="gulp"><LogoContainer Logo={<GulpLogo />} /><p>Gulp</p></div>
+        <div id="sass"><LogoContainer Logo={<SassLogo />} /><p>Sass</p></div>
+        <div id="pug"><LogoContainer Logo={<PugLogo />} /><p>Pug</p></div>
+        <div id="reactRouter"><LogoContainer Logo={<ReactRouterLogo />} /><p>React Router</p></div>
       </div>
       <NextBtn href="#projects" />
     </section>
