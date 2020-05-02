@@ -5,7 +5,7 @@
     },
     "list": [
       {
-        "srcA": "https://github.com/syyui15926/my-website-source-code/blob/master/src/pages/MessageBoard.js",
+        "srcA": "https://github.com/edinliu/my-website-source-code/blob/master/src/pages/MessageBoard.js",
         "projectLink": "/message_board",
         "listItem": [
           "React.js",
@@ -15,7 +15,7 @@
         ]
       },
       {
-        "srcA": "https://github.com/syyui15926/express-message-board-api",
+        "srcA": "https://github.com/edinliu/express-message-board-api",
         "listItem": [
           "express.js",
           "Javascript",
@@ -33,7 +33,7 @@
     },
     "list": [
       {
-        "srcA": "https://github.com/syyui15926/my-website-source-code",
+        "srcA": "https://github.com/edinliu/my-website-source-code",
         "listItem": [
           "React.js",
           "React Router",
@@ -54,7 +54,7 @@
     },
     "list": [
       {
-        "srcA": "https://github.com/syyui15926/my-website-source-code/tree/master/src/pages/landingPage",
+        "srcA": "https://github.com/edinliu/my-website-source-code/tree/master/src/pages/landingPage",
         "projectA": "/landing_page.html",
         "listItem": [
           "Pug",

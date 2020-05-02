@@ -2,14 +2,14 @@
   "home": {
     "nameCard": [
       "Hello, i’m",
-      "Eric Liu",
+      "Edin Liu",
       "CREATIVE FRONT-END WEB DEVELOPER"
     ]
   },
   "aboutMe": {
     "title": "About me",
     "subTitle": "My Skillsets",
-    "content": "Hi, I'm Eric Liu, a passionate self-taught frontEnd web developer from Taiwan.\nI tend to make use of modern web technologies to build websites that looks great,feels fantastic, and functions correctly. I am especially focusing on Reactjs."
+    "content": "Hi, I'm Edin Liu, a passionate self-taught frontEnd web developer from Taiwan.\nI tend to make use of modern web technologies to build websites that looks great,feels fantastic, and functions correctly. I am especially focusing on Reactjs."
   },
   "project": {
     "title": "Side Project"
