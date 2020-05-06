@@ -1,17 +1,8 @@
-const cssRegex = /\.css$/;
 const cssModuleRegex = /\.module\.css$/;
-const sassRegex = /\.(scss|sass)$/;
 const sassModuleRegex = /\.module\.(scss|sass)$/;
 
 module.exports = [
-  {
-    test: cssRegex,
-    exclude: cssModuleRegex,
-    use: [
-      { loader: "style-loader" },
-      { loader: "css-loader" }
-    ]
-  },
+  require('./style/css'),
   {
     test: cssModuleRegex,
     use: [
@@ -22,20 +13,14 @@ module.exports = [
           modules: {
             mode: 'local',
             localIdentName: '[hash:base64:5]',
-          }
+          },
+          importLoaders: 1
         }
-      }
+      },
+      'postcss-loader'
     ]
   },
-  {
-    test: sassRegex,
-    exclude: sassModuleRegex,
-    use: [
-      'style-loader',
-      'css-loader',
-      'sass-loader',
-    ],
-  },
+  require('./style/sass'),
   {
     test: sassModuleRegex,
     use: [
@@ -46,9 +31,11 @@ module.exports = [
           modules: {
             mode: 'local',
             localIdentName: '[hash:base64:5]',
-          }
+          },
+          importLoaders: 1
         }
       },
+      'postcss-loader',
       'sass-loader',
     ],
   },
