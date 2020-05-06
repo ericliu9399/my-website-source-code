@@ -19,7 +19,7 @@ function AboutMe({ data }) {
     <section id="aboutMe">
       <h2 className="sectionTitle">{title}</h2>
       <div className="container">
-        <img src={myphoto} alt="Eric Liu" />
+        <img src={myphoto} alt="Edin Liu" />
         <p>
           {content}
         </p>
