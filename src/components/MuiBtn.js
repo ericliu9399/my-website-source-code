@@ -22,7 +22,6 @@ const useStyles = makeStyles({
 
 export default function MuiBtn({ children, variant = "contained", color = "primary" }) {
   const classes = useStyles();
-  console.log(classes)
   return (
     <Button
       variant={variant}
