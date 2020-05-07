@@ -1,7 +1,8 @@
 import React, { useState, useMemo, createRef } from 'react'
 import { Link } from "react-router-dom"
 import styles from './Project.module.sass'
-import Button from './MuiBtn';
+import Button from './BsButton';
+import SectionTitle from './SectionTitle'
 
 function FeatureItem({ contentListItem, dataListItem, toSrc, toProject }) {
   const { listTitle } = contentListItem || {}
@@ -9,9 +10,9 @@ function FeatureItem({ contentListItem, dataListItem, toSrc, toProject }) {
   return (
     <div className={styles.featureItem}>
       {listTitle && <p>{listTitle}</p>}
-      {srcA && <Button><a href={srcA}>{toSrc}</a></Button>}
-      {projectLink && <Button color="secondary"><Link to={projectLink}>{toProject}</Link></Button>}
-      {projectA && <Button color="secondary"><a href={projectA}>{toProject}</a></Button>}
+      {srcA && <Button isAnchor={true} href={srcA} className="btn btn-primary">{toSrc}</Button>}
+      {projectLink && <Button isLink={true} to={projectLink}>{toProject}</Button>}
+      {projectA && <Button isAnchor={true} href={projectA}>{toProject}</Button>}
       <ul>
         {listItem.map(item => <li key={item}>{item}</li>)}
       </ul>
@@ -124,7 +125,7 @@ function Project({ content, dataArray }) {
   const data = [projectArray, toProject, toSrc, dataArray]
   return (
     <section id="projects">
-      <h2 className="sectionTitle">{sectionTitle}</h2>
+      <SectionTitle title={sectionTitle} />
       <ProjectItemArray
         // projectArray={projectArray}
         // toProject={toProject}
