@@ -2,28 +2,21 @@
 @import ../lib/sass/mixin
 //main
 $main_padding: 20vw
-//section
-$title_padding: 60px
+
 #BgImg
   z-index: 0
   position: absolute
   top: 0px
   right: 0px
-main#indexPage
+
+#indexPage
   top: 0px
   section
     padding: 0px $main_padding
     min-height: 100vh
     width: 100%
-    display: flex
-    flex-direction: column
     @media all and (max-width: $break-medium)
       padding: 0px $main_padding/2
-    h2.sectionTitle
-      text-align: center      
-      padding-top: $title_padding
-      @media all and (max-width: $break-medium)
-        padding-top: 0px
     h2.subTitle
       text-align: center
   .bgDiv
