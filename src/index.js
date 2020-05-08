@@ -2,8 +2,10 @@ import 'react-app-polyfill/ie9'
 import 'react-app-polyfill/stable'
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './lib/css/normalize.css'
+// import './lib/css/normalize.css'
+// import './lib/css/bs_v4.4.1/bootstrap-reboot.min.css'
 import './styles/global.sass';
+import './styles/global.css'
 import {
   // HashRouter, //這款router refresh會可以顯示
   BrowserRouter as Router,
