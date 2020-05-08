@@ -1,6 +1,6 @@
 import React from "react"
 import styles from "./Contact.module.sass"
-import Button from './Button'
+import Button from './BsButton'
 
 export default class Contact extends React.Component {
   constructor(props) {
