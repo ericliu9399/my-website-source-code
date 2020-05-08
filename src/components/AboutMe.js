@@ -11,13 +11,14 @@ import PugLogo from '../images/skill/Pug.svg'
 import ReactRouterLogo from '../images/skill/react-router.svg'
 import myphoto from '../images/myphoto.png'
 import './AboutMe.sass'
+import SectionTitle from './SectionTitle'
 
 function AboutMe({ data }) {
   const { title, content, subTitle } = data
 
   return (
     <section id="aboutMe">
-      <h2 className="sectionTitle">{title}</h2>
+      <SectionTitle title={title}></SectionTitle>
       <div className="container">
         <img src={myphoto} alt="Edin Liu" />
         <p>
