@@ -7,12 +7,21 @@ import SectionTitle from './SectionTitle'
 function FeatureItem({ contentListItem, dataListItem, toSrc, toProject }) {
   const { listTitle } = contentListItem || {}
   const { srcA, projectLink, projectA, listItem } = dataListItem || {}
+  const ToSrc = () => <a href={srcA}>
+    <Button className="btn btn-primary">{toSrc}</Button>
+  </a>
+  const ToProjectLink = () => <Link to={projectLink}>
+    <Button className="btn btn-secondary">{toProject}</Button>
+  </Link>
+  const ToProjectAnchor = () => <a href={projectA}>
+    <Button className="btn btn-secondary">{toProject}</Button>
+  </a>
   return (
     <div className={styles.featureItem}>
       {listTitle && <p>{listTitle}</p>}
-      {srcA && <Button isAnchor={true} href={srcA} className="btn btn-primary">{toSrc}</Button>}
-      {projectLink && <Button isLink={true} to={projectLink}>{toProject}</Button>}
-      {projectA && <Button isAnchor={true} href={projectA}>{toProject}</Button>}
+      {srcA && <ToSrc />}
+      {projectLink && <ToProjectLink />}
+      {projectA && <ToProjectAnchor />}
       <ul>
         {listItem.map(item => <li key={item}>{item}</li>)}
       </ul>
