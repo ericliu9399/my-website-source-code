@@ -1,52 +1,18 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
 
 function BsButton({
-  children,
   className = "btn btn-primary",
   type = "button",
-  isAnchor = false, href = "",
-  isLink = false, to = "",
-  isInput = false, value = ""
+  children
 }) {
-  // const linkBool = !isAnchor && isLink && !isInput
-  const anchorBool = isAnchor && !isLink && !isInput
-  const inputBool = !isAnchor && !isLink && isInput
-  const buttonBool = !isAnchor && !isLink && !isInput
   return (
     <>
-      {/* {
-        linkBool && <Link
-          className={className}
-          to={to}
-          role="button">
-          {children}
-        </Link>
-      } */}
-      {
-        anchorBool && <a
-          className={className}
-          href={href}
-          role="button"
-        >
-          {children}
-        </a>
-      }
-      {
-        inputBool && <input
-          className={className}
-          type={type}
-          value={value}
-        />
-      }
-      {
-        buttonBool && <button
-          type={type}
-          className={className}
-        >
-          {children}
-        </button>
-      }
+      <button
+        className={className}
+        type={type}
+      >
+        {children}
+      </button>
       {/* bootstrap style */}
       <style jsx>{`
 /*!
