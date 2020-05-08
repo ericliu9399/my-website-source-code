@@ -14,9 +14,7 @@ const cssRule = {
         importLoaders: 1,
       }
     },
-    {
-      loader: 'postcss-loader'
-    },
+    require('../use/postcss_prod'),
   ]
 }
 const cssModuleRule = {
@@ -30,10 +28,10 @@ const cssModuleRule = {
           mode: 'local',
           localIdentName: '[hash:base64:5]',
         },
-        importLoaders: 1
+        importLoaders: 1,
       }
     },
-    'postcss-loader'
+    require('../use/postcss_prod'),
   ]
 }
 const sassRule = {
@@ -47,9 +45,7 @@ const sassRule = {
         importLoaders: 1,
       }
     },
-    {
-      loader: 'postcss-loader'
-    },
+    require('../use/postcss_prod'),
     'sass-loader'
   ]
 }
@@ -64,10 +60,10 @@ const sassModuleRule = {
           mode: 'local',
           localIdentName: '[hash:base64:5]',
         },
-        importLoaders: 1
+        importLoaders: 1,
       }
     },
-    'postcss-loader',
+    require('../use/postcss_prod'),
     'sass-loader',
   ],
 }

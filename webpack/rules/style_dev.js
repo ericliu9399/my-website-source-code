@@ -17,9 +17,7 @@ const cssRule = {
         importLoaders: 1,
       }
     },
-    {
-      loader: 'postcss-loader'
-    },
+    require('../use/postcss_dev')
   ]
 }
 const cssModuleRule = {
@@ -39,7 +37,7 @@ const cssModuleRule = {
         importLoaders: 1
       }
     },
-    'postcss-loader'
+    require('../use/postcss_dev')
   ]
 }
 const sassRule = {
@@ -56,9 +54,7 @@ const sassRule = {
         importLoaders: 1,
       }
     },
-    {
-      loader: 'postcss-loader'
-    },
+    require('../use/postcss_dev'),
     'sass-loader'
   ]
 }
@@ -79,7 +75,7 @@ const sassModuleRule = {
         importLoaders: 1
       }
     },
-    'postcss-loader',
+    require('../use/postcss_dev'),
     'sass-loader',
   ],
 }
