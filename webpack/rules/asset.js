@@ -16,6 +16,3 @@ module.exports = [
     ],
   }
 ]
-/**
-import myphoto './your path'
- */
