@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --mode production --env=prod",
+    "buildBs": "source script/buildBs.sh",
     "dev": "webpack-dev-server --mode development --env=dev",
     "deploy": "source script/public_deploy.sh"
   },
@@ -20,6 +21,8 @@
     "gulp": "^4.0.2",
     "gulp-pug": "^4.0.1",
     "gulp-sass": "^4.0.2",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
     "node-sass": "^4.14.1",
     "postcss-loader": "^3.0.0",
     "precss": "^4.0.0",
@@ -41,6 +44,6 @@
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not ie <= 8"
+    "not ie <= 10"
   ]
 }
