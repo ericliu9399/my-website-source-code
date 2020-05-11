@@ -1,8 +1,14 @@
 import React from 'react'
-import styles from './SectionTitle.module.sass'
 
 function SectionTitle({ title, id }) {
-  return <h2 id={id} className={styles.SectionTitle}>{title}</h2>
+  return <>
+    <h2
+      id={id}
+      className="text-center pt-1 pt-sm-5"
+    >
+      {title}
+    </h2>
+  </>
 }
 
 export default SectionTitle
