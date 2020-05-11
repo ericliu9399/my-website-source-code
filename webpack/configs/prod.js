@@ -1,11 +1,12 @@
 const path = require("path");
+const PATH = require("./configPath")
 
 module.exports = {
   entry: {
-    bundle: path.resolve("src", "index.js"),
+    bundle: path.resolve(PATH.src, PATH.entry),
   },
   output: {
-    path: path.resolve("public"),
+    path: path.resolve(PATH.public),
     filename: "[name].js",
   },
   module: {
@@ -14,6 +15,9 @@ module.exports = {
       ...require('../rules/style_prod'),
       ...require('../rules/asset')
     ]
-  }
+  },
+  plugins: [
+    require('../plugins/HtmlWebpackPlugin')
+  ]
 };
 
