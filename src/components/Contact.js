@@ -1,6 +1,7 @@
 import React from "react"
-import styles from "./Contact.module.sass"
+// import styles from "./Contact.module.sass"
 import Button from './BsButton'
+import SectionTitle from './SectionTitle'
 
 export default class Contact extends React.Component {
   constructor(props) {
@@ -14,25 +15,41 @@ export default class Contact extends React.Component {
     const { status } = this.state
     const { data: { title } } = this.props
     return (
-      <section id="contact">
-        <h2 className="sectionTitle">{title}</h2>
-        <form
-          className={styles.formspree}
-          onSubmit={this.submitForm}
-          action="https://formspree.io/mvorroln"
-          method="POST"
-        >
-          <div className={styles.upPart}>
-            <label>Email<input type="email" name="email" /></label>
-            <label>Name<input type="text" name="name" /></label>
-          </div>
-          <label className={styles.message}>Message<textarea name="message" defaultValue={""} /></label>
-          <div className={styles.bottomPart}>
-            {status === "ERROR" && <p>Ooops! There was an error.</p>}
-            {status === "SUCCESS" ? <p>Thanks!</p> : <Button>Submit</Button>}
-          </div>
-        </form>
-      </section>
+      <>
+        <section className="min-vh-100 d-flex flex-column" id="contact">
+          <SectionTitle title={title} />
+          <form
+            className="flex-grow-1 d-flex flex-column"
+            onSubmit={this.submitForm}
+            action="https://formspree.io/mvorroln"
+            method="POST"
+          >
+            <div className="container flex-grow-1 d-flex flex-column">
+              <label className="d-flex flex-column">
+                Email<input className="" type="email" name="email" />
+              </label>
+              <label className="d-flex flex-column">
+                Name<input className="" type="text" name="name" />
+              </label>
+              <label className="flex-grow-1 d-flex flex-column">
+                Message<textarea className="flex-grow-1" name="message" defaultValue={""} />
+              </label>
+              <div className="">
+                {status === "SUCCESS" ? <p>Thanks!</p> : <button className="btn btn-primary">Submit</button>}
+                {status === "ERROR" && <p>Ooops! There was an error.</p>}
+              </div>
+            </div>
+          </form>
+        </section>
+        <style jsx>{`
+*{
+border: solid 1px white;
+}
+{/* .vh-50{
+height: 80vh;
+} */}
+`}</style>
+      </>
     );
   }
 
