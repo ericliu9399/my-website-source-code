@@ -8,6 +8,7 @@ function SectionTitle({ title, id }) {
     >
       {title}
     </h2>
+
   </>
 }
 

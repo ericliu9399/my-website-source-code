@@ -10,34 +10,57 @@ import SassLogo from '../images/skill/Sass.svg'
 import PugLogo from '../images/skill/Pug.svg'
 import ReactRouterLogo from '../images/skill/react-router.svg'
 import myphoto from '../images/myphoto.png'
-import './AboutMe.sass'
 import SectionTitle from './SectionTitle'
+
+function SkillContainer() {
+  return (
+    <div className="skillContainer d-flex flex-wrap justify-content-around">
+      <LogoContainer id="react" sec={3} isFillPath={true} color="rgba(97, 218, 251, 1)" Logo={<ReactLogo />} content={"React.js"} />
+      <LogoContainer id="javascript" sec={1.5} isFillPath={true} color="rgba(241, 218, 31, 0.5)" Logo={<JavascriptLogo />} content={"Javascript"} />
+      <LogoContainer id="express" sec={2} color="rgba(140, 200, 75, 1)" Logo={<NodejsLogo />} content={"Express.js"} />
+      <LogoContainer id="webpack" sec={4} color="rgba(141, 213, 249, 0.5)" Logo={<WebpackLogo />} content={"Webpack"} />
+      <LogoContainer id="gulp" sec={2.5} color="rgba(224, 73, 73, 1)" Logo={<GulpLogo />} content={"Gulp"} />
+      <LogoContainer id="sass" sec={1} color="rgba(212, 100, 152, 1)" Logo={<SassLogo />} content={"Sass"} />
+      <LogoContainer id="pug" sec={2} color="rgba(237, 205, 166, 0.5)" Logo={<PugLogo />} content={"Pug"} />
+      <LogoContainer id="reactRouter" sec={1.5} color="rgba(86, 216, 249, 1)" Logo={<ReactRouterLogo />} content={"React Router"} />
+    </div>
+  )
+}
 
 function AboutMe({ data }) {
   const { title, content, subTitle } = data
 
   return (
-    <section id="aboutMe">
-      <SectionTitle title={title}></SectionTitle>
-      <div className="container">
-        <img src={myphoto} alt="Edin Liu" />
-        <p>
-          {content}
-        </p>
-      </div>
-      <h2 className="subTitle">{subTitle}</h2>
-      <div className="skillContainer">
-        <div id="react" ><LogoContainer Logo={<ReactLogo />} /><p>React.js</p></div>
-        <div id="javascript" ><LogoContainer Logo={<JavascriptLogo />} /><p>Javascript</p></div>
-        <div id="express" ><LogoContainer Logo={<NodejsLogo />} /><p>Express.js</p></div>
-        <div id="webpack"><LogoContainer Logo={<WebpackLogo />} /><p>Webpack</p></div>
-        <div id="gulp"><LogoContainer Logo={<GulpLogo />} /><p>Gulp</p></div>
-        <div id="sass"><LogoContainer Logo={<SassLogo />} /><p>Sass</p></div>
-        <div id="pug"><LogoContainer Logo={<PugLogo />} /><p>Pug</p></div>
-        <div id="reactRouter"><LogoContainer Logo={<ReactRouterLogo />} /><p>React Router</p></div>
-      </div>
-      <NextBtn href="#projects" />
-    </section>
+    <>
+      <section id="aboutMe" className="pt-sm-5">
+        <SectionTitle title={title}></SectionTitle>
+        <div className={
+          "d-flex flex-column flex-md-row align-items-center"
+        }>
+          <img src={myphoto} alt="Edin Liu" />
+          <p className="p-5 w-100">
+            {content}
+          </p>
+        </div>
+        <h4 className="text-center pt-3 pb-5">{subTitle}</h4>
+        <SkillContainer />
+        <div className="d-flex justify-content-center">
+          <NextBtn href="#projects" />
+        </div>
+      </section>
+      <style jsx>{`
+img{
+      width: auto;
+      height: auto;
+      max-width: 250px;
+      max-height: 250px;
+      border-radius: 50%;
+}
+p{
+      line-height: 1.5rem;
+}
+`}</style>
+    </>
   )
 }
 
