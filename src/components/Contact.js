@@ -1,6 +1,4 @@
 import React from "react"
-// import styles from "./Contact.module.sass"
-import Button from './BsButton'
 import SectionTitle from './SectionTitle'
 
 export default class Contact extends React.Component {
@@ -16,35 +14,35 @@ export default class Contact extends React.Component {
     const { data: { title } } = this.props
     return (
       <>
-        <section className="min-vh-100 d-flex flex-column" id="contact">
+        <section className="vh-100 d-flex flex-column" id="contact">
           <SectionTitle title={title} />
           <form
-            className="flex-grow-1 d-flex flex-column"
+            className="container flex-grow-1 d-flex flex-column"
             onSubmit={this.submitForm}
             action="https://formspree.io/mvorroln"
             method="POST"
           >
-            <div className="container flex-grow-1 d-flex flex-column">
-              <label className="d-flex flex-column">
-                Email<input className="" type="email" name="email" />
+            <div className="row">
+              <label className="col-sm-6">
+                Email<input className="w-100" type="email" name="email" />
               </label>
-              <label className="d-flex flex-column">
-                Name<input className="" type="text" name="name" />
+              <label className="col-sm-6">
+                Name<input className="w-100" type="text" name="name" />
               </label>
-              <label className="flex-grow-1 d-flex flex-column">
-                Message<textarea className="flex-grow-1" name="message" defaultValue={""} />
-              </label>
-              <div className="">
-                {status === "SUCCESS" ? <p>Thanks!</p> : <button className="btn btn-primary">Submit</button>}
-                {status === "ERROR" && <p>Ooops! There was an error.</p>}
-              </div>
+            </div>
+            <label className="flex-grow-1 d-flex flex-column">
+              Message<textarea className="w-100 flex-grow-1" name="message" defaultValue={""} />
+            </label>
+            <div className="w-100 pb-3">
+              {status === "SUCCESS" ? <p>Thanks!</p> : <button className="btn btn-primary">Submit</button>}
+              {status === "ERROR" && <p>Ooops! There was an error.</p>}
             </div>
           </form>
         </section>
         <style jsx>{`
-*{
+{/* *{
 border: solid 1px white;
-}
+} */}
 {/* .vh-50{
 height: 80vh;
 } */}

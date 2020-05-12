@@ -4,7 +4,7 @@ function SectionTitle({ title, id }) {
   return <>
     <h2
       id={id}
-      className="text-center pt-1 pt-sm-5"
+      className="d-block text-center pt-1 pt-sm-5"
     >
       {title}
     </h2>
