@@ -1,23 +1,21 @@
-import React, { useState, useMemo, createRef } from 'react'
+import React from 'react'
 import { Link } from "react-router-dom"
-import styles from './Project.module.sass'
-import Button from './BsButton';
 import SectionTitle from './SectionTitle'
 
 function FeatureItem({ contentListItem, dataListItem, toSrc, toProject }) {
   const { listTitle } = contentListItem || {}
   const { srcA, projectLink, projectA, listItem } = dataListItem || {}
   const ToSrc = () => <a href={srcA}>
-    <Button className="btn btn-primary">{toSrc}</Button>
+    <button className="btn btn-primary m-1">{toSrc}</button>
   </a>
   const ToProjectLink = () => <Link to={projectLink}>
-    <Button className="btn btn-secondary">{toProject}</Button>
+    <button className="btn btn-secondary m-1">{toProject}</button>
   </Link>
   const ToProjectAnchor = () => <a href={projectA}>
-    <Button className="btn btn-secondary">{toProject}</Button>
+    <button className="btn btn-secondary m-1">{toProject}</button>
   </a>
   return (
-    <div className={styles.featureItem}>
+    <div className="mr-3">
       {listTitle && <p>{listTitle}</p>}
       {srcA && <ToSrc />}
       {projectLink && <ToProjectLink />}
@@ -32,7 +30,7 @@ function Feature({ contentList, dataList, toSrc, toProject }) {
   const length = Math.max(dataList.length, contentList.length)
   const array = Array.from({ length: length })
   return (
-    <div className={styles.feature}>
+    <div className="d-flex flex-row justify-content-start">
       {array.map((item, key) => {
         return (
           <FeatureItem
@@ -49,7 +47,7 @@ function Feature({ contentList, dataList, toSrc, toProject }) {
 }
 function Content({ title, summary }) {
   return (
-    <div className={styles.content}>
+    <div className="styles">
       <h2>{title}</h2>
       <p>{summary}</p>
     </div>
@@ -57,32 +55,25 @@ function Content({ title, summary }) {
 }
 function Preview({ preview }) {
   const { path } = preview
-  const [imgStyle, setImgStyle] = useState({})
-  const divRef = useMemo(() => {
-    console.log("useMemo create divRef")
-    return createRef()
-  }, [])
-  function moveToMiddle({ target: img }) {
-    // console.log(key)
-    let img_width = img.offsetWidth
-    let div_width = divRef.current.offsetWidth
-    // console.log(div_width)
-    console.log('img_width', img.offsetWidth)
-    console.log('div_width', divRef.current ? divRef.current.offsetWidth : 0)
-    if (img_width > div_width) {
-      let imgOffset = (img_width - div_width) / 2
-      setImgStyle({ "right": `-${imgOffset}px` })
-    }
-  }
   return (
-    <div className={styles.preview} ref={divRef}>
-      <img src={path} alt="" style={imgStyle} onLoad={(t) => { moveToMiddle(t) }} />
-    </div>
+    <>
+      <div className="w-100">
+        <img className="w-100 round box-shadow" src={path} alt="" />
+      </div>
+      <style jsx>{`
+.round{
+border-radius: 30px;
+}
+.box-shadow{
+box-shadow: 5px 5px 30px rgba(255,255,255,0.5);
+}
+`}</style>
+    </>
   )
 }
 function ProjectItemUpper({ subContainerStyle, title, summary, contentList, dataList, toSrc, toProject }) {
   return (
-    <div className={styles.ProjectItemUpper} style={subContainerStyle}>
+    <div className="d-flex flex-column" style={subContainerStyle}>
       <Content title={title} summary={summary} />
       <Feature
         contentList={contentList}
@@ -95,7 +86,7 @@ function ProjectItemUpper({ subContainerStyle, title, summary, contentList, data
 }
 function ProjectItem({ subContainerStyle, title, summary, contentList, dataList, toSrc, toProject, preview }) {
   return (
-    <div className={styles.ProjectItem} >
+    <div className="d-flex flex-column flex-lg-row pb-2 pb-5" >
       <ProjectItemUpper subContainerStyle={subContainerStyle}
         title={title}
         summary={summary}
@@ -131,15 +122,19 @@ function Project({ content, dataArray }) {
 
   const { projectArray, title: sectionTitle, toProject, toSrc } = content
   return (
-    <section id="projects">
-      <SectionTitle title={sectionTitle} />
-      <ProjectItemArray
-        projectArray={projectArray}
-        toProject={toProject}
-        toSrc={toSrc}
-        dataArray={dataArray}
-      />
-    </section>
+    <>
+      <section className="container" id="projects">
+        <div className="">
+          <SectionTitle title={sectionTitle} />
+          <ProjectItemArray
+            projectArray={projectArray}
+            toProject={toProject}
+            toSrc={toSrc}
+            dataArray={dataArray}
+          />
+        </div>
+      </section>
+    </>
   )
 }
 

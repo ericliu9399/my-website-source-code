@@ -1,5 +1,7 @@
 import React from 'react'
-
+/**
+這是不需要額外的css檔的single file component
+ */
 function BsButton({
   className = "btn btn-primary",
   type = "button",
