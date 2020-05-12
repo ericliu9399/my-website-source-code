@@ -108,8 +108,7 @@ function ProjectItem({ subContainerStyle, title, summary, contentList, dataList,
     </div>
   )
 }
-function ProjectItemArray({ data }) {// projectArray, toProject, toSrc, dataArray
-  const [projectArray, toProject, toSrc, dataArray] = data
+function ProjectItemArray({ projectArray, toProject, toSrc, dataArray }) {
   return projectArray.map((item, key) => {
     const { title, summary, list: contentList } = item
     const { preview, list: dataList, subContainerStyle } = dataArray[key]
@@ -131,16 +130,14 @@ function ProjectItemArray({ data }) {// projectArray, toProject, toSrc, dataArra
 function Project({ content, dataArray }) {
 
   const { projectArray, title: sectionTitle, toProject, toSrc } = content
-  const data = [projectArray, toProject, toSrc, dataArray]
   return (
     <section id="projects">
       <SectionTitle title={sectionTitle} />
       <ProjectItemArray
-        // projectArray={projectArray}
-        // toProject={toProject}
-        // toSrc={toSrc}
-        // dataArray={dataArray}
-        data={data}
+        projectArray={projectArray}
+        toProject={toProject}
+        toSrc={toSrc}
+        dataArray={dataArray}
       />
     </section>
   )
