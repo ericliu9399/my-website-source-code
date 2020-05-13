@@ -18,7 +18,7 @@ export default class Contact extends React.Component {
           <SectionTitle title={title} />
           <div className={
             "flex-grow-1 d-flex flex-column justify-content-center" +
-            " pt-md-3 pb-md-3 pt-lg-4 pb-lg-4 pt-xl-5 pb-xl-5"
+            " pt-md-0 pb-md-0 pt-lg-1 pb-lg-1 pt-xl-2 pb-xl-2"
           }>
             <form
               className={

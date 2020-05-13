@@ -53,6 +53,12 @@ width: ${hamburgerDiameter}vw;
 height: ${hamburgerDiameter}vw;
 border-radius: 50%;
 }
+.bar3Offset{
+transform: translateY(${-100 + barOffset}%);
+}
+.bar1Offset{
+transform: translateY(${100 - barOffset}%);
+}
 .bar{
 width: ${barWidth}%;
 height: ${barHeight}%;
@@ -61,9 +67,9 @@ position: relative;
 margin-left: auto;
 margin-right: auto;
 }
-.bar1Offset{
-transform: translateY(${100 - barOffset}%);
-}
+`}</style>
+    {/* 動畫 */}
+    <style jsx>{`
 .bar1Animation{
 animation: bar1 0.5s;
 animation-fill-mode: forwards;
@@ -83,9 +89,6 @@ animation-direction: ${direction};
 @keyframes bar2 {
   50%  {transform: translateY(${barOffset}%);}
   100% {transform: translateY(${barOffset}%);opacity: 0;}
-}
-.bar3Offset{
-transform: translateY(${-100 + barOffset}%);
 }
 .bar3Animation{
 animation: bar3 0.5s;
