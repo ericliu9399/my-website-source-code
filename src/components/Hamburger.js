@@ -1,31 +1,21 @@
 import React, { useState } from 'react'
 
-function Hamburger({ children }) {
-  const barOffset = 200
-  const barWidth = 65
-  const barHeight = 9
-  const hamburgerDiameter = 15//15
-  const [direction, setDirection] = useState('reverse')
-  const [animationClass, setAnimationClass] = useState(['', '', ''])
-  function handleClick() {
-    direction === 'normal' ? setDirection('reverse') : setDirection('normal')
-    setAnimationClass(['bar1Animation', 'bar2Animation', 'bar3Animation'])
-  }
+function Nav({ children, navDisplayNone, direction, displayNoneSec = 0.5 }) {
   return <>
-    <div className="mobile_nav d-flex flex-column align-items-end p-3 d-lg-none">
-      <div className="btn-group-vertical pb-3">
-        {children}
-      </div>
-      <button
-        className={"hamburger btn btn-primary"}
-        onClick={handleClick}
-      >
-        <div className={"bar bar1Offset rounded-pill " + animationClass[0]} />
-        <div className={"bar rounded-pill " + animationClass[1]} />
-        <div className={"bar bar3Offset rounded-pill " + animationClass[2]} />
-      </button>
+    <div className={"btn-group-vertical pb-3 navDisplayNoneAnimation " + navDisplayNone}>
+      {children}
     </div>
     <style jsx>{`
+.navDisplayNoneAnimation{
+transform: translateY(-5%);
+opacity: 0;
+animation: navDisplayNoneAnimation ${displayNoneSec}s;
+animation-direction: ${direction};
+animation-fill-mode: forwards;
+}
+@keyframes navDisplayNoneAnimation {
+  100% {transform: translateY(0%);opacity: 1;}
+}
 .btn-group-vertical :global(*){
 min-height: 10vmin;
 min-width: 20vmin;
@@ -35,11 +25,28 @@ justify-content: center;
 margin-bottom: 5px;
 border-radius: 20px;
 }
-.mobile_nav{
-position: fixed;
-bottom: 30px;
-right: 10px;
+.btn-group-vertical{
+transition-duration: 1s;
 }
+`}</style>
+  </>
+}
+
+function Hamburger({ handleClick, direction }) {
+  const barOffset = 200
+  const barWidth = 65
+  const barHeight = 9
+  const hamburgerDiameter = 15
+  return <>
+    <button
+      className={"hamburger btn btn-primary"}
+      onClick={handleClick}
+    >
+      <div className={"bar bar1Offset rounded-pill bar1Animation"} />
+      <div className={"bar rounded-pill bar2Animation"} />
+      <div className={"bar bar3Offset rounded-pill bar3Animation"} />
+    </button>
+    <style jsx>{`
 .hamburger{
 padding: 0px;
 width: ${hamburgerDiameter}vw;
@@ -90,8 +97,35 @@ animation-direction: ${direction};
   50%  {transform: translateY(${-100 + barOffset}%);}
   100% {transform: translateY(${-100}%) rotate(-45deg);width: 80%;}
 }
-
 `}</style>
   </>
 }
-export default Hamburger
+
+function MobileNav({ children, displayNoneSec = 0.5 }) {
+  const [direction, setDirection] = useState('reverse')
+  const [navDisplayNone, setNavDisplayNone] = useState('d-none')
+  function handleClick() {
+    if (direction === 'normal') {
+      setDirection('reverse')
+      setTimeout(() => { setNavDisplayNone('d-none') }, displayNoneSec * 1000)
+    }
+    else {
+      setDirection('normal')
+      setNavDisplayNone('')
+    }
+  }
+  return <>
+    <div className="mobile_nav d-flex flex-column align-items-end p-3 d-lg-none">
+      <Nav direction={direction} navDisplayNone={navDisplayNone} displayNoneSec={displayNoneSec}>{children}</Nav>
+      <Hamburger handleClick={handleClick} direction={direction} />
+    </div>
+    <style jsx>{`
+.mobile_nav{
+position: fixed;
+bottom: 30px;
+right: 10px;
+}
+`}</style>
+  </>
+}
+export default MobileNav
