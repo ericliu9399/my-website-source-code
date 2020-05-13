@@ -1,14 +1,19 @@
 import React from 'react'
 
 function SectionTitle({ title, id }) {
+  const smPt = 4
+  const pt = 2
   return <>
-    <h2
-      id={id}
-      className="d-block text-center pt-1 pt-sm-5"
-    >
-      {title}
-    </h2>
-
+    <div className={`pt-${pt} pt-sm-${smPt}`}>
+      <div className={`pt-${pt} pt-sm-${smPt}`}>
+        <h2
+          id={id}
+          className={`text-center pt-${pt} pt-sm-${smPt}`}
+        >
+          {title}
+        </h2>
+      </div>
+    </div>
   </>
 }
 

@@ -32,23 +32,28 @@ function AboutMe({ data }) {
 
   return (
     <>
-      <section id="aboutMe" className="pt-sm-5">
+      <section className="min-vh-100 pt-sm-5 d-flex flex-column" id="aboutMe" >
         <SectionTitle title={title}></SectionTitle>
-        <div className={
-          "d-flex flex-column flex-md-row align-items-center"
-        }>
-          <img src={myphoto} alt="Edin Liu" />
-          <p className="p-5 w-100">
-            {content}
-          </p>
-        </div>
-        <h4 className="text-center pt-3 pb-5">{subTitle}</h4>
-        <SkillContainer />
-        <div className="d-flex justify-content-center">
-          <NextBtn href="#projects" />
+        <div className="flex-grow-1 d-flex flex-column">
+          <div className={
+            "d-flex flex-column flex-md-row align-items-center"
+          }>
+            <img src={myphoto} alt="Edin Liu" />
+            <p className="p-5 w-100">
+              {content}
+            </p>
+          </div>
+          <h4 className="text-center pt-3 pb-5">{subTitle}</h4>
+          <SkillContainer />
+          <div className="d-flex justify-content-center">
+            <NextBtn href="#projects" />
+          </div>
         </div>
       </section>
       <style jsx>{`
+{/* *{
+border: solid 1px white;
+} */}
 img{
       width: auto;
       height: auto;

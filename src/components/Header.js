@@ -4,7 +4,7 @@ function Header({ children }) {
   return (
     <>
       <nav className={
-        "nav d-none d-md-flex align-items-center" +
+        "nav d-none d-lg-flex align-items-center" +
         " justify-content-end pr-3 position-fixed"
       }>
         {children}

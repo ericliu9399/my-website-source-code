@@ -1,70 +1,97 @@
 import React, { useState } from 'react'
-import {
-  bar1,
-  bar2,
-  bar3,
-  hamburger,
-  mobileNav,
-  hamburgerClick,
-  hamburgerCross,
-  navShow
-} from './Hamburger.module.sass'
-import Button from '../components/Button'
 
-function Hamburger({ links }) {
-  const [clsH, setClsH] = useState(hamburger)//hamburger class
-  const [idNav, setID_Nav] = useState("")//navbar class
-  const [isNavShow, setIsNavShow] = useState(false)
-  let timer
-  function hamburgerOn() {
-    clearTimeout(timer)
-    setClsH(`${hamburger} ${hamburgerClick}`)
-    navFadeIn()
-    timer = setTimeout(() => {
-      setClsH(`${hamburger} ${hamburgerClick} ${hamburgerCross}`)
-    }, 210)
+function Hamburger({ children }) {
+  const barOffset = 200
+  const barWidth = 65
+  const barHeight = 9
+  const hamburgerDiameter = 15//15
+  const [direction, setDirection] = useState('reverse')
+  const [animationClass, setAnimationClass] = useState(['', '', ''])
+  function handleClick() {
+    direction === 'normal' ? setDirection('reverse') : setDirection('normal')
+    setAnimationClass(['bar1Animation', 'bar2Animation', 'bar3Animation'])
   }
-  function hamburgerOff() {
-    clearTimeout(timer)
-    setClsH(`${hamburger} ${hamburgerClick}`)
-    setTimeout(() => {
-      setID_Nav("")
-    }, 10)
-    timer = setTimeout(() => {
-      setClsH(hamburger)
-      setIsNavShow(false)
-    }, 210)
-  }
-  function hamburgerOnclick() {
-    clsH === hamburger ? hamburgerOn() : hamburgerOff()
-  }
-  function navFadeIn() {
-    setIsNavShow(true)
-    setTimeout(() => {
-      setID_Nav(navShow)
-    }, 10)
-  }
-
-  return (
-    <div
-      className={mobileNav}
-      onClick={() => {
-        hamburgerOnclick()
-      }}
-    >
-      {isNavShow && <nav id={idNav}>
-        {links.map((item, key) => {
-          return (
-            <Button key={key}>{item}</Button>
-          )
-        })}
-      </nav>}
-      <div className={clsH}>
-        <div id={bar1} />
-        <div id={bar2} />
-        <div id={bar3} />
+  return <>
+    <div className="mobile_nav d-flex flex-column align-items-end p-3 d-lg-none">
+      <div className="btn-group-vertical pb-3">
+        {children}
       </div>
+      <button
+        className={"hamburger btn btn-primary"}
+        onClick={handleClick}
+      >
+        <div className={"bar bar1Offset rounded-pill " + animationClass[0]} />
+        <div className={"bar rounded-pill " + animationClass[1]} />
+        <div className={"bar bar3Offset rounded-pill " + animationClass[2]} />
+      </button>
     </div>
-  )
+    <style jsx>{`
+.btn-group-vertical :global(*){
+min-height: 10vmin;
+min-width: 20vmin;
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin-bottom: 5px;
+border-radius: 20px;
+}
+.mobile_nav{
+position: fixed;
+bottom: 30px;
+right: 10px;
+}
+.hamburger{
+padding: 0px;
+width: ${hamburgerDiameter}vw;
+height: ${hamburgerDiameter}vw;
+border-radius: 50%;
+}
+.bar{
+width: ${barWidth}%;
+height: ${barHeight}%;
+background-color: white;
+position: relative;
+margin-left: auto;
+margin-right: auto;
+}
+.bar1Offset{
+transform: translateY(${100 - barOffset}%);
+}
+.bar1Animation{
+animation: bar1 0.5s;
+animation-fill-mode: forwards;
+animation-play-state: running;
+animation-direction: ${direction};
+}
+@keyframes bar1 {
+  50%  {transform: translateY(${100 + barOffset}%);}
+  100% {transform: translateY(${100}%) rotate(45deg);width: 80%;}
+}
+.bar2Animation{
+animation: bar2 0.5s;
+animation-fill-mode: forwards;
+animation-play-state: running;
+animation-direction: ${direction};
+}
+@keyframes bar2 {
+  50%  {transform: translateY(${barOffset}%);}
+  100% {transform: translateY(${barOffset}%);opacity: 0;}
+}
+.bar3Offset{
+transform: translateY(${-100 + barOffset}%);
+}
+.bar3Animation{
+animation: bar3 0.5s;
+animation-fill-mode: forwards;
+animation-play-state: running;
+animation-direction: ${direction};
+}
+@keyframes bar3 {
+  50%  {transform: translateY(${-100 + barOffset}%);}
+  100% {transform: translateY(${-100}%) rotate(-45deg);width: 80%;}
+}
+
+`}</style>
+  </>
 }
 export default Hamburger

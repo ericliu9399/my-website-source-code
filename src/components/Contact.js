@@ -16,37 +16,37 @@ export default class Contact extends React.Component {
       <>
         <section className="vh-100 d-flex flex-column" id="contact">
           <SectionTitle title={title} />
-          <form
-            className="container flex-grow-1 d-flex flex-column"
-            onSubmit={this.submitForm}
-            action="https://formspree.io/mvorroln"
-            method="POST"
-          >
-            <div className="row">
-              <label className="col-sm-6">
-                Email<input className="w-100" type="email" name="email" />
+          <div className={
+            "flex-grow-1 d-flex flex-column justify-content-center" +
+            " pt-md-3 pb-md-3 pt-lg-4 pb-lg-4 pt-xl-5 pb-xl-5"
+          }>
+            <form
+              className={
+                "container flex-grow-1 d-flex flex-column" +
+                " pt-sm-5 pb-sm-5"
+              }
+              onSubmit={this.submitForm}
+              action="https://formspree.io/mvorroln"
+              method="POST"
+            >
+              <div className="row">
+                <label className="col-sm-6">
+                  Email<input className="w-100" type="email" name="email" />
+                </label>
+                <label className="col-sm-6">
+                  Name<input className="w-100" type="text" name="name" />
+                </label>
+              </div>
+              <label className="flex-grow-1 d-flex flex-column">
+                Message<textarea className="w-100 flex-grow-1" name="message" defaultValue={""} />
               </label>
-              <label className="col-sm-6">
-                Name<input className="w-100" type="text" name="name" />
-              </label>
-            </div>
-            <label className="flex-grow-1 d-flex flex-column">
-              Message<textarea className="w-100 flex-grow-1" name="message" defaultValue={""} />
-            </label>
-            <div className="w-100 pb-3">
-              {status === "SUCCESS" ? <p>Thanks!</p> : <button className="btn btn-primary">Submit</button>}
-              {status === "ERROR" && <p>Ooops! There was an error.</p>}
-            </div>
-          </form>
+              <div className="w-100 pb-3">
+                {status === "SUCCESS" ? <p>Thanks!</p> : <button className="btn btn-primary">Submit</button>}
+                {status === "ERROR" && <p>Ooops! There was an error.</p>}
+              </div>
+            </form>
+          </div>
         </section>
-        <style jsx>{`
-{/* *{
-border: solid 1px white;
-} */}
-{/* .vh-50{
-height: 80vh;
-} */}
-`}</style>
       </>
     );
   }
