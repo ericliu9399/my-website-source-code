@@ -23,10 +23,7 @@ function Burger({ clsH = "hamburger", onClick }) {
   z-index: 10;
   bottom: 30px;
   right: 150px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  z-index: 0;
+	position: fixed;
 }
 `}</style>
     {/* default */}

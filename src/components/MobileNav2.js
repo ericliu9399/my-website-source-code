@@ -1,82 +1,20 @@
 import React, { useState } from 'react'
-import {
-  mobileNav,
-  navShow
-} from './MobileNav2.module.sass'
-function Burger({ clsH, onClick }) {
-  let bar = "position-absolute bg-white rounded-pill"
+import Burger from './Burger'
+
+function Nav({ isNavShow, links, idNav }) {
+
   return <>
-    <button
-      className={
-        clsH +
-        " rounded-circle btn btn-primary"
-      }
-      onClick={onClick}
-    >
-      <div className={bar} id="bar1" />
-      <div className={bar} id="bar2" />
-      <div className={bar} id="bar3" />
-    </button>
-    {/* default */}
-    <style jsx>{`
-.hamburger {
-	z-index: 10;
-	width: 15vw;
-	height: 15vw;
-	opacity: 0.5;
-}
-#bar1, #bar2, #bar3 {
-	width: 50%;
-	height: 10%;
-	top: 50%;
-	left: 50%;
-	transition-duration: 0.2s;
-	opacity: 1;
-	animation: BarBreathLight 2s infinite;
-  z-index: 60;
-}
-{/* @keyframes BarBreathLight {
-	30% {
-		opacity: 0;
-	}
-} */}
-.hamburger #bar1 {
-	transform: translateX(-50%) translateY(-250%);
-}
-.hamburger #bar2 {
-	transform: translateX(-50%) translateY(-50%);
-}
-.hamburger #bar3 {
-	transform: translateX(-50%) translateY(150%);
-}
-`}</style>
-    {/* click */}
-    <style jsx>{`
-.fold {
-	opacity: 1;
-}
-.fold #bar1, .fold #bar2 {
-	transform: translateX(-50%) translateY(150%);
-}
-.fold #bar3 {
-	opacity: 0;
-}
-`}</style>
-    {/* cross */}
-    <style jsx>{`
-.cross #bar1, .cross #bar2, .cross #bar3 {
-	width: 70%;
-}
-.cross #bar1 {
-	transform: translateX(-50%) translateY(0%) rotate(-45deg);
-}
-.cross #bar2 {
-	transform: translateX(-50%) translateY(0%) rotate(45deg);
-}
-`}</style>
+    {isNavShow && links && <nav id={idNav}>
+      {links.map((item, key) => {
+        return (
+          <button key={key}>{item}</button>
+        )
+      })}
+    </nav>}
   </>
 }
-function Hamburger({ links }) {
+
+function MobileNav2({ links }) {
   const [idNav, setID_Nav] = useState("")//navbar class
   const [isNavShow, setIsNavShow] = useState(false)
   const [clsH, setClsH] = useState("hamburger")//hamburger class
@@ -106,25 +44,46 @@ function Hamburger({ links }) {
   function navFadeIn() {
     setIsNavShow(true)
     setTimeout(() => {
-      setID_Nav(navShow)
+      setID_Nav("navShow")
     }, 10)
   }
   return (
-    <div
-      className={mobileNav}
-    >
-      {isNavShow && links && <nav id={idNav}>
-        {links.map((item, key) => {
-          return (
-            <button key={key}>{item}</button>
-          )
-        })}
-      </nav>}
-      <Burger
-        clsH={clsH}
-        onClick={hamburgerOnclick}
-      />
-    </div>
+    <>
+      <div
+        className="mobileNav"
+      >
+        {/* <Nav isNavShow={isNavShow} links={links} idNav={idNav} /> */}
+        <Burger
+          clsH={clsH}
+          onClick={hamburgerOnclick}
+        />
+      </div>
+      <style jsx>{`
+.mobileNav {
+	z-index: 10;
+	position: fixed;
+	bottom: 50px;
+	right: 150px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 0;
+}
+.mobileNav nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: fit-content;
+	transition-duration: 0.5s;
+	opacity: 0;
+}
+.mobileNav nav button {
+	width: 110px;
+	max-height: 60px;
+	padding: 10px;
+}
+`}</style>
+    </>
   )
 }
-export default Hamburger
+export default MobileNav2

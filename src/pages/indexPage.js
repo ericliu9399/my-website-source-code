@@ -4,7 +4,6 @@ import BgImg from "../images/home_bg.svg"
 import apiUrl from '../lib/apiUrl'
 import Header from "../components/Header.js"
 import MobileNav from "../components/MobileNav"
-import MobileNav2 from "../components/MobileNav2"
 import LanguageSelect from '../components/LanguageSelect'
 import Project from '../components/Project.js'
 import AboutMe from '../components/AboutMe'
@@ -69,7 +68,6 @@ function IndexPage() {
           key="LanguageSelect"
         />
       </MobileNav>
-      <MobileNav2 />
       <style jsx>{`
 :global(section){
 overflow: hidden;

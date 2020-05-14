@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Burger from './Burger'
 function Nav({ children, navDisplayNone, direction, displayNoneSec = 0.5 }) {
   return <>
     <div className={"btn-group-vertical pb-3 navDisplayNoneAnimation " + navDisplayNone}>
@@ -119,7 +118,6 @@ function MobileNav({ children, displayNoneSec = 0.5 }) {
     <div className="mobile_nav d-flex flex-column align-items-end p-3 d-lg-none">
       <Nav direction={direction} navDisplayNone={navDisplayNone} displayNoneSec={displayNoneSec}>{children}</Nav>
       <Hamburger handleClick={changeDirection} direction={direction} />
-      <Burger />
     </div>
     <style jsx>{`
 .mobile_nav{
