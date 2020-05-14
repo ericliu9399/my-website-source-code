@@ -7,7 +7,6 @@ function CommentForm({ postMethod }) {
     ev.preventDefault()
     let formData = new FormData(ev.target)
     postMethod(form2json(formData), message => {
-      console.log(message)
       setErrorMessage(message)
     })
   }

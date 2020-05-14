@@ -10,62 +10,59 @@ import apiUrl from '../lib/apiUrl'
 function MessageBoard() {
   const [data, setData] = useState([])
   useEffect(() => {
-    getMethod(setData)
+    getRequest()
   }, [])
-  function getMethod() {
-    fetch(apiUrl)
-      .then(res => res.json())
-      .then(json => setData(json))
-      .catch(() => console.log("api error"))
+  function fetchData(request, jsonHandler, textHandler) {
+    fetch(request)
+      .then(response => response.text())
+      .then(text => {
+        try {
+          const json = JSON.parse(text);
+          // Do your JSON handling here
+          if (typeof jsonHandler === 'function') jsonHandler(json)
+        } catch (err) {
+          // It is text, do you text handling here
+          if (typeof textHandler === 'function') textHandler(text)
+        }
+      });
   }
-  function postMethod(data, setMessage) {
+  function getRequest() {
+    const request = new Request(apiUrl)
+    fetchData(request, setData)
+  }
+  function postRequest(data, setMessage) {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-
     var raw = JSON.stringify(data);
-
     var requestOptions = {
       method: 'POST',
       headers: myHeaders,
       body: raw,
       redirect: 'follow'
     };
-    fetch(apiUrl, requestOptions)
-      .then(response => {
-        if (response.ok) {
-          response.json().then(json => addData(json))
-          setMessage("Success!")
-        }
-      })
-      .catch(err => {
-        setMessage(err.toString())
-      })
+    const request = new Request(apiUrl, requestOptions)
+    const textHandler = (text) => {
+      setMessage(text)
+    }
+    fetchData(request, addFrontEndData, textHandler)
   }
-  function deleteMethod(id, deletePassword, setMessage) {
-    console.log("sendDeletRequest")
+  function deleteRequest(id, deletePassword, setMessage) {
     var myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
-
     var requestOptions = {
       method: 'DELETE',
       headers: myHeaders,
       redirect: 'follow'
     };
-    return fetch(apiUrl + `${id}/${deletePassword}`, requestOptions)
-      .then(response => {
-        if (response.ok) response.json()
-          .then(json => {
-            putData(json, id)
-          })
-        else response.text().then(res => { setMessage(res) })
-      })
+    const request = new Request(apiUrl + `${id}/${deletePassword}`, requestOptions)
+    fetchData(request, (json) => { putFrontEndData(json, id) }, setMessage)
   }
-  const addData = (newData) => {
+  const addFrontEndData = (newData) => {
     let arr = [...data]
     arr.push(newData)
     setData(arr)
   }
-  const putData = (newData, id) => {
+  const putFrontEndData = (newData, id) => {
     let arr = [...data]
     arr[id - 1] = newData
     setData(arr)
@@ -79,16 +76,15 @@ function MessageBoard() {
         key={comment.id}
         id={comment.id}
         isDelete={comment.isDelete}
-        sendDeletRequest={deleteMethod}
+        sendDeletRequest={deleteRequest}
       />
     )
-  const link = [<Link to="/" key="home">home</Link>]
   return (
     <div id="messageBoard">
-      <Header links={link} />
+      <Header><Link className="nav-link" to="/" key="home">home</Link></Header>
       <div className="container">
         <Comments />
-        <Form postMethod={postMethod} />
+        <Form postMethod={postRequest} />
         <a
           className="reply_btn"
           href="/message_board#CommentForm"
@@ -96,7 +92,7 @@ function MessageBoard() {
           留言
         </a>
       </div>
-      <Hamburger links={link} />
+      <Hamburger><Link className="btn btn-primary" to="/" key="home">home</Link></Hamburger>
     </div>
   )
 }
