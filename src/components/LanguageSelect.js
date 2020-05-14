@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './LanguageSelect.module.sass'
 import LangLogo from '../images/translate.svg'
 
-function LanguageSelect({ switchLangMethod, language, currentLanguage }) {
+function LanguageSelect({ switchLangMethod, language, currentLanguage, className }) {
   function onClick() {
     let index = language.findIndex((lang) => lang === currentLanguage)
     if (index === language.length - 1)
@@ -13,7 +13,7 @@ function LanguageSelect({ switchLangMethod, language, currentLanguage }) {
   }
   return (
     <div
-      className={styles.LanguageSelect}
+      className={styles.LanguageSelect + " " + className}
       onClick={onClick}>
       <LangLogo />
     </div>
