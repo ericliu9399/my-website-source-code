@@ -1,4 +1,5 @@
 npm run build
+gulp build
 cd public
 rm -r -f .git
 git init
