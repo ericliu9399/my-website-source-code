@@ -7,7 +7,7 @@
     "build": "webpack --mode production --env=prod",
     "buildBs": "source script/buildBs.sh",
     "dev": "webpack-dev-server --mode development --env=dev",
-    "dev deploy": "source script/public__dev_deploy.sh"
+    "devdeploy": "source script/public_dev_deploy.sh"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
