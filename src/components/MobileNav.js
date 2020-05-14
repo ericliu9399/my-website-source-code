@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import Burger from './Burger'
 function Nav({ children, navDisplayNone, direction, displayNoneSec = 0.5 }) {
   return <>
     <div className={"btn-group-vertical pb-3 navDisplayNoneAnimation " + navDisplayNone}>
@@ -31,7 +31,6 @@ transition-duration: 1s;
 `}</style>
   </>
 }
-
 function Hamburger({ handleClick, direction }) {
   const barOffset = 200
   const barWidth = 65
@@ -106,7 +105,7 @@ animation-direction: ${direction};
 function MobileNav({ children, displayNoneSec = 0.5 }) {
   const [direction, setDirection] = useState('reverse')
   const [navDisplayNone, setNavDisplayNone] = useState('d-none')
-  function handleClick() {
+  function changeDirection() {
     if (direction === 'normal') {
       setDirection('reverse')
       setTimeout(() => { setNavDisplayNone('d-none') }, displayNoneSec * 1000)
@@ -119,8 +118,8 @@ function MobileNav({ children, displayNoneSec = 0.5 }) {
   return <>
     <div className="mobile_nav d-flex flex-column align-items-end p-3 d-lg-none">
       <Nav direction={direction} navDisplayNone={navDisplayNone} displayNoneSec={displayNoneSec}>{children}</Nav>
-      <Hamburger handleClick={handleClick} direction={direction} />
-      <Burger direction={direction} handleClick={handleClick} />
+      <Hamburger handleClick={changeDirection} direction={direction} />
+      <Burger />
     </div>
     <style jsx>{`
 .mobile_nav{

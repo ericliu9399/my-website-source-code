@@ -4,7 +4,7 @@ import Form from "../components/CommentForm"
 import Comment from "../components/Comment"
 import "./MessageBoard.sass"
 import { Link } from "react-router-dom";
-import Hamburger from '../components/Hamburger'
+import MobileNav from '../components/MobileNav'
 import apiUrl from '../lib/apiUrl'
 
 function MessageBoard() {
@@ -92,7 +92,7 @@ function MessageBoard() {
           留言
         </a>
       </div>
-      <Hamburger><Link className="btn btn-primary" to="/" key="home">home</Link></Hamburger>
+      <MobileNav><Link className="btn btn-primary" to="/" key="home">home</Link></MobileNav>
     </div>
   )
 }

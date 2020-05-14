@@ -3,7 +3,8 @@ import { Link } from "react-router-dom"
 import BgImg from "../images/home_bg.svg"
 import apiUrl from '../lib/apiUrl'
 import Header from "../components/Header.js"
-import Hamburger from "../components/Hamburger"
+import MobileNav from "../components/MobileNav"
+import MobileNav2 from "../components/MobileNav2"
 import LanguageSelect from '../components/LanguageSelect'
 import Project from '../components/Project.js'
 import AboutMe from '../components/AboutMe'
@@ -53,7 +54,7 @@ function IndexPage() {
         <Project content={content} dataArray={dataArray} />
         <Contact data={contact} />
       </main>
-      <Hamburger>
+      <MobileNav>
         <a href="#home" className="btn btn-primary">home</a>
         <a href="#aboutMe" className="btn btn-primary">about me</a>
         <a href="#projects" className="btn btn-primary">projects</a>
@@ -67,7 +68,8 @@ function IndexPage() {
           currentLanguage={language}
           key="LanguageSelect"
         />
-      </Hamburger>
+      </MobileNav>
+      <MobileNav2 />
       <style jsx>{`
 :global(section){
 overflow: hidden;
