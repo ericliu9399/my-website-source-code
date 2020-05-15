@@ -4,6 +4,11 @@
   "toProject": "前往網頁",
   "projectArray": [
     {
+      "title": "這個個人網站",
+      "summary": "這個網站是用React.j與Bootstrap製作的個人網站。組件使用zeit/styled-jsx製作成單文件組件。",
+      "list": []
+    },
+    {
       "title": "簡易留言板",
       "summary": "前後端分離的簡易留言板,前後端分別部屬在github與heroku。",
       "list": [
@@ -14,11 +19,6 @@
           "listTitle": "後端"
         }
       ]
-    },
-    {
-      "title": "這個個人網站",
-      "summary": "這個網站是用React.js製作的個人網站。",
-      "list": []
     },
     {
       "title": "登陸頁面",

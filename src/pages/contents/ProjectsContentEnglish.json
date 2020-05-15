@@ -4,6 +4,11 @@
   "toProject": "go to project",
   "projectArray": [
     {
+      "title": "My Website",
+      "summary": "This page is a personal website made with React.js and Bootstrap.The component is made into a single file component using zeit/styled-jsx.",
+      "list": []
+    },
+    {
       "title": "Message Board",
       "summary": "Simple message board with separate front and back ends. The front and back ends are deployed on GitHub and Heroku.",
       "list": [
@@ -14,11 +19,6 @@
           "listTitle": "Back-End"
         }
       ]
-    },
-    {
-      "title": "My Website",
-      "summary": "This page is a personal website made with React.js.",
-      "list": []
     },
     {
       "title": "Landing Page",

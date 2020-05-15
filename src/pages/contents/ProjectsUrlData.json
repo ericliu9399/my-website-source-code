@@ -1,6 +1,25 @@
 [
   {
     "preview": {
+      "path": "images/preview_this_personal_website.png"
+    },
+    "list": [
+      {
+        "srcA": "https://github.com/edinliu/my-website-source-code",
+        "listItem": [
+          "React.js",
+          "React Router",
+          "Bootstrap",
+          "Styled Jsx",
+          "Javascript",
+          "Webpack",
+          "RWD"
+        ]
+      }
+    ]
+  },
+  {
+    "preview": {
       "path": "images/preview_message_board.png"
     },
     "list": [
@@ -25,30 +44,6 @@
     ]
   },
   {
-    "subContainerStyle": {
-      "flexWrap": "nowrap"
-    },
-    "preview": {
-      "path": "images/preview_this_personal_website.png"
-    },
-    "list": [
-      {
-        "srcA": "https://github.com/edinliu/my-website-source-code",
-        "listItem": [
-          "React.js",
-          "React Router",
-          "Javascript",
-          "Sass",
-          "Webpack",
-          "RWD"
-        ]
-      }
-    ]
-  },
-  {
-    "subContainerStyle": {
-      "flexWrap": "nowrap"
-    },
     "preview": {
       "path": "images/preview_landing_page.jpg"
     },
