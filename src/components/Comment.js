@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-const Comment = ({ name, email, content, id, isDelete, sendDeletRequest }) => {
+const Comment = ({ name, email, content, id, isDelete = false, sendDeletRequest }) => {
   const [isClickDelete, setIsClickDelete] = useState(false)
   const [animate, setAnimate] = useState(null)
   const defaultPwd = "刪文用密碼"
@@ -26,7 +26,7 @@ const Comment = ({ name, email, content, id, isDelete, sendDeletRequest }) => {
   return (
     <>
       <div className={
-        (!isDelete ? "p-4 bg-secondary mb-3 rounded" : "deletedComment")
+        (!isDelete ? "p-4 bg-secondary mb-3 rounded-10" : "deletedComment")
       }>
         <div className="">
           <h4>{id}樓</h4>
@@ -37,7 +37,7 @@ const Comment = ({ name, email, content, id, isDelete, sendDeletRequest }) => {
         {
           !isDelete &&
           <div className="deletePanel d-flex align-items-center">
-            <button className="btn btn-dark" onClick={onClickDelet}>刪文</button>
+            <button className="btn btn-primary" onClick={onClickDelet}>刪文</button>
             {isClickDelete ?
               <input
                 className="ml-2 flex-grow-1 rounded bg-light position-relative"

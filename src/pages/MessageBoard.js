@@ -2,10 +2,45 @@ import React, { useEffect, useState } from "react"
 import Header from "../components/Header"
 import Form from "../components/CommentForm"
 import Comment from "../components/Comment"
-import "./MessageBoard.sass"
 import { Link } from "react-router-dom";
 import MobileNav from '../components/MobileNav'
 import apiUrl from '../lib/apiUrl'
+
+function ReplyBtn() {
+  return <>
+    <a
+      className="reply_btn btn btn-primary position-fixed p-3"
+      href="/message_board#CommentForm"
+    >
+      留言
+        </a>
+    <style jsx>{`
+.reply_btn{
+  bottom: 40px;
+  left: 10px;
+  z-index: 1;
+  text-decoration: none;
+}
+`}</style>
+  </>
+}
+function Comments({ data, deleteRequest }) {
+  return <div className="pt-sm-5">
+    <div className="container p-0 pt-sm-5">
+      {data !== [] && data.map(comment =>
+        <Comment
+          name={comment.name}
+          email={comment.email}
+          content={comment.content}
+          key={comment.id}
+          id={comment.id}
+          isDelete={comment.isDelete}
+          sendDeletRequest={deleteRequest}
+        />
+      )}
+    </div>
+  </div>
+}
 
 function MessageBoard() {
   const [data, setData] = useState([])
@@ -67,33 +102,16 @@ function MessageBoard() {
     arr[id - 1] = newData
     setData(arr)
   }
-  const Comments = () =>
-    data !== [] && data.map(comment =>
-      <Comment
-        name={comment.name}
-        email={comment.email}
-        content={comment.content}
-        key={comment.id}
-        id={comment.id}
-        isDelete={comment.isDelete}
-        sendDeletRequest={deleteRequest}
-      />
-    )
   return (
-    <div id="messageBoard">
+    <>
       <Header><Link className="nav-link" to="/" key="home">home</Link></Header>
-      <div className="container">
-        <Comments />
+      <div id="container pb-5">
+        <Comments data={data} deleteRequest={deleteRequest} />
         <Form postMethod={postRequest} />
-        <a
-          className="reply_btn"
-          href="/message_board#CommentForm"
-        >
-          留言
-        </a>
       </div>
+      <ReplyBtn />
       <MobileNav><Link className="btn btn-primary" to="/" key="home">home</Link></MobileNav>
-    </div>
+    </>
   )
 }
 export default MessageBoard

@@ -1,14 +1,15 @@
 import React from 'react'
 import NextBtn from './NextBtn'
+import LanguageSelect from './LanguageSelect'
 
 function Home({ nameCard }) {
   return (
     <>
       <section className="vh-100 d-flex flex-column" id="home">
         <div className="nameCard position-relative">
-          <p>{nameCard[0]}</p>
-          <h2>{nameCard[1]}</h2>
-          <p>{nameCard[2]}</p>
+          <h5>{nameCard[0]}</h5>
+          <h1>{nameCard[1]}</h1>
+          <h5>{nameCard[2]}</h5>
         </div>
         <div className="flex-grow-1">
         </div>

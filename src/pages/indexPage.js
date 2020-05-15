@@ -38,12 +38,14 @@ function IndexPage() {
         <a href="#contact" className="nav-link pr-1">contact</a>
         <Link to="/message_board" className="nav-link pr-1">message board</Link>
         <a href="/landing_page.html" className="nav-link pr-1">landing page</a>
-        <LanguageSelect
-          switchLangMethod={setLanguage}
-          language={["chinese", "english"]}
-          currentLanguage={language}
-          key="LanguageSelect"
-        />
+        <div className="pl-3 pr-3">
+          <LanguageSelect
+            switchLangMethod={setLanguage}
+            language={["chinese", "english"]}
+            currentLanguage={language}
+            key="LanguageSelect"
+          />
+        </div>
       </Header>
       <div id="BgImg"><BgImg /></div>
       <main className="container">
@@ -60,13 +62,14 @@ function IndexPage() {
         <a href="#contact" className="btn btn-primary">contact</a>
         <Link to="/message_board" className="btn btn-primary">message board</Link>
         <a href="/landing_page.html" className="btn btn-primary">landing page</a>
-        <LanguageSelect
-          className="btn btn-primary"
-          switchLangMethod={setLanguage}
-          language={["chinese", "english"]}
-          currentLanguage={language}
-          key="LanguageSelect"
-        />
+        <button className="btn btn-primary d-flex justify-content-center">
+          <LanguageSelect
+            switchLangMethod={setLanguage}
+            language={["chinese", "english"]}
+            currentLanguage={language}
+            key="LanguageSelect"
+          />
+        </button>
       </MobileNav>
       <style jsx>{`
 :global(section){

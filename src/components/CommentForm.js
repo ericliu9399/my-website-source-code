@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import styles from "./CommentForm.module.sass"
 
 function CommentForm({ postMethod }) {
   const [errorMessage, setErrorMessage] = useState("")
@@ -18,31 +17,51 @@ function CommentForm({ postMethod }) {
     return jsonData
   }
   return (
-    <form
-      className={styles.commentForm}
-      onSubmit={submit}
-      id="CommentForm"//連結跳轉用
-    >
-      <div className={styles.upPart}>
-        <label>Name
-            <input type="text" name="name" />
-        </label>
-        <label>Email
-            <input type="email" name="email" />
-        </label>
+    <>
+      <div className="pb-5">
+        <div className="pb-5 pb-lg-0">
+          <form
+            className={
+              "CommentForm w-100 container d-flex flex-column p-3 mt-3 bg-secondary rounded-10" +
+              " mb-5"
+            }
+            onSubmit={submit}
+            id="CommentForm"//連結跳轉用
+          >
+            <div className="row">
+              <label className="col-12 col-sm-6">Name
+            <input className="w-100 rounded" type="text" name="name" />
+              </label>
+              <label className="col-12 col-sm-6">Email
+            <input className="w-100 rounded" type="email" name="email" />
+              </label>
+            </div>
+            <label className="flex-grow-1 d-flex flex-column">Message
+          <textarea className="flex-grow-1 rounded" name="content" defaultValue={""} />
+            </label>
+            <div className="d-flex">
+              <label className="flex-grow-1">
+                Password for delete
+            <input className="w-100 rounded" name="deletePassword" defaultValue={""} />
+              </label>
+              <button className="btn btn-primary m-3">Submit</button>
+            </div>
+            <p className="m-0 p-0">{errorMessage}</p>
+          </form>
+        </div>
       </div>
-      <label className={styles.middlePart}>Message
-          <textarea name="content" defaultValue={""} />
-      </label>
-      <div className={styles.bottomPart}>
-        <label>
-          Password for delete
-            <input name="deletePassword" defaultValue={""} />
-        </label>
-        <button>Submit</button>
-      </div>
-      <p className={styles.errorMes}>{errorMessage}</p>
-    </form>
+      <style jsx>{`
+form{
+height: 70vh;
+}
+.CommentForm{
+height: 60vh;
+}
+textarea{
+resize: none;
+}
+`}</style>
+    </>
   )
 }
 

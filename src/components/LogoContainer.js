@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
 const ThreeLogo = ({ Logo, sec, color, isFillPath }) => {
   return (
@@ -23,10 +23,9 @@ position: absolute;
 
 filter: drop-shadow(0px 0px 25px ${color});
 animation: breathLight ${sec}s infinite;
+}
 @keyframes breathLight{
-50%{
-filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0));
-}}
+50%{filter: drop-shadow(0px 0px 25px rgba(0, 0, 0, 0));}
 }
 .logo :global(svg path){fill:${isFillPath ? color : ""};}
 `}</style>

@@ -1,89 +1,97 @@
-import React from 'react'
-/**
-@param clsH string hamburger fold cross
- */
-function Burger({ clsH = "hamburger", onClick }) {
-  let bar = "position-absolute bg-white rounded-pill"
+import React, { useState, useEffect } from 'react'
+
+function Burger({ direction, onClick }) {
+  const diameter = 15
+  const transitionDuration = 0.5;
+
+  const [change, setChange] = useState({
+    offset: { bar1: -200, bar2: 0, bar3: 200 },
+    rotate: { bar1: 0, bar2: 0 },
+    width: { bar1: 50, bar2: 50, bar3: 50 },
+    opacity: { bar3: 1 }
+  })
+  const init = () => {
+    setChange({
+      offset: { bar1: -200, bar2: 0, bar3: 200 },
+      rotate: { bar1: 0, bar2: 0 },
+      width: { bar1: 50, bar2: 50, bar3: 50 },
+      opacity: { bar3: 1 }
+    })
+  }
+  const fold = () => {
+    setChange({
+      offset: { bar1: 200, bar2: 200, bar3: 200 },
+      rotate: { bar1: 0, bar2: 0 },
+      width: { bar1: 50, bar2: 50, bar3: 50 },
+      opacity: { bar3: 0 }
+    })
+  }
+  const cross = () => {
+    setChange({
+      offset: { bar1: 0, bar2: 0, bar3: 200 },
+      rotate: { bar1: 45, bar2: -45 },
+      width: { bar1: 70, bar2: 70, bar3: 50 },
+      opacity: { bar3: 0 }
+    })
+  }
+  const animationNormal = () => {
+    fold()
+    setTimeout(cross, transitionDuration * 1000)
+  }
+  const animationReverse = () => {
+    fold()
+    setTimeout(init, transitionDuration * 1000)
+  }
+  useEffect(() => {
+    if (direction === "normal") animationNormal()
+    else animationReverse()
+  }, [direction])
+
+  const { offset, rotate, width, opacity } = change
   return <>
-    <div className="mobileNav">
-      <button
-        className={
-          clsH +
-          " rounded-circle btn btn-primary"
-        }
-        onClick={onClick}
-      >
-        <div className={bar} id="bar1" />
-        <div className={bar} id="bar2" />
-        <div className={bar} id="bar3" />
-      </button>
-    </div>
+    <button className="burger bg-primary" onClick={onClick}>
+      <div className="bar1" />
+      <div className="bar2" />
+      <div className="bar3" />
+    </button>
+    {/* static */}
     <style jsx>{`
-.mobileNav{
-  z-index: 10;
-  bottom: 30px;
-  right: 150px;
-	position: fixed;
+.burger{
+width: ${diameter}vmin;
+height: ${diameter}vmin;
+border-radius: 50%;
+position: relative;
+}
+.bar1,.bar2,.bar3{
+height: 10%;
+background: rgba(255,255,255,1);
+position: absolute;
+top: 50%;
+left: 50%;
+border-radius: 500px;
+transition-duration: ${transitionDuration}s;
+animation: barBreathLight 2s infinite;
+}
+@keyframes barBreathLight{
+30%{background: rgba(255,255,255,0.5);}
 }
 `}</style>
-    {/* default */}
+    {/* dynamic */}
     <style jsx>{`
-.hamburger {
-	z-index: 10;
-	width: 15vw;
-	height: 15vw;
-	opacity: 0.5;
+.bar1{
+width: ${width.bar1}%;
+transform: translate(-50%,${-50 + offset.bar1}%) rotate(${rotate.bar1}deg);
 }
-#bar1, #bar2, #bar3 {
-	width: 50%;
-	height: 10%;
-	top: 50%;
-	left: 50%;
-	transition-duration: 0.2s;
-	opacity: 1;
-	animation: BarBreathLight 2s infinite;
-  z-index: 60;
+.bar2{
+width: ${width.bar2}%;
+transform: translate(-50%,${-50 + offset.bar2}%) rotate(${rotate.bar2}deg);
 }
-{/* @keyframes BarBreathLight {
-	30% {
-		opacity: 0;
-	}
-} */}
-.hamburger #bar1 {
-	transform: translateX(-50%) translateY(-250%);
-}
-.hamburger #bar2 {
-	transform: translateX(-50%) translateY(-50%);
-}
-.hamburger #bar3 {
-	transform: translateX(-50%) translateY(150%);
-}
-`}</style>
-    {/* click */}
-    <style jsx>{`
-.fold {
-	opacity: 1;
-}
-.fold #bar1, .fold #bar2 {
-	transform: translateX(-50%) translateY(150%);
-}
-.fold #bar3 {
-	opacity: 0;
-}
-`}</style>
-    {/* cross */}
-    <style jsx>{`
-.cross #bar1, .cross #bar2, .cross #bar3 {
-	width: 70%;
-}
-.cross #bar1 {
-	transform: translateX(-50%) translateY(0%) rotate(-45deg);
-}
-.cross #bar2 {
-	transform: translateX(-50%) translateY(0%) rotate(45deg);
+.bar3{
+width: ${width.bar3}%;
+transform: translate(-50%,${-50 + offset.bar3}%);
+opacity: ${opacity.bar3};
 }
 `}</style>
   </>
 }
-
 export default Burger
