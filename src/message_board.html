@@ -1,0 +1,315 @@
+<html lang="cht">
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Dailton Bastos">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes">
+  <title>Edin Liu</title>
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edin Liu</title>
+  <style srctype="sass">
+    * {
+      font-family: Montserrat, sans-serif, Helvetica, "Microsoft JhengHei";
+    }
+
+    html,
+    body {
+      overflow-x: hidden;
+    }
+
+    body {
+      background: #191919;
+      color: white;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .btn {
+      background-image: linear-gradient(135deg, #6a98f0 0%, rgba(0, 0, 0, 0) 99%);
+    }
+
+    .rounded-5 {
+      border-radius: 10px;
+    }
+
+    .rounded-10 {
+      border-radius: 10px;
+    }
+
+    .rounded-20 {
+      border-radius: 20px;
+    }
+
+    ::-webkit-scrollbar {
+      width: 10px;
+      background-color: black;
+      cursor: pointer;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #6d83f2;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: black;
+    }
+  </style>
+  <style type="text/css" data-styled-jsx="">
+    nav.jsx-4142784331 {
+      background: rgb(35, 35, 35);
+      height: 60px;
+      width: 100%;
+      z-index: 3;
+    }
+
+    nav.jsx-4142784331 .nav-link {
+      color: white;
+      -webkit-transition-duration: 0.2s;
+      transition-duration: 0.2s;
+    }
+
+    nav.jsx-4142784331 .nav-link:hover {
+      color: #c0c2e4;
+    }
+  </style>
+  <style type="text/css" data-styled-jsx="">
+    .navDisplayNoneAnimation.jsx-2755195015 {
+      -webkit-transform: translateY(-5%);
+      -ms-transform: translateY(-5%);
+      transform: translateY(-5%);
+      opacity: 0;
+      -webkit-animation: navDisplayNoneAnimation-jsx-2755195015 0.5s;
+      animation: navDisplayNoneAnimation-jsx-2755195015 0.5s;
+      -webkit-animation-direction: reverse;
+      animation-direction: reverse;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+
+    @-webkit-keyframes navDisplayNoneAnimation-jsx-2755195015 {
+      100% {
+        -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        transform: translateY(0%);
+        opacity: 1;
+      }
+    }
+
+    @keyframes navDisplayNoneAnimation-jsx-2755195015 {
+      100% {
+        -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        transform: translateY(0%);
+        opacity: 1;
+      }
+    }
+
+    .btn-group-vertical.jsx-2755195015 * {
+      min-height: 10vmin;
+      min-width: 20vmin;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      margin-bottom: 5px;
+      border-radius: 20px;
+    }
+
+    .btn-group-vertical.jsx-2755195015 {
+      -webkit-transition-duration: 1s;
+      transition-duration: 1s;
+    }
+  </style>
+  <style type="text/css" data-styled-jsx="">
+    .burger.jsx-2204592206 {
+      width: 15vmin;
+      height: 15vmin;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .bar1.jsx-2204592206,
+    .bar2.jsx-2204592206,
+    .bar3.jsx-2204592206 {
+      height: 10%;
+      background: rgba(255, 255, 255, 1);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border-radius: 500px;
+      -webkit-transition-duration: 0.5s;
+      transition-duration: 0.5s;
+      -webkit-animation: barBreathLight-jsx-2204592206 2s infinite;
+      animation: barBreathLight-jsx-2204592206 2s infinite;
+    }
+
+    @-webkit-keyframes barBreathLight-jsx-2204592206 {
+      30% {
+        background: rgba(255, 255, 255, 0.5);
+      }
+    }
+
+    @keyframes barBreathLight-jsx-2204592206 {
+      30% {
+        background: rgba(255, 255, 255, 0.5);
+      }
+    }
+  </style>
+  <style type="text/css" data-styled-jsx="">
+    .mobile_nav.jsx-2900412353 {
+      position: fixed;
+      bottom: 30px;
+      right: 10px;
+    }
+  </style>
+  <style type="text/css" data-styled-jsx="">
+    form.jsx-3664647009 {
+      height: 70vh;
+    }
+
+    .CommentForm.jsx-3664647009 {
+      height: 60vh;
+    }
+
+    textarea.jsx-3664647009 {
+      resize: none;
+    }
+  </style>
+  <style type="text/css" data-styled-jsx="">
+    .reply_btn.jsx-2884562635 {
+      bottom: 40px;
+      left: 10px;
+      z-index: 1;
+      -webkit-text-decoration: none;
+      text-decoration: none;
+    }
+  </style>
+  <style type="text/css" data-styled-jsx="">
+    .deletePanel.jsx-612891924 button.jsx-612891924 {
+      -webkit-order: -1;
+      -ms-flex-order: -1;
+      order: -1;
+    }
+
+    .deletePanel.jsx-612891924 input.jsx-612891924 {
+      opacity: 0;
+      -webkit-transition-duration: 0.4s;
+      transition-duration: 0.4s;
+      right: -20px;
+    }
+
+    .deletedComment.jsx-612891924 {
+      background: none;
+      height: -webkit-fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+      margin-top: 10px;
+      border-radius: 10px;
+    }
+
+    .deletedComment.jsx-612891924 h2.jsx-612891924,
+    .deletedComment.jsx-612891924 h3.jsx-612891924 {
+      font-size: 10px;
+    }
+
+    .deletedComment.jsx-612891924 h2.jsx-612891924,
+    .deletedComment.jsx-612891924 h3.jsx-612891924,
+    .deletedComment.jsx-612891924 h4.jsx-612891924,
+    .deletedComment.jsx-612891924 p.jsx-612891924 {
+      margin: 5px;
+      padding: 0px;
+    }
+
+    .deletedComment.jsx-612891924 button.jsx-612891924 {
+      height: 0px;
+      visibility: hidden;
+    }
+  </style>
+  <style type="text/css" data-styled-jsx="">
+    .bar1.jsx-2819748247 {
+      width: 50%;
+      -webkit-transform: translate(-50%, -250%) rotate(0deg);
+      -ms-transform: translate(-50%, -250%) rotate(0deg);
+      transform: translate(-50%, -250%) rotate(0deg);
+    }
+
+    .bar2.jsx-2819748247 {
+      width: 50%;
+      -webkit-transform: translate(-50%, -50%) rotate(0deg);
+      -ms-transform: translate(-50%, -50%) rotate(0deg);
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    .bar3.jsx-2819748247 {
+      width: 50%;
+      -webkit-transform: translate(-50%, 150%);
+      -ms-transform: translate(-50%, 150%);
+      transform: translate(-50%, 150%);
+      opacity: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <nav class="jsx-4142784331 nav d-none d-lg-flex align-items-center justify-content-end pr-3 position-fixed"><a
+        class="nav-link" href="/">home</a></nav>
+    <div id="container pb-5">
+      <div class="pt-sm-5">
+        <div class="container p-0 pt-sm-5"></div>
+      </div>
+      <div class="jsx-3664647009 pb-5">
+        <div class="jsx-3664647009 pb-5 pb-lg-0">
+          <form id="CommentForm"
+            class="jsx-3664647009 CommentForm w-100 container d-flex flex-column p-3 mt-3 bg-secondary rounded-10 mb-5">
+            <div class="jsx-3664647009 row"><label class="jsx-3664647009 col-12 col-sm-6">Name<input type="text"
+                  name="name" class="jsx-3664647009 w-100 rounded"></label><label
+                class="jsx-3664647009 col-12 col-sm-6">Email<input type="email" name="email"
+                  class="jsx-3664647009 w-100 rounded"></label></div><label
+              class="jsx-3664647009 flex-grow-1 d-flex flex-column">Message<textarea name="content"
+                class="jsx-3664647009 flex-grow-1 rounded"></textarea></label>
+            <div class="jsx-3664647009 d-flex"><label class="jsx-3664647009 flex-grow-1">Password for delete<input
+                  name="deletePassword" class="jsx-3664647009 w-100 rounded" value=""></label><button
+                class="jsx-3664647009 btn btn-primary m-3">Submit</button></div>
+            <p class="jsx-3664647009 m-0 p-0"></p>
+          </form>
+        </div>
+      </div>
+    </div><a href="/message_board#CommentForm"
+      class="jsx-2884562635 reply_btn btn btn-primary position-fixed p-3">留言</a>
+    <div class="jsx-2900412353 mobile_nav d-flex flex-column align-items-end p-3 d-lg-none">
+      <div class="jsx-2755195015 btn-group-vertical pb-3 navDisplayNoneAnimation d-none"><a class="btn btn-primary"
+          href="/">home</a></div><button class="jsx-2204592206 jsx-2819748247 burger bg-primary">
+        <div class="jsx-2204592206 jsx-2819748247 bar1"></div>
+        <div class="jsx-2204592206 jsx-2819748247 bar2"></div>
+        <div class="jsx-2204592206 jsx-2819748247 bar3"></div>
+      </button>
+    </div>
+  </div>
+  <script src="bundle.js"></script>
+
+</body>
+
+</html>
