@@ -1,3 +1,5 @@
 cd public
-git remote add origin https://github.com/syyui15926/syyui15926.github.io.git
+git init
+git remote add dev https://github.com/edinliu/test.git
+git remote add public https://github.com/edinliu/edinliu.github.io.git
 cd ..

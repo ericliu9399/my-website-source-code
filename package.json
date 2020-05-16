@@ -5,9 +5,11 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --mode production --env=prod",
-    "buildBs": "source script/buildBs.sh",
+    "build-bs": "source script/build_bs.sh",
     "dev": "webpack-dev-server --mode development --env=dev",
-    "devdeploy": "source script/public_dev_deploy.sh"
+    "deploy-dev": "source script/public_deploy_dev.sh",
+    "deploy": "source script/public_deploy.sh",
+    "deploy-f": "source script/public_deploy_f.sh"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
