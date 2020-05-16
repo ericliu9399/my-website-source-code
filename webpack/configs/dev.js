@@ -1,10 +1,9 @@
 const path = require("path");
 const PATH = require("./configPath")
+const entryConfig = require("./entry")
 
 module.exports = {
-  entry: {
-    bundle: path.resolve(PATH.src, PATH.entry),
-  },
+  entry: entryConfig,
   output: {
     path: path.resolve(PATH.public),
     filename: "[name].js",
