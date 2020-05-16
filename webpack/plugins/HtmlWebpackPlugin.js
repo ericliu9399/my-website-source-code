@@ -8,6 +8,7 @@ module.exports = [
   new HtmlWebpackPlugin({
     filename: 'message_board.html',
     template: `${PATH.src}/message_board.html`,
-    minify: { minifyCSS: true }
+    minify: true
   }),
 ]
+//{ minifyCSS: true }
