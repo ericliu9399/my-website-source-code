@@ -15,7 +15,7 @@ import ProjectCht from './contents/ProjectsContentChinese.json'
 import ProjectEng from './contents/ProjectsContentEnglish.json'
 import ProjectData from './contents/ProjectsUrlData.json'
 
-function IndexPage() {
+function IndexPage({ pathname = "" }) {
   useEffect(() => {
     fetch(apiUrl + "start")
       .then(res => res.text())
@@ -36,7 +36,7 @@ function IndexPage() {
         <a href="#aboutMe" className="nav-link pr-1">about me</a>
         <a href="#projects" className="nav-link pr-1">projects</a>
         <a href="#contact" className="nav-link pr-1">contact</a>
-        <Link to="/message_board" className="nav-link pr-1">message board</Link>
+        <Link to={pathname + "/message_board"} className="nav-link pr-1">message board</Link>
         <a href="/landing_page.html" className="nav-link pr-1">landing page</a>
         <div className="pl-3 pr-3">
           <LanguageSelect
@@ -60,7 +60,7 @@ function IndexPage() {
         <a href="#aboutMe" className="btn btn-primary">about me</a>
         <a href="#projects" className="btn btn-primary">projects</a>
         <a href="#contact" className="btn btn-primary">contact</a>
-        <Link to="/message_board" className="btn btn-primary">message board</Link>
+        <Link to={pathname + "/message_board"} className="btn btn-primary">message board</Link>
         <a href="/landing_page.html" className="btn btn-primary">landing page</a>
         <button className="btn btn-primary d-flex justify-content-center">
           <LanguageSelect
