@@ -5,29 +5,17 @@ import './styles/global.sass';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
+  Route
 } from "react-router-dom";
 //pages
 import IndexPage from './pages/IndexPage'
 import MessageBoard from './pages/MessageBoard'
 
-const pagesArray = [
-  { page: <MessageBoard />, route: "/message_board" },
-  { page: <IndexPage />, route: "/" },
-]
-console.log("v4")
-const routes = pagesArray.map(p => (
-  <Route
-    path={p.route}
-    key={p.route}
-  >
-    {p.page}
-  </Route>
-))
 ReactDOM.render(
   <Router >
     <Switch>
-      {routes}
+      <Route path="/message_board" component={MessageBoard} />
+      <Route path="/" component={IndexPage} />
     </Switch>
   </Router >
   , document.getElementById('app'));
