@@ -1,14 +1,17 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const PATH = require('../configs/configPath.js')
-
+/**
+ * @param fileName {string} name.html 
+ */
+function newHtmlWebpackPlugin(fileName) {
+  return new HtmlWebpackPlugin({
+    filename: fileName,
+    template: `${PATH.src}/` + fileName,
+    minify: true,//{ minifyCSS: true }
+    inject: false
+  })
+}
 module.exports = [
-  new HtmlWebpackPlugin({
-    template: `${PATH.src}/index.html`
-  }),
-  new HtmlWebpackPlugin({
-    filename: 'message_board.html',
-    template: `${PATH.src}/message_board.html`,
-    minify: true
-  }),
+  newHtmlWebpackPlugin("index.html"),
+  newHtmlWebpackPlugin("message_board.html")
 ]
-//{ minifyCSS: true }
