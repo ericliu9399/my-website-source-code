@@ -10,12 +10,22 @@ import {
 //pages
 import IndexPage from './pages/IndexPage'
 import MessageBoard from './pages/MessageBoard'
+import getPathName from './lib/getPathName'
 
-ReactDOM.render(
-  <Router >
+function App() {
+  const pathname = getPathName()
+  return <Router >
     <Switch>
-      <Route path="/message_board" component={MessageBoard} />
-      <Route path="/" component={IndexPage} />
+      <Route path={pathname + "/message_board"}>
+        <MessageBoard pathname={pathname} />
+      </Route>
+      <Route path={pathname + "/"}>
+        <IndexPage pathname={pathname} />
+      </Route>
     </Switch>
   </Router >
+}
+
+ReactDOM.render(
+  <App />
   , document.getElementById('app'));
