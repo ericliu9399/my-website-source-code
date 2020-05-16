@@ -54,14 +54,14 @@ function AboutMe({ data }) {
       </section>
       <style jsx>{`
 img{
-      width: auto;
-      height: auto;
-      max-width: 250px;
-      max-height: 250px;
-      border-radius: 50%;
+width: auto;
+height: auto;
+max-width: 250px;
+max-height: 250px;
+border-radius: 50%;
 }
 p{
-      line-height: 1.5rem;
+line-height: 1.5rem;
 }
 `}</style>
     </>
