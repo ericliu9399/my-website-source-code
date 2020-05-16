@@ -7,6 +7,7 @@
     "build": "webpack --mode production --env=prod",
     "build-bs": "source script/build_bs.sh",
     "dev": "webpack-dev-server --mode development --env=dev",
+    "deploy-dev-f": "source script/public_deploy_dev_f.sh",
     "deploy-dev": "source script/public_deploy_dev.sh",
     "deploy": "source script/public_deploy.sh",
     "deploy-f": "source script/public_deploy_f.sh"
