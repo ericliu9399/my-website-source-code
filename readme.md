@@ -17,7 +17,7 @@
 
 1. 這個個人網站使用 Styled jsx 製作的單文件組件，因為只有用到 Bootstrap 與 Styled jsx，可以很方便地複製到下一個專案使用。使用上只需要添加 Bootstrap.css CDN 到 html 裡面，再依照 zeit/styled-jsx 官網教學安裝相關套件就可以使用了。
 
-2. 一鍵中英文切換功能，使用預先準備好 json 格式的資料，中文英文各一份，之後使用 react hook 做切換
+2. 一鍵中英文切換功能，使用 json 格式的資料，中文英文各一份，之後用 react hook 做切換
 
 3. 靜態頁面
    由於我的網站的 message_board 頁面是用 react 做的一個組件。由於 github page 沒有伺服器渲染，重新整理頁面、或者是分享連結時會出錯，所以用手工的方式先準備了一個已經渲染好的 html 放在 github page 裡面。
