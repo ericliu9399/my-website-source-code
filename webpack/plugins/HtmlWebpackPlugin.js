@@ -7,8 +7,17 @@ function newHtmlWebpackPlugin(fileName) {
   return new HtmlWebpackPlugin({
     filename: fileName,
     template: `${PATH.src}/` + fileName,
-    minify: true,//{ minifyCSS: true }
-    inject: false
+    minify: {
+      collapseWhitespace: true,
+      removeComments: true,
+      removeRedundantAttributes: true,
+      removeScriptTypeAttributes: true,
+      removeStyleLinkTypeAttributes: true,
+      useShortDoctype: true,
+      minifyCSS: true,
+      minifyJS: true
+    },
+    inject: true
   })
 }
 module.exports = [
