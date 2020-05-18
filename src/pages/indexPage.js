@@ -72,9 +72,6 @@ function IndexPage({ pathname = "" }) {
         </button>
       </MobileNav>
       <style jsx>{`
-:global(section){
-overflow: hidden;
-}
 main{
 min-height:100vh;
 }
