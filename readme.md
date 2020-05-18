@@ -5,78 +5,53 @@
 </p> 
 <p align="center">Creative FrontEnd Web Developer</p>
 
-## :rocket: Quick start
+## :rocket: 簡單介紹
 
-**Run the site locally**
+**這是一個找工作用的個人網站，包含 3 個作品**
 
-_NOTE: The default branch for this repo is `master`, when you push or pull make sure you specify the correct branch_
+### 作品 1: 這個個人網站
 
-### Step 1: Clone The Repo
+**這是一個找工作用的個人網站**
 
-Fork the repository. then clone the repo locally by doing -
+#### 特色
 
-```bash
-git clone https://github.com/edinliu/edinliu.github.io.git
-```
+1. 這個個人網站使用 Styled jsx 製作的單文件組件，因為只有用到 Bootstrap 與 Styled jsx，可以很方便地複製到下一個專案使用。使用上只需要添加 Bootstrap.css CDN 到 html 裡面，再依照 zeit/styled-jsx 官網教學安裝相關套件就可以使用了。
 
-### Step 2: Install Dependencies
+2. 一鍵中英文切換功能，使用預先準備好 json 格式的資料，中文英文各一份，之後使用 hook 做切換
 
-cd into the directory
+3. 靜態頁面
+   由於我的網站的 message_board 頁面是用 react 做的一個組件。由於 github page 沒有伺服器渲染，重新整理頁面、或者是分享連結時會出錯，所以用手工的方式先準備了一個已經渲染好的 html 放在 github page 裡面。
 
-```bash
-cd edinliu.github.io
-```
-
-install all the dependencies
-
-```bash
-npm install
-```
-
-### Step 3: Start Development Server
-
-Then start the development Server
-
-```
-npm run dev
-```
-
-After running the development server the site should be running on https://localhost:3000
-
-## :open_file_folder: What's inside?
-
-A quick look at the folder structure of this project.
-
-    .
-    ├── script
-    │   ├───public_deploy.sh
-    │   └───public_deploy_f.sh
-    └── src
-        ├───components
-        │   ├───AboutMe
-        │   ├───Burger
-        │   ├───Comment
-        │   ├───CommentForm
-        │   ├───Contact
-        │   ├───Header
-        │   ├───Home
-        │   ├───LanguageSelect
-        │   ├───LogoContainer
-        │   ├───MobileNav
-        │   ├───NextBtn
-        │   ├───Project
-        |   └───SectionTitle
-        ├───favicon
-        ├───images
-        ├───lib
-        ├───pages
-        ├───styles
-        ├───index.html
-        ├───index.js
-        └───message_board.html
-
-## Tools Used
+#### 使用的工具
 
 1. React.js
-2. Styled Jsx & Bootstrap for styling
-3. Webpack for bundle
+2. Styled Jsx
+3. Bootstrap
+4. Webpack
+
+### 作品 2: 留言板
+
+檔案位置: src/pages/MessageBoard.js
+
+#### 特色
+
+1. 前後端分離，前端部屬在 github page，串接 Restful API
+2. 後端使用 Express.js 框架，部屬在 heroku。資料儲存方面使用 fs 去對 json 檔案做讀寫，但是過一陣子留言的資料會消失，恐怕是 heroku 伺服器那邊資料沒有真的寫入硬碟，且試用版過了半小時左右會關機，導致資料消失。之後會考慮串接資料庫去儲存資料。
+
+#### 使用的工具
+
+1. React.js
+2. Styled Jsx & Bootstrap
+3. Webpack
+
+### 作品 3: 登陸頁面
+
+檔案位置: src/pages/landingPage
+
+這個頁面是我姊姊設計的，我收到 .ai 檔案後使用 illustrator 將會動的部分分成群組並且命名，之後用 css 的屬性選擇器製作動畫。在製作過程中發現當放兩個以上的 svg 在同一個頁面中 svg 位置會錯亂，我猜想是因為圖檔圖層太多太複雜的緣故。之後把 svg 單獨放在一個頁面中，再用 iframe 把他們放在主頁，一切就正常了。
+
+#### 使用的工具
+
+1. Gulp
+2. Sass
+3. Pug
