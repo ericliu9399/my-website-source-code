@@ -16,7 +16,8 @@ module.exports = {
     ]
   },
   plugins: [
-    ...require('../plugins/HtmlWebpackPlugin')
+    ...require('../plugins/HtmlWebpackPlugin'),
+    ...require('../plugins/DynamicCdnWebpackPlugin')
   ]
 };
 
