@@ -10,10 +10,11 @@ import {
 //pages
 import IndexPage from './pages/IndexPage'
 import MessageBoard from './pages/MessageBoard'
-import getPathName from './lib/getPathName'
+// import getPathName from './lib/getPathName'
 
 function App() {
-  const pathname = getPathName()
+  const pathname = ""//for deploy
+  // const pathname = getPathName()//for deploy-dev
   return <Router >
     <Switch>
       <Route path={pathname + "/message_board"}>
