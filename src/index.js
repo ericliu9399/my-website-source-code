@@ -1,5 +1,5 @@
 import 'react-app-polyfill/ie9'
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactDOM from 'react-dom';
 import './styles/global.sass';
 import {
@@ -10,18 +10,21 @@ import {
 //pages
 import IndexPage from './pages/IndexPage'
 import MessageBoard from './pages/MessageBoard'
-// import getPathName from './lib/getPathName'
+import getPathName from './lib/getPathName'
 
 function App() {
-  const pathname = ""//for deploy
-  // const pathname = getPathName()//for deploy-dev
-  return <Router >
+  console.log("v3")
+  const [pathName, setPathName] = useState("")
+  useEffect(() => {
+    setPathName(getPathName())
+  }, [])
+  return <Router>
     <Switch>
-      <Route path={pathname + "/message_board"}>
-        <MessageBoard pathname={pathname} />
+      <Route path={pathName + "/message_board"}>
+        <MessageBoard pathName={pathName} />
       </Route>
-      <Route path={pathname + "/"}>
-        <IndexPage pathname={pathname} />
+      <Route path={pathName + "/"}>
+        <IndexPage pathName={pathName} />
       </Route>
     </Switch>
   </Router >
