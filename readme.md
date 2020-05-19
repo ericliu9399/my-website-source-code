@@ -5,31 +5,31 @@
 </p> 
 <p align="center">Creative FrontEnd Web Developer</p>
 
-## :rocket: 簡單介紹
+## :rocket: 作品介紹
 
-**這是一個找工作用的個人網站，包含 3 個作品**
+### 作品 1: 個人網站
 
-### 作品 1: 這個個人網站
+##### 特色
 
-**這是一個找工作用的個人網站**
+1. 單文件組件
+   這個個人網站使用 zeit/styled-jsx ，這個工具將 css 與 jsx 整合在一起成為單文件組件。可以很方便地複製到下一個專案使用。使用上只需要添加 Bootstrap.css CDN 到 html 裡面，再依照 zeit/styled-jsx 官網教學安裝相關套件就可以使用了。
 
-#### 特色
-
-1. 這個個人網站使用 Styled jsx 製作的單文件組件，因為只有用到 Bootstrap 與 Styled jsx，可以很方便地複製到下一個專案使用。使用上只需要添加 Bootstrap.css CDN 到 html 裡面，再依照 zeit/styled-jsx 官網教學安裝相關套件就可以使用了。
-
-2. 一鍵中英文切換功能，使用 json 格式的資料，中文英文各一份，之後用 react hook 做切換
+2. 一鍵中英文切換功能
+   使用 json 格式的資料，中文英文各一份，之後用 react hook 做切換
 
 3. 靜態頁面
-   由於我的網站的 message_board 頁面是用 react 做的一個組件。由於 github page 沒有伺服器渲染，重新整理頁面、或者是分享連結時會出錯，所以用手工的方式先準備了一個已經渲染好的 html 放在 github page 裡面。
+   由於我的網站的 message_board 頁面是用 react 做的一個組件，使用 react router 做頁面的切換。由於 github page 沒有伺服器渲染，重新整理頁面、或者是分享連結時會出錯，所以用 html webpack plugin 複製一份 index.html 在 public 資料夾並且更名為 message_board，問題就解決了。
 
-4. 使用 dynamic-cdn-webpack-plugin ，這個工具將 React、React Router...等函式庫改成使用 CDN 的方式來使用，減少 bundle.js 的大小，可以節省 github page 的流量。
+4. 使用 CDN 減少 bundle 的大小
+   使用 dynamic-cdn-webpack-plugin 這個工具將 React、React Router...等函式庫改成使用 CDN 的方式來使用，減少 bundle.js 的大小，可以節省 github page 的流量。
 
-#### 使用的工具
+##### 使用的工具
 
 1. React.js
 2. Styled Jsx
 3. Bootstrap
 4. Webpack
+5. dynamic-cdn-webpack-plugin
 
 ### 作品 2: 留言板
 
