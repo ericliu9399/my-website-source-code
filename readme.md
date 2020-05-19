@@ -11,16 +11,16 @@
 
 ##### 特色
 
-1. 單文件組件
+1. 單文件組件<br>
    這個個人網站使用 zeit/styled-jsx ，這個工具將 css 與 jsx 整合在一起成為單文件組件。可以很方便地複製到下一個專案使用。使用上只需要添加 Bootstrap.css CDN 到 html 裡面，再依照 zeit/styled-jsx 官網教學安裝相關套件就可以使用了。
 
-2. 一鍵中英文切換功能
+2. 一鍵中英文切換功能<br>
    使用 json 格式的資料，中文英文各一份，之後用 react hook 做切換
 
-3. 靜態頁面
+3. 靜態頁面<br>
    由於我的網站的 message_board 頁面是用 react 做的一個組件，使用 react router 做頁面的切換。由於 github page 沒有伺服器渲染，重新整理頁面、或者是分享連結時會出錯，所以用 html webpack plugin 複製一份 index.html 在 public 資料夾並且更名為 message_board，問題就解決了。
 
-4. 使用 CDN 減少 bundle 的大小
+4. 使用 CDN 減少 bundle 的大小<br>
    使用 dynamic-cdn-webpack-plugin 這個工具將 React、React Router...等函式庫改成使用 CDN 的方式來使用，減少 bundle.js 的大小，可以節省 github page 的流量。
 
 ##### 使用的工具
@@ -37,7 +37,8 @@
 
 #### 特色
 
-1. 前後端分離，前端部屬在 github page，串接 Restful API
+1. 前後端分離<br>
+   前端部屬在 github page，串接 Restful API
 2. 後端使用 Express.js 框架，部屬在 heroku。資料儲存方面使用 fs 去對 json 檔案做讀寫，但是過一陣子留言的資料會消失。heroku 官網說他們伺服器關閉資料不會儲存，而且每天會重新啟動。之後會考慮串接資料庫去儲存資料。
 
 #### 使用的工具
