@@ -9,8 +9,6 @@
 
 ### 作品 1: 個人網站
 
-##### 特色
-
 1. 單文件組件<br>
    這個個人網站使用 zeit/styled-jsx ，這個工具將 css 與 jsx 整合在一起成為單文件組件。可以很方便地複製到下一個專案使用。使用上只需要添加 Bootstrap.css CDN 到 html 裡面，再依照 zeit/styled-jsx 官網教學安裝相關套件就可以使用了。
 
@@ -34,8 +32,6 @@
 ### 作品 2: 留言板
 
 檔案位置: src/pages/MessageBoard.js
-
-#### 特色
 
 1. 前後端分離<br>
    前端部屬在 github page，串接 Restful API
