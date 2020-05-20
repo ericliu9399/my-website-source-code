@@ -102,6 +102,8 @@ function MessageBoard({ pathName = "" }) {
     arr[id - 1] = newData
     setData(arr)
   }
+  console.log("MessageBoard")
+  console.log(pathName)
   return (
     <>
       <Header><Link className="nav-link" to={pathName + "/"}>home</Link></Header>

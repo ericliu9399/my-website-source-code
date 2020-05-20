@@ -3,6 +3,9 @@ function getPathName() {
   if (pathname !== "") {
     pathname = "/" + pathname
   }
+  if (pathname.search(".html") !== -1) {
+    pathname = ""
+  }
   return pathname
 }
 

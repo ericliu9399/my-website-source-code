@@ -11,13 +11,11 @@ import {
 import IndexPage from './pages/IndexPage'
 import MessageBoard from './pages/MessageBoard'
 import getPathName from './lib/getPathName'
-
+const pathName = getPathName()
 function App() {
-  console.log("v3")
-  const [pathName, setPathName] = useState("")
-  useEffect(() => {
-    setPathName(getPathName())
-  }, [])
+  console.log("v7")
+  console.log("App")
+  console.log(pathName)
   return <Router>
     <Switch>
       <Route path={pathName + "/message_board"}>
