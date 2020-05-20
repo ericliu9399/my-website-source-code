@@ -5,7 +5,7 @@ import apiUrl from '../lib/apiUrl'
 import Header from "../components/Header.js"
 import MobileNav from "../components/MobileNav"
 import LanguageSelect from '../components/LanguageSelect'
-import Project from '../components/Project2.js'
+import Project from '../components/Project.js'
 import AboutMe from '../components/AboutMe'
 import Home from '../components/Home'
 import Contact from '../components/Contact'
