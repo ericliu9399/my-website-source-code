@@ -12,6 +12,7 @@ import ReactRouterLogo from '../images/skill/react-router.svg'
 import myphoto from '../images/myphoto.png'
 import SectionTitle from './SectionTitle'
 import StyleJsxLogo from '../images/skill/StyleJsx.svg'
+import TimeLine from './TimeLine'
 
 function SkillContainer() {
   return (
@@ -44,6 +45,10 @@ function AboutMe({ data }) {
             <p className="p-5 w-100">
               {content}
             </p>
+          </div>
+          <h4 className="text-center pt-3 pb-5">經歷</h4>
+          <div className="d-flex justify-content-center">
+            <TimeLine />
           </div>
           <h4 className="text-center pt-3 pb-5">{subTitle}</h4>
           <SkillContainer />
