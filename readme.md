@@ -1,4 +1,13 @@
+<div class="top-pannel">
+<p align="center">
+  <a href="https://edinliu.github.io/">
+    <h2 align="center">前往個人網站</h2>
+  </a>
+</p> 
+<p align="center">Creative FrontEnd Web Developer</p>
+
 <h2 align="center">作品介紹</h2>
+</div>
 
 ### 作品 1: 個人網站
 
@@ -11,7 +20,7 @@
    用 dynamic-cdn-webpack-plugin 這個工具將 React、React Router...等函式庫改成使用 CDN 的方式來使用，減少 bundle.js 的大小，可以節省 github page 的網路流量。
 
 3. **<a href="https://github.com/edinliu/my-website-source-code/blob/master/src/components/MarkdownViewer.js">編譯 markdown</a>**
-   用 marked.js 將 readme.md 的內容顯示到這個網站中。
+   用 marked.js 將這個 readme.md 的內容顯示到個人網站中。
 
 ##### 使用的工具
 
