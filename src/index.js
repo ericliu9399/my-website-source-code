@@ -1,5 +1,5 @@
 import 'react-app-polyfill/ie9'
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/global.sass';
 import {
@@ -10,8 +10,12 @@ import {
 //pages
 import IndexPage from './pages/IndexPage'
 import MessageBoard from './pages/MessageBoard'
+//這三個圖片是給 readme.md 與 cakeresume 用的
+import './images/preview_landing_page.jpg'
+import './images/preview_message_board.png'
+import './images/preview_this_personal_website.png'
 
-console.log("2c0de3d")
+console.log("fc7a3c7")
 
 function App() {
   return <Router>
