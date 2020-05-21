@@ -13,9 +13,8 @@ module.exports = [
     test: /\.(jpe?g|png|gif)$/i,
     loaders: [
       {
-        loader: 'url-loader',
+        loader: 'file-loader',
         options: {
-          limit: 8192,
           name: imgPath + '[name].[ext]'
         }
       },
