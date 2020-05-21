@@ -4,7 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "webpack --mode production --env=prod",
+    "build-webpack": "webpack --mode production --env=prod",
+    "build": "source script/build_all.sh",
     "build-bs": "source script/build_bs.sh",
     "dev": "webpack-dev-server --mode development --env=dev",
     "deploy-dev-f": "source script/public_deploy_dev_f.sh",
