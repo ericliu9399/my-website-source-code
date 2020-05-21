@@ -9,24 +9,13 @@ module.exports = [
     test: /\.svg$/,
     use: ['@svgr/webpack'],
   },
-  // {
-  //   test: /\.(png|jpg|gif)$/i,
-  //   use: [
-  //     {
-  //       loader: 'url-loader',
-  //       options: {
-  //         limit: 8192,
-  //         name: "images/[name].[ext]"//[hash:8].
-  //       },
-  //     },
-  //   ],
-  // },
   {
     test: /\.(jpe?g|png|gif)$/i,
     loaders: [
       {
-        loader: 'file-loader',
+        loader: 'url-loader',
         options: {
+          limit: 8192,
           name: imgPath + '[name].[ext]'
         }
       },
@@ -45,12 +34,12 @@ module.exports = [
               floyd: 0.5,
               speed: 2
             }),
-            imageminSvgo({
-              plugins: [
-                { removeTitle: true },
-                { convertPathData: false }
-              ]
-            })
+            // imageminSvgo({
+            //   plugins: [
+            //     { removeTitle: true },
+            //     { convertPathData: false }
+            //   ]
+            // })
           ]
         }
       }
