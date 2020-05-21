@@ -10,20 +10,14 @@ import {
 //pages
 import IndexPage from './pages/IndexPage'
 import MessageBoard from './pages/MessageBoard'
-import getPathName from './lib/getPathName'
-const pathName = getPathName()
+
+console.log("2c0de3d")
+
 function App() {
-  console.log("v7")
-  console.log("App")
-  console.log(pathName)
   return <Router>
     <Switch>
-      <Route path={pathName + "/message_board"}>
-        <MessageBoard pathName={pathName} />
-      </Route>
-      <Route path={pathName + "/"}>
-        <IndexPage pathName={pathName} />
-      </Route>
+      <Route path="/message_board" component={MessageBoard} />
+      <Route path="/" component={IndexPage} />
     </Switch>
   </Router >
 }

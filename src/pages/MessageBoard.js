@@ -42,7 +42,7 @@ function Comments({ data, deleteRequest }) {
   </div>
 }
 
-function MessageBoard({ pathName = "" }) {
+function MessageBoard() {
   const [data, setData] = useState([])
   useEffect(() => {
     getRequest()
@@ -102,17 +102,15 @@ function MessageBoard({ pathName = "" }) {
     arr[id - 1] = newData
     setData(arr)
   }
-  console.log("MessageBoard")
-  console.log(pathName)
   return (
     <>
-      <Header><Link className="nav-link" to={pathName + "/"}>home</Link></Header>
+      <Header><Link className="nav-link" to={"/"}>home</Link></Header>
       <div id="container pb-5">
         <Comments data={data} deleteRequest={deleteRequest} />
         <Form postMethod={postRequest} />
       </div>
       <ReplyBtn />
-      <MobileNav><Link className="btn btn-primary" to={pathName + "/"}>home</Link></MobileNav>
+      <MobileNav><Link className="btn btn-primary" to={"/"}>home</Link></MobileNav>
     </>
   )
 }
