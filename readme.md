@@ -9,7 +9,7 @@
 <h2 align="center">作品介紹</h2>
 </div>
 
-### 作品 1: 個人網站
+### 作品 1: 個人網站 [Link](https://edinliu.github.io/index.html)
 
 <img src="https://edinliu.github.io/images/preview_this_personal_website.png" alt="site1" width="50%"/>
 
@@ -32,7 +32,7 @@
 
 <hr>
 
-### 作品 2: 留言板
+### 作品 2: 留言板 [Link](https://edinliu.github.io/message_board)
 
 <img src="https://edinliu.github.io/images/preview_message_board.png" alt="site1" width="50%"/>
 
@@ -50,7 +50,7 @@
 3. Express.js
 <hr>
 
-### 作品 3: 登陸頁面
+### 作品 3: 登陸頁面 [Link](https://edinliu.github.io/landing_page.html)
 
 <img src="https://edinliu.github.io/images/preview_landing_page.jpg" alt="site1" width="50%"/>
 
