@@ -1,16 +1,18 @@
 const path = require("path");
-const PATH = require("./configPath")
-const entryConfig = require("./entry")
+global.PATH = {
+  src: "src",
+  public: "public",
+}
 let config = {
-  entry: entryConfig,
+  entry: {
+    bundle: path.resolve(global.PATH.src, "index.js")
+  },
   output: {
-    path: path.resolve(PATH.public),
+    path: path.resolve(global.PATH.public),
     filename: "[name].js",
   },
   module: {
-    rules: [
-      ...require('../rules/style_dev'),
-    ]
+    rules: []
   },
   plugins: []
 };
@@ -18,4 +20,5 @@ require("./devServer")(config)
 require("./babelReact")(config)
 require('./htmlPlugin')(config)
 require("./assetRules")(config)
+require('./styleDevRules')(config)
 module.exports = config

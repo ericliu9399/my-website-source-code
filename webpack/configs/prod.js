@@ -1,25 +1,25 @@
 const path = require("path");
-const PATH = require("./configPath")
-const entryConfig = require("./entry")
-
+global.PATH = {
+  src: "src",
+  public: "public",
+}
 let config = {
-  entry: entryConfig,
+  entry: {
+    bundle: path.resolve(global.PATH.src, "index.js")
+  },
   output: {
-    path: path.resolve(PATH.public),
+    path: path.resolve(global.PATH.public),
     filename: "[name].js",
   },
   module: {
-    rules: [
-      ...require('../rules/script'),
-      ...require('../rules/style_prod'),
-    ]
+    rules: []
   },
-  plugins: [
-    ...require('../plugins/HtmlWebpackPlugin'),
-    ...require('../plugins/DynamicCdnWebpackPlugin')
-  ]
+  plugins: []
 };
 
 require('./assetRules')(config)
-
+require('./babelReact')(config)
+require('./htmlPlugin')(config)
+require('./dynamicCDN')(config)
+require('./styleRulesProd')(config)
 module.exports = config

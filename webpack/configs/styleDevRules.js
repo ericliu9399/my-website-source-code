@@ -79,9 +79,11 @@ const sassModuleRule = {
     'sass-loader',
   ],
 }
-module.exports = [
-  cssRule,
-  cssModuleRule,
-  sassRule,
-  sassModuleRule
-]
+module.exports = function styleDevRules(config) {
+  config.module.rules.push(
+    cssRule,
+    cssModuleRule,
+    sassRule,
+    sassModuleRule
+  )
+}
