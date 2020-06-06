@@ -2,19 +2,14 @@ const cssRegex = /\.css$/
 const cssModuleRegex = /\.module\.css$/
 const sassRegex = /\.(scss|sass)$/
 const sassModuleRegex = /\.module\.(scss|sass)$/
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const cssRule = {
   test: cssRegex,
   exclude: cssModuleRegex,
   use: [
-    'style-loader',
-    {
-      loader: 'css-loader',
-      options: {
-        importLoaders: 1,
-      }
-    },
-    require('../use/postcss_prod'),
+    MiniCssExtractPlugin.loader,
+    "css-loader"
   ]
 }
 const cssModuleRule = {
