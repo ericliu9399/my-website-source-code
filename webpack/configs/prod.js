@@ -2,7 +2,7 @@ const path = require("path");
 const PATH = require("./configPath")
 const entryConfig = require("./entry")
 
-module.exports = {
+let config = {
   entry: entryConfig,
   output: {
     path: path.resolve(PATH.public),
@@ -12,7 +12,6 @@ module.exports = {
     rules: [
       ...require('../rules/script'),
       ...require('../rules/style_prod'),
-      ...require('../rules/asset')
     ]
   },
   plugins: [
@@ -21,3 +20,6 @@ module.exports = {
   ]
 };
 
+require('./assetRules')(config)
+
+module.exports = config
