@@ -2,7 +2,16 @@ const cssModuleRegex = /\.module\.css$/;
 const sassModuleRegex = /\.module\.(scss|sass)$/;
 const cssRegex = /\.css$/;
 const sassRegex = /\.(scss|sass)$/;
-
+const postCssConfig = {
+  loader: 'postcss-loader',
+  options: {
+    ident: 'postcss',
+    plugins: [
+      require('precss'),
+      require('autoprefixer'),
+    ],
+  },
+}
 const cssRule = {
   test: cssRegex,
   exclude: cssModuleRegex,
@@ -17,7 +26,7 @@ const cssRule = {
         importLoaders: 1,
       }
     },
-    require('../use/postcss_dev')
+    postCssConfig
   ]
 }
 const cssModuleRule = {
@@ -37,7 +46,7 @@ const cssModuleRule = {
         importLoaders: 1
       }
     },
-    require('../use/postcss_dev')
+    postCssConfig
   ]
 }
 const sassRule = {
@@ -54,7 +63,7 @@ const sassRule = {
         importLoaders: 1,
       }
     },
-    require('../use/postcss_dev'),
+    postCssConfig,
     'sass-loader'
   ]
 }
@@ -75,7 +84,7 @@ const sassModuleRule = {
         importLoaders: 1
       }
     },
-    require('../use/postcss_dev'),
+    postCssConfig,
     'sass-loader',
   ],
 }

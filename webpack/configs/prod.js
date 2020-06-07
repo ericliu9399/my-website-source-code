@@ -16,10 +16,9 @@ let config = {
   },
   plugins: []
 };
-
 require('./assetRules')(config)
 require('./babelReact')(config)
 require('./htmlPlugin')(config)
 require('./dynamicCDN')(config)
-require('./styleRulesProd')(config)
+require('./styleProdRules')(config)
 module.exports = config

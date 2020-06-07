@@ -2,6 +2,23 @@ const cssRegex = /\.css$/
 const cssModuleRegex = /\.module\.css$/
 const sassRegex = /\.(scss|sass)$/
 const sassModuleRegex = /\.module\.(scss|sass)$/
+const postCssConfig = {
+  loader: 'postcss-loader',
+  options: {
+    ident: 'postcss',
+    plugins: [
+      require('precss'),
+      require('autoprefixer'),
+      require('cssnano')({
+        preset: ['default', {
+          discardComments: {
+            removeAll: true,
+          },
+        }]
+      }),
+    ],
+  },
+}
 
 const cssRule = {
   test: cssRegex,
@@ -14,7 +31,7 @@ const cssRule = {
         importLoaders: 1,
       }
     },
-    require('../use/postcss_prod'),
+    postCssConfig,
   ]
 }
 const cssModuleRule = {
@@ -31,7 +48,7 @@ const cssModuleRule = {
         importLoaders: 1,
       }
     },
-    require('../use/postcss_prod'),
+    postCssConfig,
   ]
 }
 const sassRule = {
@@ -45,7 +62,7 @@ const sassRule = {
         importLoaders: 1,
       }
     },
-    require('../use/postcss_prod'),
+    postCssConfig,
     'sass-loader'
   ]
 }
@@ -63,7 +80,7 @@ const sassModuleRule = {
         importLoaders: 1,
       }
     },
-    require('../use/postcss_prod'),
+    postCssConfig,
     'sass-loader',
   ],
 }
