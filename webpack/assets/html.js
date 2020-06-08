@@ -20,10 +20,10 @@ function newHtmlWebpackPlugin(fileName, template) {
     inject: true
   })
 }
-module.exports = function htmlPlugin(config) {
-  config.plugins.concat([
+module.exports = function (config) {
+  config.plugins.push(
     newHtmlWebpackPlugin("index.html", global.PATH.src + "/index.html"),
     newHtmlWebpackPlugin("message_board.html", global.PATH.src + "/index.html")
-  ])
+  )
 }
 

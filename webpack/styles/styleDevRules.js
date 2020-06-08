@@ -12,23 +12,6 @@ const postCssConfig = {
     ],
   },
 }
-const cssRule = {
-  test: cssRegex,
-  exclude: cssModuleRegex,
-  use: [
-    {
-      loader: 'style-loader',
-      options: { attributes: { srcType: 'css' } }
-    },
-    {
-      loader: 'css-loader',
-      options: {
-        importLoaders: 1,
-      }
-    },
-    postCssConfig
-  ]
-}
 const cssModuleRule = {
   test: cssModuleRegex,
   use: [
@@ -90,7 +73,6 @@ const sassModuleRule = {
 }
 module.exports = function styleDevRules(config) {
   config.module.rules.push(
-    cssRule,
     cssModuleRule,
     sassRule,
     sassModuleRule

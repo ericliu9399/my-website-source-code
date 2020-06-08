@@ -4,14 +4,10 @@ const imageminPngquant = require("imagemin-pngquant");
 const imageminSvgo = require("imagemin-svgo");
 const imageminMozjpeg = require('imagemin-mozjpeg');
 
-module.exports = function assetRules(config) {
-  config.module.rules.push(...[
+module.exports = function (config) {
+  config.module.rules.push(
     {
-      test: /\.svg$/,
-      use: ['@svgr/webpack'],
-    },
-    {
-      test: /\.(jpe?g|png|gif)$/i,
+      test: /\.(jpe?g|png|gif|svg)$/i,
       loaders: [
         {
           loader: 'file-loader',
@@ -34,16 +30,16 @@ module.exports = function assetRules(config) {
                 floyd: 0.5,
                 speed: 2
               }),
-              // imageminSvgo({
-              //   plugins: [
-              //     { removeTitle: true },
-              //     { convertPathData: false }
-              //   ]
-              // })
+              imageminSvgo({
+                plugins: [
+                  { removeTitle: true },
+                  { convertPathData: false }
+                ]
+              })
             ]
           }
         }
       ]
     }
-  ])
+  )
 }
