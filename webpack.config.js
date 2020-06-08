@@ -14,15 +14,18 @@ let config = {
   module: {
     rules: []
   },
-  plugins: []
-};
+  plugins: [],
+  resolve: { alias: {} }
+}
 module.exports = (env) => {
   global.env = env
+
   require('./webpack/assets/img-loader&file-loader&svgr')(config)
   require('./webpack/scripts/babel-loader.react&styled-jsx')(config)
   require('./webpack/assets/html')(config)
   if (env === "prod") {
-    require('./webpack/settings/dynamic-cdn')(config)
+    require('./webpack/settings/preact_alias')(config)//用dynamic-cdn會沒作用
+    // require('./webpack/settings/dynamic-cdn')(config)
     require('./webpack/styles/styleProdRules')(config)
   }
   if (env === "dev") {
