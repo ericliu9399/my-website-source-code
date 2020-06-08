@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import marked from 'marked'
 
 function markdown2html(text) {
   marked.setOptions({

@@ -1,31 +1,33 @@
 {
-  "name": "react-webpack-boilerplate",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
   "scripts": {
     "build-webpack": "webpack --mode production --env=prod",
     "build": "source script/build_all.sh",
-    "build-bs": "source script/build_bs.sh",
     "dev": "webpack-dev-server --mode development --env=dev",
-    "deploy-dev-f": "source script/public_deploy_dev_f.sh",
-    "deploy-dev": "source script/public_deploy_dev.sh",
     "deploy": "source script/public_deploy.sh",
-    "deploy-f": "source script/public_deploy_f.sh"
+    "deploy-f": "source script/public_deploy_f.sh",
+    "deploy-dev": "source script/public_deploy_dev.sh",
+    "deploy-dev-f": "source script/public_deploy_dev_f.sh"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "marked": "^1.1.0",
+    "preact": "^10.4.4",
+    "react": "^16.13.1",
+    "react-app-polyfill": "^1.0.6",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.0",
     "@babel/preset-react": "^7.9.4",
+    "@fullhuman/postcss-purgecss": "^2.2.0",
     "@svgr/webpack": "^5.3.0",
     "babel-loader": "^8.1.0",
     "css-loader": "^3.4.2",
     "cssnano": "^4.1.10",
     "dynamic-cdn-webpack-plugin": "^5.0.0",
     "file-loader": "^6.0.0",
-    "gulp": "^4.0.2",
-    "gulp-pug": "^4.0.1",
-    "gulp-sass": "^4.0.2",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
     "imagemin": "^7.0.1",
@@ -42,16 +44,10 @@
     "sass-loader": "^8.0.2",
     "style-loader": "^1.1.3",
     "styled-jsx": "^3.2.5",
+    "url-loader": "^4.1.0",
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
-  },
-  "dependencies": {
-    "mini-css-extract-plugin": "^0.9.0",
-    "react": "^16.13.1",
-    "react-app-polyfill": "^1.0.6",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.1.2"
   },
   "browserslist": [
     "> 1%",
