@@ -37,7 +37,6 @@ function IndexPage() {
         <a href="#projects" className="nav-link pr-1">projects</a>
         <a href="#contact" className="nav-link pr-1">contact</a>
         <Link to={"/message_board"} className="nav-link pr-1">message board</Link>
-        <a href="/landing_page.html" className="nav-link pr-1">landing page</a>
         <div className="pl-3 pr-3">
           <LanguageSelect
             switchLangMethod={setLanguage}
@@ -61,7 +60,6 @@ function IndexPage() {
         <a href="#projects" className="btn btn-primary">projects</a>
         <a href="#contact" className="btn btn-primary">contact</a>
         <Link to={"/message_board"} className="btn btn-primary">message board</Link>
-        <a href="/landing_page.html" className="btn btn-primary">landing page</a>
         <button className="btn btn-primary d-flex justify-content-center">
           <LanguageSelect
             switchLangMethod={setLanguage}
