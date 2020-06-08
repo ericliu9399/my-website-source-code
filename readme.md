@@ -20,8 +20,8 @@
 1. **<a href="https://github.com/edinliu/my-website-source-code/tree/master/src/components">單文件組件</a>**
    這個個人網站使用 zeit/styled-jsx ，這個工具將 css 與 jsx 整合在一起成為單文件組件。可以很方便地複製到下一個專案使用。使用上只需要添加 Bootstrap.css CDN 到 html 裡面，再依照 zeit/styled-jsx 官網教學安裝相關套件就可以使用了。
 
-2. **<a href="https://github.com/edinliu/my-website-source-code/blob/master/webpack/plugins/DynamicCdnWebpackPlugin.js">使用 CDN 減少 bundle 的大小</a>**
-   用 dynamic-cdn-webpack-plugin 這個工具將 React、React Router...等函式庫改成使用 CDN 的方式來使用，減少 bundle.js 的大小，可以節省 github page 的網路流量。
+2. **<a href="https://github.com/edinliu/my-website-source-code/blob/master/src/components/MarkdownViewer.js">使用 Preact.js 減少 bundle 大小</a>**
+   在生產環境用 Preact.js 替換 React.js，chrome 的 Lighthouse 效能測試，效能從 92 上升到 98。
 
 3. **<a href="https://github.com/edinliu/my-website-source-code/blob/master/src/components/MarkdownViewer.js">編譯 markdown</a>**
    用 marked.js 將這個 readme.md 的內容顯示到個人網站中。
@@ -59,11 +59,11 @@
 3. Express.js
 <hr>
 
-### 作品 3: 登陸頁面 [Link](https://edinliu.github.io/landing_page.html)
+### 作品 3: 登陸頁面 [Link](https://edinliu.github.io/landing_page/)
 
 <img src="https://edinliu.github.io/images/preview_landing_page.jpg" alt="site1" width="50%"/>
 
-**<a href="https://github.com/edinliu/my-website-source-code/tree/master/src/pages/landingPage">原始碼</a>**
+**<a href="https://github.com/edinliu/landing_page">原始碼</a>**
 
 這個頁面是我姊姊設計的。我使用 illustrator 將 .ai 檔案圖片分群組並且命名，之後用 css 的屬性選擇器製作動畫。
 在製作過程中發現當放兩個以上的 svg 在同一個頁面中 svg 位置會錯亂，我猜想是因為圖檔圖層太多太複雜的緣故。之後把 svg 單獨放在一個頁面中，再用 iframe 把他們放在主頁，一切就正常了。
