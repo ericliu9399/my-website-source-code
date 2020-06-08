@@ -25,7 +25,7 @@ function markdown2html(text) {
 function MarkdownViewer({ url }) {
   const [content, setContent] = useState("")
   useEffect(() => {
-    fetch(url)
+    fetch(url, { cache: 'no-cache' })
       .then(res => res.text())
       .then(text => setContent(markdown2html(text)))
   }, [url])
