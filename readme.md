@@ -28,11 +28,10 @@
 
 ##### 使用的工具
 
-1. React.js
+1. Preact.js
 2. Styled Jsx
 3. Bootstrap
 4. Webpack
-5. dynamic-cdn-webpack-plugin
 
 <hr>
 
@@ -54,7 +53,7 @@
 
 #### 使用的工具
 
-1. React.js
+1. Preact.js
 2. Styled Jsx & Bootstrap
 3. Express.js
 <hr>
