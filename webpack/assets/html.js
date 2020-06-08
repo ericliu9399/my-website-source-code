@@ -17,7 +17,7 @@ function newHtmlWebpackPlugin(fileName, template) {
       minifyCSS: true,
       minifyJS: true
     },
-    inject: true
+    inject: false
   })
 }
 module.exports = function (config) {

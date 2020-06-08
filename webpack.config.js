@@ -5,7 +5,7 @@ global.PATH = {
 }
 let config = {
   entry: {
-    bundle: path.resolve(global.PATH.src, "index.js")
+    index: path.resolve(global.PATH.src, "index.js"),
   },
   output: {
     path: path.resolve(global.PATH.public),
