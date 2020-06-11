@@ -1,3 +1,8 @@
+if (global.isInstall) {
+  const script = "npm install -D postcss-loader precss autoprefixer style-loader css-loader"
+  require('../helpers/install')(script)
+}
+
 const cssRegex = /\.css$/;
 const cssModuleRegex = /\.module\.css$/;
 const postCssConfig = {

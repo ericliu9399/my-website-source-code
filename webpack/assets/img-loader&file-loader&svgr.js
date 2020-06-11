@@ -1,3 +1,7 @@
+if (global.isInstall) {
+  const script = "npm install -D imagemin imagemin-gifsicle imagemin-pngquant imagemin-mozjpeg @svgr/webpack file-loader url-loader img-loader"
+  require('../helpers/install')(script)
+}
 const imgPath = 'images/';
 const imageminGifsicle = require("imagemin-gifsicle");
 const imageminPngquant = require("imagemin-pngquant");

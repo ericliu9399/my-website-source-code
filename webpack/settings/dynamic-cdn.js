@@ -1,3 +1,8 @@
+if (global.isInstall) {
+  const script = "npm install -D html-webpack-plugin dynamic-cdn-webpack-plugin"
+  require('../helpers/install')(script)
+}
+
 const DynamicCdnWebpackPlugin = require('dynamic-cdn-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
