@@ -20,8 +20,8 @@
 1. **<a href="https://github.com/edinliu/my-website-source-code/tree/master/src/components">單文件組件</a>**
    這個個人網站使用 zeit/styled-jsx ，這個工具將 css 與 jsx 整合在一起成為單文件組件。可以很方便地複製到下一個專案使用。使用上只需要添加 Bootstrap.css CDN 到 html 裡面，再依照 zeit/styled-jsx 官網教學安裝相關套件就可以使用了。
 
-2. **<a href="https://github.com/edinliu/my-website-source-code/blob/master/webpack/settings/preact_alias.js">使用 PurgeCSS 減少 bundle 大小</a>**
-   用 PurgeCSS 刪除多餘的 bootstrap css。經過 chrome 的 Lighthouse 效能測試，效能從 92 上升到 98。
+2. **<a href="https://github.com/edinliu/my-website-source-code/blob/master/webpack/styles/styleProdRules.js">使用 PurgeCSS 減少 bundle 大小</a>**
+   用 PurgeCSS 刪除多餘的 bootstrap css，bundle 大小減少了 133kb。
 
 3. **<a href="https://github.com/edinliu/my-website-source-code/blob/master/src/components/MarkdownViewer.js">編譯 markdown</a>**
    用 marked.js 將這個 readme.md 的內容顯示到個人網站中。
