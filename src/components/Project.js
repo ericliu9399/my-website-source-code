@@ -12,9 +12,6 @@ function Project({ content }) {
         <MarkdownViewer url={"./readme.md"} />
       </section>
       <style jsx>{`
-:global(a[target="_blank"]){
-display: none;
-}
 :global(h3){
 margin-top: 20px;
 }

@@ -19,7 +19,7 @@ import './images/preview_message_board.png'
 import './images/preview_this_personal_website.png'
 import './images/favicon-32x32.png'
 
-console.log("fc7a3c7")
+console.log("da20f74")
 
 function App() {
   return <Router>
