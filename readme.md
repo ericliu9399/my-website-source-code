@@ -20,15 +20,15 @@
 1. **<a href="https://github.com/edinliu/my-website-source-code/tree/master/src/components">單文件組件</a>**
    這個個人網站使用 zeit/styled-jsx ，這個工具將 css 與 jsx 整合在一起成為單文件組件。可以很方便地複製到下一個專案使用。使用上只需要添加 Bootstrap.css CDN 到 html 裡面，再依照 zeit/styled-jsx 官網教學安裝相關套件就可以使用了。
 
-2. **<a href="https://github.com/edinliu/my-website-source-code/blob/master/webpack/settings/preact_alias.js">使用 Preact.js 與 PurgeCSS 減少 bundle 大小</a>**
-   在生產環境用 Preact.js 替換 React.js，再用 PurgeCSS 刪除多餘的 bootstrap css。經過 chrome 的 Lighthouse 效能測試，效能從 92 上升到 98。
+2. **<a href="https://github.com/edinliu/my-website-source-code/blob/master/webpack/settings/preact_alias.js">使用 PurgeCSS 減少 bundle 大小</a>**
+   用 PurgeCSS 刪除多餘的 bootstrap css。經過 chrome 的 Lighthouse 效能測試，效能從 92 上升到 98。
 
 3. **<a href="https://github.com/edinliu/my-website-source-code/blob/master/src/components/MarkdownViewer.js">編譯 markdown</a>**
    用 marked.js 將這個 readme.md 的內容顯示到個人網站中。
 
 ##### 使用的工具
 
-1. Preact.js
+1. React.js
 2. PurgeCSS
 3. Styled Jsx
 4. Bootstrap
@@ -68,8 +68,8 @@
 這個頁面是我姊姊設計的。我使用 illustrator 將 .ai 檔案圖片分群組並且命名，之後用 inline svg + css 的屬性選擇器製作動畫。
 於製作過程中做了三種嘗試:
 第一版用 inline svg 的方式把全部圖片放在 index.html，產生圖片錯位，顯示不正常的情況，上網找不到原因，猜想是圖檔的圖層太多導致效能的問題。
-第二版用 iframe 的方式把 inline svg 裝進個別的 html，圖片正常顯示了，css 動畫也正常，但是還是有效能的問題，用 chrome 測試效能只有 20 多，用手機觀看 css 動畫會卡卡的。
-第三版把其他 svg 圖片改用 img 載入，只留一個用 inline svg 做動畫，用 chrome 測試效能提升到 40 多。未來會想使用 SMIL 來做 svg 動畫，看能不能改善效能的問題。
+第二版用 iframe 的方式把 inline svg 裝進個別的 html，圖片正常顯示了， svg 的 css 動畫也正常，但是還是有效能的問題，用 chrome 測試效能只有 20 多，用手機觀看 css 動畫會卡卡的。
+第三版把其他 svg 圖片改用 img 載入，只留一個用 inline svg 做動畫，用 chrome 測試效能提升到 40 多。未來會朝著減少 css 動畫的方式來提升效能。
 
 #### 使用的工具
 
