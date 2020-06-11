@@ -34,7 +34,7 @@
 4. Bootstrap
 5. Webpack
 
-<hr>
+<hr style='page-break-before:always'>
 
 ### 作品 2: 留言板 [Link](https://edinliu.github.io/message_board)
 
@@ -57,7 +57,7 @@
 1. Preact.js
 2. Styled Jsx & Bootstrap
 3. Express.js
-<hr>
+<hr style='page-break-before:always'>
 
 ### 作品 3: 登陸頁面 [Link](https://edinliu.github.io/landing_page/)
 

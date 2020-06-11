@@ -4,7 +4,7 @@ import MarkdownViewer from './MarkdownViewer'
 
 function Project({ content }) {
 
-  const { title: sectionTitle } = content
+  const { title: sectionTitle } = content || {}
   return (
     <>
       <section className="container" id="projects">
@@ -12,6 +12,12 @@ function Project({ content }) {
         <MarkdownViewer url={"./readme.md"} />
       </section>
       <style jsx>{`
+:global(a[target="_blank"]){
+display: none;
+}
+:global(h3){
+margin-top: 20px;
+}
 section{
 min-height: 100vh;
 }
