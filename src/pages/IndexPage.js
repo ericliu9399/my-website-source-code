@@ -36,6 +36,7 @@ function IndexPage() {
         <a href="#aboutMe" className="nav-link pr-1">about me</a>
         <a href="#projects" className="nav-link pr-1">projects</a>
         <a href="#contact" className="nav-link pr-1">contact</a>
+        <a href="https://edinliu.blogspot.com/" className="nav-link pr-1">blog</a>
         <Link to={"/message_board"} className="nav-link pr-1">message board</Link>
         <div className="pl-3 pr-3">
           <LanguageSelect

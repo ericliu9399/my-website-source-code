@@ -2,13 +2,14 @@ const path = require("path");
 global.PATH = {
   src: "src",
   public: "public",
+  build: "build"
 }
 let config = {
   entry: {
     index: path.resolve(global.PATH.src, "index.js"),
   },
   output: {
-    path: path.resolve(global.PATH.public),
+    path: path.resolve(global.PATH.build),
     filename: "[name].js",
   },
   module: {
@@ -26,7 +27,8 @@ module.exports = (env) => {
   if (env === "prod" || global.isInstall) {
     // require('./webpack/settings/dynamic-cdn')(config)
     require('./webpack/styles/styleProdRules')(config)
-    require('./webpack/scripts/compression')(config)
+    // require('./webpack/scripts/compression')(config)
+    // require('./webpack/settings/rwd')(config)
   }
   if (env === "dev" || global.isInstall) {
     require("./webpack/settings/devServer")(config)
