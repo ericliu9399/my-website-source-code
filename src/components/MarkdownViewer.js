@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import marked from 'marked'
+import hljs from 'hljs'
 
 function markdown2html(text) {
   marked.setOptions({

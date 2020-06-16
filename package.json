@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
+    "hljs": "^6.2.3",
     "marked": "^1.1.0",
     "react-app-polyfill": "^1.0.6",
     "react-router-dom": "^5.2.0"
@@ -44,6 +45,7 @@
     "url-loader": "^4.1.0",
     "webpack": "latest",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "workbox-webpack-plugin": "^5.1.3"
   }
 }
