@@ -1,8 +1,8 @@
 import React from 'react'
 
-function SectionTitle({ title, id }) {
+function SectionTitle({ title, id, isPrint = false }) {
   const smPt = 4
-  const pt = 2
+  const pt = isPrint ? 0 : 2
   return <>
     <div className={`pt-${pt} pt-sm-${smPt}`}>
       <div className={`pt-${pt} pt-sm-${smPt}`}>
