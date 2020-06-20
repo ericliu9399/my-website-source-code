@@ -1,2 +1,2 @@
 npm run build-webpack
-source move_file.sh
+source script/move_file.sh
