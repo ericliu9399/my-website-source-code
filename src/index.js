@@ -5,10 +5,10 @@ import ReactDOM from 'react-dom';
 import './lib/scss/import_bootstrap.scss'
 import './styles/global.sass';
 import {
-  BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
+import Router from "react-router-dom/BrowserRouter"
 //pages
 import IndexPage from './pages/IndexPage'
 import MessageBoard from './pages/MessageBoard'

@@ -1,4 +1,4 @@
-if (global.isInstall) require('../helpers/install')("npm install -D html-webpack-plugin")
+if (global.isInstall) require('../helpers/shellExec')("npm install -D html-webpack-plugin")
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 /**
  * @param fileName {string} export file's name
@@ -24,8 +24,6 @@ function newHtmlWebpackPlugin(fileName, template) {
 module.exports = function (config) {
   config.plugins.push(
     newHtmlWebpackPlugin("index.html", global.PATH.public + "/index.html"),
-    newHtmlWebpackPlugin("message_board.html", global.PATH.public + "/index.html"),
-    newHtmlWebpackPlugin("for_print.html", global.PATH.public + "/index.html"),
   )
 }
 
