@@ -58,15 +58,15 @@ function TimeLine({ isPrint = false }) {
     <ul className={"timeline d-flex flex-column " + reverse}>
       <TimeWithReverse content="至今" />
       <Branch isPrint={isPrint} title="自學前端" >
-        <p>購買了hahow的線上課程，從 html、javascript、css開始自學，今年開始接觸 react 並且製作了個人網頁，未來目標是成為全端工程師。</p>
+        <p>購買了hahow的線上課程，從 html、javascript、css開始自學，今年開始接觸 react 與 bootstrap 並且製作了個人網頁，目前仍在努力學習中。</p>
       </Branch>
       <TimeWithReverse content="2019年10月" />
       <Branch isPrint={isPrint} title="自學python">
-        <p>開始自學 python，期間用 python製作了簡易翻譯機、股票小程式。後來發現比較喜歡前端，因為可以製作漂亮的介面，於是就開始自學前端。</p>
+        <p>開始自學 python，期間用 python製作了<a href="https://github.com/edinliu/python-simple-translator">簡易翻譯機</a>。其ui介面是用tkinter這個python函式庫製作的。在製作這個ui介面的過程，感受到做一個ui介面對使用者而言非常重要，而用python製作ui介面在外觀上相對於網頁來說是缺乏靈活性的，而網頁css則可以對ui進行外觀的設定，且透過瀏覽器，可以輕易地運行在各種有瀏覽器的裝置中，而且javascript npm 模組的生態系也非常豐富，覺得學習javascript未來非常光明，於是就開始自學前端。</p>
       </Branch>
       <TimeWithReverse content="2019年4月" />
       <Branch isPrint={isPrint} title="五股職訓局學習PLC機電整合">
-        <p>PLC是工業用的可程式控制器，從事PLC工作必須接觸硬體方面。在學習過程中，我發覺我對機械、硬體興趣缺缺，只喜歡軟體的部分，於是開始研究 python。</p>
+        <p>PLC是工業用的可程式控制器，從事PLC工作必須接觸硬體方面。在學習過程中，我發覺我對機械、硬體方面興趣缺缺，想製作可以與人互動的程式，由於當時人工智慧與python非常熱門，我認為學習python一定不會錯，於是開始自學python。</p>
       </Branch>
       <TimeWithReverse content="2018年9月" />
       <Branch isPrint={isPrint} title="離職之後">

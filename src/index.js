@@ -13,19 +13,21 @@ import Router from "react-router-dom/BrowserRouter"
 import IndexPage from './pages/IndexPage'
 import MessageBoard from './pages/MessageBoard'
 import ForPrint from './pages/ForPrint'
+import PrintProject from './pages/PrintProject'
 //這三個圖片是給 readme.md 與 cakeresume 用的
 import './images/preview_landing_page.jpg'
 import './images/preview_message_board.png'
 import './images/preview_this_personal_website.png'
 import './images/favicon-32x32.png'
 
-console.log("da20f74")
+console.log("heah123")
 
 function App() {
   return <Router>
     <Switch>
       <Route path="/message_board" component={MessageBoard} />
       <Route path="/for_print" component={ForPrint} />
+      <Route path="/print_project" component={PrintProject} />
       <Route path="/" component={IndexPage} />
     </Switch>
   </Router >

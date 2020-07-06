@@ -9,7 +9,17 @@
 <h2 align="center">作品介紹</h2>
 </div>
 
-### 作品 1: 個人網站 [Link](https://edinliu.github.io/index.html)
+### 作品 1: Todo List [demo](https://edinliu.github.io/ts-todolist-demo/) [原始碼](https://github.com/edinliu/ts-todolist-source-code)
+
+<img src="https://i.imgur.com/II2Jx3H.png" alt="site1" width="50%"/>
+
+#### 簡介
+
+組件用 typescript 製作的 todolist
+
+<hr>
+
+### 作品 2: 個人網站 [demo](https://edinliu.github.io/index.html) [原始碼](https://github.com/edinliu/my-website-source-code)
 
 <img src="https://edinliu.github.io/images/preview_this_personal_website.png" alt="site1" width="50%"/>
 
@@ -36,7 +46,7 @@
 
 <hr style='page-break-before:always'>
 
-### 作品 2: 留言板 [Link](https://edinliu.github.io/message_board)
+### 作品 3: 留言板 [demo](https://edinliu.github.io/message_board) [原始碼](https://github.com/edinliu/express-message-board-api)
 
 <img src="https://edinliu.github.io/images/preview_message_board.png" alt="site1" width="50%"/>
 
@@ -59,21 +69,23 @@
 3. Express.js
 <hr style='page-break-before:always'>
 
-### 作品 3: 登陸頁面 [Link](https://edinliu.github.io/landing_page/)
+### 作品 4: Redux Counter [demo](https://edinliu.github.io/redux-counter/) [原始碼](https://github.com/edinliu/redux-counter-source-code)
 
-<img src="https://edinliu.github.io/images/preview_landing_page.jpg" alt="site1" width="50%"/>
+<img src="https://edinliu.github.io/redux-counter/images/snapshot.png" alt="site1" width="50%"/>
 
-**<a href="https://github.com/edinliu/landing_page">原始碼</a>**
-
-這個頁面是我姊姊設計的。我使用 illustrator 將 .ai 檔案圖片分群組並且命名，之後用 inline svg + css 的屬性選擇器製作動畫。
-於製作過程中做了三種嘗試:
-第一版用 inline svg 的方式把全部圖片放在 index.html，產生圖片錯位，顯示不正常的情況，上網找不到原因，猜想是圖檔的圖層太多導致效能的問題。
-第二版用 iframe 的方式把 inline svg 裝進個別的 html，圖片正常顯示了， svg 的 css 動畫也正常，但是還是有效能的問題，用 chrome 測試效能只有 20 多，用手機觀看 css 動畫會卡卡的。
-第三版把其他 svg 圖片改用 img 載入，只留一個用 inline svg 做動畫，用 chrome 測試效能提升到 40 多。未來會朝著減少 css 動畫的方式來提升效能。
+這是用 redux 與 react 製作的簡易 counter
 
 #### 使用的工具
 
-1. Gulp
-2. Sass
-3. Pug
-4. illustrator
+1. Redux
+2. React
+
+### 作品 5: 登陸頁面 [demo](https://edinliu.github.io/landing_page/) [原始碼](https://github.com/edinliu/landing_page)
+
+<img src="https://edinliu.github.io/images/preview_landing_page.jpg" alt="site1" width="50%"/>
+
+這個頁面是我姊姊設計的。我使用 illustrator 將 .ai 檔案圖片分群組並且命名，之後用 inline svg + css 的屬性選擇器製作動畫。
+
+#### 使用的工具
+
+Gulp, Sass, Pug, illustrator
