@@ -6,9 +6,9 @@ import './lib/scss/import_bootstrap.scss'
 import './styles/global.sass';
 import {
   Switch,
-  Route
+  Route,
+  BrowserRouter as Router
 } from "react-router-dom";
-import Router from "react-router-dom/BrowserRouter"
 //pages
 import IndexPage from './pages/IndexPage'
 import MessageBoard from './pages/MessageBoard'
@@ -19,6 +19,7 @@ import './images/preview_landing_page.jpg'
 import './images/preview_message_board.png'
 import './images/preview_this_personal_website.png'
 import './images/favicon-32x32.png'
+import * as serviceWorker from './serviceWorker'
 
 console.log("heah123")
 
@@ -34,4 +35,6 @@ function App() {
 }
 ReactDOM.render(
   <App />
-  , document.getElementById('app'));
+  , document.getElementById('root'));
+
+serviceWorker.register()
