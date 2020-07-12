@@ -3,8 +3,8 @@
   "license": "",
   "scripts": {
     "build": "webpack --mode production --env=prod",
-    "deploy": "source script/public_deploy.sh",
-    "deploy-f": "source script/public_deploy_f.sh",
+    "deploy": "source script/build_folder_deploy.sh",
+    "deploy-f": "source script/build_folder_deploy_f.sh",
     "start": "webpack-dev-server --mode development --env=dev",
     "install-webpack": "webpack --env=install"
   },
