@@ -70,29 +70,29 @@ const Comment = ({
       <style jsx>
         {`
 .deletePanel button {
-	order: -1;
+order: -1;
 }
 .deletePanel input {
-	opacity: 0;
-	transition-duration: 0.4s;
+opacity: 0;
+transition-duration: 0.4s;
   right: -20px;
 }
 .deletedComment {
-	background: none;
-	height: fit-content;
-	margin-top: 10px;
-	border-radius: 10px;
+background: none;
+height: fit-content;
+margin-top: 10px;
+border-radius: 10px;
 }
 .deletedComment h2, .deletedComment h3 {
-	font-size: 10px;
+font-size: 10px;
 }
 .deletedComment h2, .deletedComment h3, .deletedComment h4, .deletedComment p {
-	margin: 5px;
-	padding: 0px;
+margin: 5px;
+padding: 0px;
 }
 .deletedComment button {
-	height: 0px;
-	visibility: hidden;
+height: 0px;
+visibility: hidden;
 }
 `}
       </style>
