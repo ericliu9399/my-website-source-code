@@ -1,10 +1,9 @@
 /* eslint-disable */
 const path = require('path');
-
 global.PATH = {
   src: 'src',
   imgPath: 'images/',
-  public: 'public',
+  public: 'public/',
   build: 'build',
 };
 global.config = {
@@ -18,7 +17,8 @@ global.config = {
   module: {
     rules: [],
   },
-  plugins: [],
+  plugins: [
+  ],
   resolve: { alias: {} },
 };
 module.exports = (env) => {

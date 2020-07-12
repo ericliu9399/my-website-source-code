@@ -21,7 +21,7 @@ import './images/preview_this_personal_website.png'
 import './images/favicon-32x32.png'
 import * as serviceWorker from './serviceWorker'
 
-console.log("heah123")
+console.log("456789")
 
 function App() {
   return <Router>

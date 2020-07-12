@@ -2,8 +2,7 @@
   "repository": "",
   "license": "",
   "scripts": {
-    "build-webpack": "webpack --mode production --env=prod",
-    "build": "source script/build_all.sh",
+    "build": "webpack --mode production --env=prod",
     "deploy": "source script/public_deploy.sh",
     "deploy-f": "source script/public_deploy_f.sh",
     "start": "webpack-dev-server --mode development --env=dev",
@@ -36,6 +35,7 @@
     "imagemin-pngquant": "^9.0.0",
     "imagemin-svgo": "^8.0.0",
     "img-loader": "^3.0.1",
+    "interpolate-html-plugin": "^3.0.0",
     "node-sass": "^4.14.1",
     "postcss-loader": "^3.0.0",
     "precss": "^4.0.0",
