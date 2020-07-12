@@ -21,7 +21,7 @@ global.config = {
   ],
   resolve: {
     alias: {},
-    extensions: ['.js', '.jsx'],
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
 };
 module.exports = (env) => {
@@ -38,6 +38,7 @@ module.exports = (env) => {
     require('./webpack/styles/styleDevRules'),
     require('./webpack/scripts/source-map'),
     // require('./webpack/settings/devServer'),//設定 port:3000
+    require('./webpack/scripts/react-hash-router-alias'),
   ]
   const prodConfig = [
     require('./webpack/settings/copy-file'),
