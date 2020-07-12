@@ -7,11 +7,11 @@ import './styles/global.sass';
 import {
   Switch,
   Route,
-  BrowserRouter as Router,
 } from 'react-router-dom';
+import Router from './lib/browser-router';
 // pages
 import IndexPage from './pages/IndexPage';
-import MessageBoard from './pages/MessageBoard';
+import MessageBoard from './pages/MessageBoard/index';
 import ForPrint from './pages/ForPrint';
 import PrintProject from './pages/PrintProject';
 import * as serviceWorker from './serviceWorker';
