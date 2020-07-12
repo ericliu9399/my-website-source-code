@@ -1,17 +1,17 @@
-import React from 'react'
-import SectionTitle from './SectionTitle'
-import MarkdownViewer from './MarkdownViewer'
+import React from 'react';
+import SectionTitle from './SectionTitle';
+import MarkdownViewer from './MarkdownViewer';
 
 function Project({ content }) {
-
-  const { title: sectionTitle } = content || {}
+  const { title: sectionTitle } = content || {};
   return (
     <>
       <section className="container" id="projects">
         <SectionTitle title={sectionTitle} />
-        <MarkdownViewer url={"./readme.md"} />
+        <MarkdownViewer url="./readme.md" />
       </section>
-      <style jsx>{`
+      <style jsx>
+        {`
 :global(h3){
 margin-top: 20px;
 }
@@ -41,9 +41,10 @@ margin: 40px;
 .container :global(.MarkdownViewer) :global(.top-pannel){
 display: none;
 }
-`}</style>
+`}
+      </style>
     </>
-  )
+  );
 }
 
-export default Project
+export default Project;

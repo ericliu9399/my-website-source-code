@@ -8,7 +8,7 @@ global.PATH = {
 };
 global.config = {
   entry: {
-    index: path.resolve(global.PATH.src, 'index.js')
+    index: path.resolve(global.PATH.src, 'index.jsx')
   },
   output: {
     path: path.resolve(global.PATH.build),
@@ -19,7 +19,10 @@ global.config = {
   },
   plugins: [
   ],
-  resolve: { alias: {} },
+  resolve: {
+    alias: {},
+    extensions: ['.js', '.jsx'],
+  },
 };
 module.exports = (env) => {
   const generalConfig = [
