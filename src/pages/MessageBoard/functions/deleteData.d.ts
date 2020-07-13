@@ -1,4 +1,4 @@
-function deleteData(
+declare function deleteData(
   id: number | string,
   deletePassword: number | string,
   setMessage: (text: string) => void,
