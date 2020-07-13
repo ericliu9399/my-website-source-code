@@ -1,9 +1,9 @@
-import 'react-app-polyfill/ie9';
+// import 'react-app-polyfill/ie9';
 // import "preact/debug"
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './lib/scss/import_bootstrap.scss';
-import './styles/global.sass';
+import './lib/bootstrap/all.scss';
+import './global.sass';
 import {
   Switch,
   Route,
