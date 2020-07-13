@@ -3,7 +3,7 @@ import Project from '../components/Project';
 import AboutMe from '../components/AboutMe';
 import data from './contents/indexPageContentChinese.json';
 
-const { home, aboutMe, contact } = data;
+const { aboutMe } = data;
 export default function ForPrint() {
   return (
     <>

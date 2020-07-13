@@ -22,9 +22,9 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/message_board" component={MessageBoard} />
-        <Route path="/for_print" component={ForPrint} />
-        <Route path="/print_project" component={PrintProject} />
+        <Route path="/message_board.html" component={MessageBoard} />
+        <Route path="/for_print.html" component={ForPrint} />
+        <Route path="/print_project.html" component={PrintProject} />
         <Route path="/" component={IndexPage} />
       </Switch>
     </Router>

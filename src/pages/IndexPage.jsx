@@ -37,8 +37,8 @@ function IndexPage() {
         <a href="#projects" className="nav-link pr-1">projects</a>
         <a href="#contact" className="nav-link pr-1">contact</a>
         <a href="https://edinliu.blogspot.com/" className="nav-link pr-1">blog</a>
-        <Link to="/message_board" className="nav-link pr-1">留言板</Link>
-        <Link to="/for_print" className="nav-link pr-1">列印</Link>
+        <Link to="/message_board.html" className="nav-link pr-1">留言板</Link>
+        <Link to="/for_print.html" className="nav-link pr-1">列印</Link>
         <div className="pl-3 pr-3">
           <LanguageSelect
             switchLangMethod={setLanguage}
@@ -61,9 +61,10 @@ function IndexPage() {
         <a href="#aboutMe" className="btn btn-primary">about me</a>
         <a href="#projects" className="btn btn-primary">projects</a>
         <a href="#contact" className="btn btn-primary">contact</a>
-        <Link to="/message_board" className="btn btn-primary">留言板</Link>
-        <Link to="/for_print" className="btn btn-primary">列印</Link>
+        <Link to="/message_board.html" className="btn btn-primary">留言板</Link>
+        <Link to="/for_print.html" className="btn btn-primary">列印</Link>
         <button
+          type="button"
           className="btn btn-primary d-flex justify-content-center"
         >
           <LanguageSelect
