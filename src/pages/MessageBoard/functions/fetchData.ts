@@ -1,4 +1,8 @@
-function fetchData(request, jsonHandler, errorMessageHandler) {
+export default function fetchData(
+  request: RequestInfo,
+  jsonHandler: (json: object) => void,
+  errorMessageHandler?: (text: string) => void
+) {
   fetch(request)
     .then((response) => response.text())
     .then((text) => {
@@ -12,5 +16,3 @@ function fetchData(request, jsonHandler, errorMessageHandler) {
       }
     });
 }
-
-export default fetchData;

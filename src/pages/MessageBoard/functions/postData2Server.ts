@@ -1,7 +1,12 @@
 import fetchData from './fetchData';
 import apiUrl from '../../../lib/apiUrl';
 
-function postData2Server(dataToPost, setMessage, data, setData) {
+function postData2Server(
+  dataToPost: object,
+  setMessage: (message: string) => void,
+  data: Array<object>,
+  setData: (data: Array<object>) => void
+) {
   const appendClientData = (newData) => {
     const arr = [...data];
     arr.push(newData);
@@ -10,13 +15,12 @@ function postData2Server(dataToPost, setMessage, data, setData) {
   const myHeaders = new Headers();
   myHeaders.append('Content-Type', 'application/json');
   const raw = JSON.stringify(dataToPost);
-  const requestOptions = {
+  const request = new Request(apiUrl, {
     method: 'POST',
     headers: myHeaders,
     body: raw,
     redirect: 'follow',
-  };
-  const request = new Request(apiUrl, requestOptions);
+  });
   const textHandler = (text) => {
     setMessage(text);
   };
