@@ -10,23 +10,24 @@ import deleteData from './functions/deleteData';
 import postData2Server from './functions/postData2Server';
 
 function MessageBoard() {
-  const [data, setData] = useState([]);
+  const [comments, setComments] = useState([]);
   useEffect(() => {
-    getData(setData);
+    console.log('get all message')
+    getData(setComments);
   }, []);
   return (
     <>
       <Header><Link className="nav-link" to="/">home</Link></Header>
       <div id="container pb-5">
         <Comments
-          data={data}
+          data={comments}
           deleteRequest={(id, deletePassword, setMessage) => {
-            deleteData(id, deletePassword, setMessage, data, setData);
+            deleteData(id, deletePassword, setMessage, comments, setComments);
           }}
         />
         <Form
           postMethod={(dataToPost, setMessage) => {
-            postData2Server(dataToPost, setMessage, data, setData);
+            postData2Server(dataToPost, setMessage, comments, setComments);
           }}
         />
       </div>
