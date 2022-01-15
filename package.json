@@ -11,7 +11,7 @@
   "dependencies": {
     "bootstrap": "^4.5.0",
     "hljs": "^6.2.3",
-    "marked": "^1.1.0",
+    "marked": "^4.0.10",
     "react": "^16.13.1",
     "react-app-polyfill": "^1.0.6",
     "react-dom": "^16.13.1",
