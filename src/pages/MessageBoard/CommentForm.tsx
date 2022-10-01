@@ -53,7 +53,7 @@ function CommentForm({ postMethod }) {
           </form>
         </div>
       </div>
-      <style jsx>
+      {/* <style jsx>
         {`
 form{
 height: 70vh;
@@ -65,7 +65,7 @@ textarea{
 resize: none;
 }
 `}
-      </style>
+      </style> */}
     </>
   );
 }

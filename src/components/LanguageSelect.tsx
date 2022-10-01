@@ -1,5 +1,5 @@
 import React from 'react';
-import { linkHoverColor } from '../lib/styleVariable';
+// import { linkHoverColor } from '../lib/styleVariable';
 
 const LangLogo = () => (
   <>
@@ -27,7 +27,7 @@ function LanguageSelect({
       >
         <LangLogo />
       </div>
-      <style jsx>
+      {/* <style jsx>
         {`
 .LanguageSelect{
 cursor: pointer;
@@ -46,7 +46,7 @@ transition-duration: 0.2s;
 fill: ${linkHoverColor};
 }
 `}
-      </style>
+      </style> */}
     </>
   );
 }

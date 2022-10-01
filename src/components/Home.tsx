@@ -1,6 +1,6 @@
 import React from 'react';
 import NextBtn from './NextBtn';
-import LanguageSelect from './LanguageSelect';
+// import LanguageSelect from './LanguageSelect';
 
 function Home({ nameCard }) {
   return (
@@ -13,17 +13,17 @@ function Home({ nameCard }) {
         </div>
         <div className="flex-grow-1" />
         <div className="d-flex justify-content-center">
-          <NextBtn href="#aboutMe" />
+          <NextBtn href="#aboutMe" key="aboutMe" />
         </div>
       </section>
-      <style jsx>
+      {/* <style jsx>
         {`
 .nameCard.position-relative{
 top: 50vh;
 transform: translateY(-50%);
 }
 `}
-      </style>
+      </style> */}
     </>
   );
 }

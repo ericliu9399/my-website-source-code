@@ -9,7 +9,7 @@ const ThreeLogo = ({
         {Logo}
         {Logo}
       </div>
-      <style jsx>
+      {/* <style jsx>
         {`
 .logo{
 width: 50px;
@@ -31,13 +31,13 @@ animation: breathLight ${sec}s infinite;
 }
 .logo :global(svg path){fill:${isFillPath ? color : ''};}
 `}
-      </style>
+      </style> */}
     </>
 
   );
 const LogoContainer = ({
-  Logo, content, sec = 1.5, color = 'white', isFillPath = false,
-}) => (
+  id,Logo, content, sec = 1.5, color = 'white', isFillPath = false,
+}:{id:string, [key:string]:any}) => (
     <>
       <div className="d-table">
         <div className="container d-flex flex-column align-items-center">

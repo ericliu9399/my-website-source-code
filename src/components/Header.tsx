@@ -10,7 +10,7 @@ function Header({ children }) {
       >
         {children}
       </nav>
-      <style jsx>
+      {/* <style jsx>
         {`
 nav{
 background: rgb(35,35,35);
@@ -26,7 +26,7 @@ nav :global(.nav-link):hover{
 color: #c0c2e4;
 }
 `}
-      </style>
+      </style> */}
     </>
   );
 }

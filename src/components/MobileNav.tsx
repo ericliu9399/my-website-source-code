@@ -9,7 +9,7 @@ function Nav({
       <div className={`btn-group-vertical pb-3 navDisplayNoneAnimation ${navDisplayNone}`}>
         {children}
       </div>
-      <style jsx>
+      {/* <style jsx>
         {`
 .navDisplayNoneAnimation{
 transform: translateY(-5%);
@@ -34,7 +34,7 @@ border-radius: 20px;
 transition-duration: 1s;
 }
 `}
-      </style>
+      </style> */}
     </>
   );
 }
@@ -62,7 +62,7 @@ function MobileNav({ children, displayNoneSec = 0.5 }) {
         </Nav>
         <Burger onClick={changeDirection} direction={direction} />
       </div>
-      <style jsx>
+      {/* <style jsx>
         {`
 .mobile_nav{
 position: fixed;
@@ -70,7 +70,7 @@ bottom: 30px;
 right: 10px;
 }
 `}
-      </style>
+      </style> */}
     </>
   );
 }

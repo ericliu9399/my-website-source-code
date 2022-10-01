@@ -9,7 +9,7 @@ function ReplyBtn() {
       >
         留言
       </a>
-      <style jsx>
+      {/* {<style jsx>
         {`
 .reply_btn{
   bottom: 40px;
@@ -18,7 +18,7 @@ function ReplyBtn() {
   text-decoration: none;
 }
 `}
-      </style>
+      </style> } */}
     </>
   );
 }

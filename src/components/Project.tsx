@@ -10,7 +10,7 @@ function Project({ content }) {
         <SectionTitle title={sectionTitle} />
         <MarkdownViewer url="./readme.md" />
       </section>
-      <style jsx>
+      {/* <style jsx>
         {`
 :global(h3){
 margin-top: 20px;
@@ -42,7 +42,7 @@ margin: 40px;
 display: none;
 }
 `}
-      </style>
+      </style> */}
     </>
   );
 }

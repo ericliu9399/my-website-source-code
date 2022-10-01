@@ -5,7 +5,7 @@ function Comments({ data, deleteRequest }) {
   return (
     <div className="pt-sm-5">
       <div className="container p-0 pt-sm-5">
-        {data !== [] && data.map((comment) => (
+        {data.length && data.map((comment) => (
           <Comment
             name={comment.name}
             email={comment.email}

@@ -10,7 +10,7 @@ function AboutMe({ data, isPrint = false }) {
   return (
     <>
       <section className="min-vh-100 pt-sm-5 d-flex flex-column" id="aboutMe">
-        <SectionTitle isPrint={isPrint} title={title} />
+        <SectionTitle id="" isPrint={isPrint} title={title} />
         <div className="flex-grow-1 d-flex flex-column">
           <div className="d-flex flex-column flex-md-row align-items-center">
             <img src={myphoto} alt="Edin Liu" />
@@ -26,13 +26,13 @@ function AboutMe({ data, isPrint = false }) {
           {!isPrint && <SkillIconContainer />}
           {!isPrint && (
             <div className="d-flex justify-content-center">
-              <NextBtn href="#projects" />
+              <NextBtn key="" href="#projects" />
             </div>
           )}
         </div>
       </section>
       <hr style={{ pageBreakBefore: 'always' }} />
-      <style jsx>
+      {/* <style jsx>
         {`
 img{
 width: auto;
@@ -45,7 +45,7 @@ p{
 line-height: 1.5rem;
 }
 `}
-      </style>
+      </style> */}
     </>
   );
 }

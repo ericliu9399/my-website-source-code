@@ -11,7 +11,7 @@ const NextBtn = ({
           <svg className="n3" viewBox="0 0 477.175 477.175"><path d="M248.1 360.731l225.1-225.1c5.3-5.3 5.3-13.8 0-19.1-5.3-5.3-13.8-5.3-19.1 0l-215.5 215.5-215.5-215.5c-5.3-5.3-13.8-5.3-19.1 0-2.6 2.6-4 6.1-4 9.5 0 3.4 1.3 6.9 4 9.5l225.1 225.1c5.2 5.3 13.8 5.3 19 .1z" /></svg>
         </a>
       </div>
-      <style jsx>
+      {/* <style jsx>
         {`
 .d-block{
 height: 20vmin;
@@ -48,7 +48,7 @@ a:hover .n3{
 transform: translateY(0px);
 }
 `}
-      </style>
+      </style> */}
     </>
   );
 export default NextBtn;

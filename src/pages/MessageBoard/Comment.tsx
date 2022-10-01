@@ -12,7 +12,7 @@ const Comment = ({
     const easeOut = () => {
       setAnimate({});
       setTimeout(() => setIsClickDelete(false), 400);
-      const pwd = deletePassword === defaultPwd | deletePassword === '' ? 'n' : deletePassword;
+      const pwd = deletePassword === defaultPwd || deletePassword === '' ? 'n' : deletePassword;
       sendDeletRequest(id, pwd, setMessage);
     };
     const easeIn = () => {
@@ -67,7 +67,7 @@ const Comment = ({
           )
         }
       </div>
-      <style jsx>
+      {/* <style jsx>
         {`
 .deletePanel button {
 order: -1;
@@ -95,7 +95,7 @@ height: 0px;
 visibility: hidden;
 }
 `}
-      </style>
+      </style> */}
     </>
   );
 };

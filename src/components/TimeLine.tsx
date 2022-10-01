@@ -7,7 +7,7 @@ function Time({ content, onClick }) {
         <div className="circle rounded-circle bg-white" onClick={onClick} />
         <div className="content">{content}</div>
       </li>
-      <style jsx>
+      {/* <style jsx>
         {`
 .time{
 margin: 10px 0px;
@@ -25,7 +25,7 @@ list-style-type: none;
 cursor: pointer;
 }
 `}
-      </style>
+      </style> */}
     </>
   );
 }
@@ -39,7 +39,7 @@ function Branch({ title, children, isPrint }) {
           {children}
         </div>
       </li>
-      <style jsx>
+      {/* <style jsx>
         {`
 li{
 list-style-type: none;
@@ -53,7 +53,7 @@ border-radius: 500px 0px;
         padding: 0px 30px;
 }
 `}
-      </style>
+      </style> */}
     </>
   );
 }
@@ -96,7 +96,7 @@ function TimeLine({ isPrint = false }) {
         </Branch>
         <TimeWithReverse content="2017年11月" />
       </ul>
-      <style jsx>
+      {/* <style jsx>
         {`
 li{
 list-style-type: none;
@@ -111,7 +111,7 @@ padding: 0px;
 width: fit-content;
 }
 `}
-      </style>
+      </style> */}
     </>
   );
 }
