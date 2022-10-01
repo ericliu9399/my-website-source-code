@@ -1,1 +1,0 @@
-yes | rm -r build
