@@ -1,5 +1,5 @@
 import fetchData from './fetchData';
-import apiUrl from '../../../lib/apiUrl';
+import {apiUrl} from '../../../lib/constants';
 
 function postData2Server(
   dataToPost: object,
@@ -7,7 +7,7 @@ function postData2Server(
   data: Array<object>,
   setData: (data: Array<object>) => void
 ) {
-  const appendClientData = (newData) => {
+  const appendClientData = (newData:any) => {
     const arr = [...data];
     arr.push(newData);
     setData(arr);
@@ -21,7 +21,7 @@ function postData2Server(
     body: raw,
     redirect: 'follow',
   });
-  const textHandler = (text) => {
+  const textHandler = (text:string) => {
     setMessage(text);
   };
   fetchData(request, appendClientData, textHandler);

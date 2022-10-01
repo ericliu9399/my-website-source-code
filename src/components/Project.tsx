@@ -2,12 +2,11 @@ import React from 'react';
 import SectionTitle from './SectionTitle';
 import MarkdownViewer from './MarkdownViewer';
 
-function Project({ content }) {
-  const { title: sectionTitle } = content || {};
+function Project({ sectionTitle }:{sectionTitle:string}) {
   return (
     <>
       <section className="container" id="projects">
-        <SectionTitle title={sectionTitle} />
+        <SectionTitle id="" title={sectionTitle} />
         <MarkdownViewer url="./readme.md" />
       </section>
       {/* <style jsx>

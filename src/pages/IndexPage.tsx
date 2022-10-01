@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import BgImg from '../images/home_bg.svg';
-import apiUrl from '../lib/apiUrl';
+import {apiUrl} from '../lib/constants';
 import Header from '../components/Header';
 import MobileNav from '../components/MobileNav';
 import LanguageSelect from '../components/LanguageSelect';

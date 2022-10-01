@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const Comment = ({
   name, email, content, id, isDelete = false, sendDeletRequest,
-}) => {
+}:{name: string}) => {
   const [isClickDelete, setIsClickDelete] = useState(false);
   const [animate, setAnimate] = useState(null);
   const defaultPwd = '刪文用密碼';

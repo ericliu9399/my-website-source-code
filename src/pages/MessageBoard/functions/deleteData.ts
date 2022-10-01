@@ -1,5 +1,5 @@
 import fetchData from './fetchData';
-import apiUrl from '../../../lib/apiUrl';
+import {apiUrl} from '../../../lib/constants';
 
 function deleteData(
   id: number,

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
 import Form from './CommentForm';
@@ -10,9 +10,8 @@ import deleteData from './functions/deleteData';
 import postData2Server from './functions/postData2Server';
 
 function MessageBoard() {
-  const [comments, setComments] = useState([]);
+  const [comments, setComments] = useState<any[]>([]);
   useEffect(() => {
-    console.log('get all message')
     getData(setComments);
   }, []);
   return (
@@ -21,7 +20,7 @@ function MessageBoard() {
       <div id="container pb-5">
         <Comments
           data={comments}
-          deleteRequest={(id, deletePassword, setMessage) => {
+          deleteRequest={(id:string, deletePassword:string, setMessage:any) => {
             deleteData(id, deletePassword, setMessage, comments, setComments);
           }}
         />

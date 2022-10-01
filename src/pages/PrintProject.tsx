@@ -4,8 +4,8 @@ import Project from '../components/Project';
 export default function ForPrint() {
   return (
     <>
-      <Project />
-      <style jsx>
+      <Project sectionTitle=""/>
+      {/* <style jsx>
         {`
 :global(body){
 background-color: white;
@@ -15,7 +15,7 @@ color: black;
 opacity: 0;
 }
 `}
-      </style>
+      </style> */}
     </>
   );
 }
